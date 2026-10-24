@@ -1,0 +1,242 @@
+<!doctype html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<title>Lista menu Beef &amp; Reef</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0}
+</style>
+</helmet>
+<div style="font-family: 'Cormorant Garamond', Cormorant, Garamond, 'Times New Roman', serif; color: var(--ink, #000000); width: 100%; display: flex; flex-direction: column; gap: 96px">
+  <sc-for list="{{groups}}" as="g" hint-placeholder-count="3">
+    <div id="{{g.anchor}}" style="scroll-margin-top: 150px; display: flex; flex-direction: column; gap: 72px">
+      <sc-if value="{{g.notFirst}}" hint-placeholder-val="{{ false }}">
+        <div aria-hidden="true" style="display: flex; flex-direction: column; gap: 6px; width: 120px; align-self: center">
+          <div style="height: 1px; background: #d2ac5a"></div>
+          <div style="height: 0.5px; background: #d2ac5a"></div>
+        </div>
+      </sc-if>
+      <sc-if value="{{g.hasTitle}}" hint-placeholder-val="{{ false }}">
+        <h2 style="margin: 0 0 -32px; align-self: center; font-size: 24px; line-height: 1.2; font-weight: 400; letter-spacing: 0.28em; text-transform: uppercase; text-align: center; padding: 0 0 10px 0.28em; border-bottom: 0.5px solid var(--rule, #000000)">{{g.title}}</h2>
+      </sc-if>
+      <div style="display: flex; flex-wrap: wrap; gap: 72px 96px; align-items: flex-start">
+        <sc-for list="{{g.cols}}" as="col" hint-placeholder-count="2">
+          <div style="flex: 1 1 440px; min-width: 0; display: flex; flex-direction: column; gap: 72px">
+            <sc-for list="{{col.sections}}" as="s" hint-placeholder-count="1">
+              <section id="{{s.id}}" style="scroll-margin-top: 150px; display: flex; flex-direction: column; align-items: center; gap: 32px">
+                <sc-if value="{{s.hasTitle}}" hint-placeholder-val="{{ true }}">
+                  <h2 style="margin: 0; font-size: 24px; line-height: 1.2; font-weight: 400; letter-spacing: 0.28em; text-transform: uppercase; text-align: center; padding: 0 0 10px 0.28em; border-bottom: 0.5px solid var(--rule, #000000)">{{s.title}}</h2>
+                </sc-if>
+
+                <sc-if value="{{s.isDishes}}" hint-placeholder-val="{{ true }}">
+                  <div style="display: flex; flex-direction: column; align-items: center; gap: 44px; width: 100%">
+                    <sc-for list="{{s.items}}" as="it" hint-placeholder-count="3">
+                      <article style="display: flex; flex-direction: column; align-items: center; text-align: center; gap: 4px; max-width: 440px">
+                        <h3 style="margin: 0; font-size: 24px; line-height: 1.2; font-weight: 700">{{it.name}}</h3>
+                        <p style="margin: 2px 0 0; font-size: 17px; line-height: 1.35">{{it.desc}}</p>
+                        <p style="margin: 10px 0 0; font-size: 17px; line-height: 1.3; font-weight: 700; font-variant-numeric: oldstyle-nums">{{it.price}}</p>
+                      </article>
+                    </sc-for>
+                  </div>
+                </sc-if>
+
+                <sc-if value="{{s.isList}}" hint-placeholder-val="{{ false }}">
+                  <div style="display: flex; flex-direction: column; gap: 12px; width: 100%; max-width: 520px">
+                    <sc-for list="{{s.items}}" as="it" hint-placeholder-count="5">
+                      <sc-if value="{{it.isSub}}" hint-placeholder-val="{{ false }}">
+                        <h3 style="margin: 12px 0 2px; font-size: 17px; font-weight: 400; letter-spacing: 0.3em; text-align: center">{{it.name}}</h3>
+                      </sc-if>
+                      <sc-if value="{{it.isRow}}" hint-placeholder-val="{{ true }}">
+                        <p style="margin: 0; display: flex; justify-content: space-between; align-items: baseline; gap: 20px">
+                          <span style="font-size: 20px; line-height: 1.35; flex: 1 1 auto; min-width: 0">{{it.name}}</span>
+                          <span style="font-size: 20px; line-height: 1.35; white-space: nowrap; font-variant-numeric: oldstyle-nums">{{it.price}}</span>
+                        </p>
+                      </sc-if>
+                    </sc-for>
+                  </div>
+                </sc-if>
+              </section>
+            </sc-for>
+          </div>
+        </sc-for>
+      </div>
+    </div>
+  </sc-for>
+  <p style="margin: 0; text-align: center; font-size: 12px; font-weight: 500; letter-spacing: 0.3em; color: var(--muted, #5e5e5e)">{{priceNote}}</p>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"lang":{"editor":"enum","options":["pl","en"],"default":"pl"},"$preview":{"width":1280,"height":8000}}'>
+class Component extends DCLogic {
+  renderVals() {
+    const lang = this.props.lang === 'en' ? 'en' : 'pl';
+    const i = lang === 'en' ? 1 : 0;
+    const t = (x) => (Array.isArray(x) ? x[i] : x);
+    const D = (name, desc, price) => ({ name: t(name), desc: t(desc), price: price });
+    const L = (name, price) => ({ name: t(name), price: price, isRow: true, isSub: false });
+    const S = (name) => ({ name: t(name), isRow: false, isSub: true });
+    const dishes = (id, title, items) => ({ id: id, title: t(title || ''), hasTitle: !!title, isDishes: true, isList: false, items: items });
+    const list = (id, title, items) => ({ id: id, title: t(title), hasTitle: true, isDishes: false, isList: true, items: items });
+    const BA = ['Wołowina rasy Black Angus, sezonowana na sucho min. 21 dni. ', 'Black Angus beef, dry-aged for at least 21 days. '];
+
+    const raw = [
+      { id: 'steaks', cols: [
+        [dishes('steki', ['Steki', 'Steaks'], [
+          D(['Stek z polędwicy', 'Fillet Steak'], ['Polędwica wołowa (filet mignon), wyjątkowo krucha i soczysta, o naturalnym, szlachetnym smaku', 'Beef fillet (filet mignon), exceptionally tender and juicy, with a pure, refined flavour'], '200 g · 119 / 300 g · 179'),
+          D('Ribeye', ['Wołowina rasy Black Angus, sezonowana na mokro. Stek intensywnie marmurkowany, niezwykle soczysty i pełen smaku', 'Black Angus beef, wet-aged. Richly marbled, exceptionally juicy and full of flavour'], '300 g · 179'),
+          D('T-bone', [BA[0] + 'Soczyste połączenie rostbefu i polędwicy', BA[1] + 'A juicy combination of sirloin and fillet'], '500 g · 229'),
+          D('Porterhouse', [BA[0] + 'Rostbef z dużą porcją delikatnej polędwicy, o głębokim smaku', BA[1] + 'Sirloin with a generous portion of tender fillet, deep in flavour'], '600 g · 249'),
+          D('Tomahawk', [BA[0] + 'Spektakularny antrykot z zachowaną długą kością żebrową', BA[1] + 'A spectacular ribeye cut with the long rib bone left on'], '900–1000 g · 499')
+        ])],
+        [list('dodatki', ['Dodatki', 'Sides'], [
+          L(['Frytki stekowe', 'Steak fries'], '19'), L(['Fasolka szparagowa', 'Green beans'], '19'), L(['Purée ziemniaczane', 'Mashed potatoes'], '19'), L(['Ziemniaki francuskie', 'Roast potatoes'], '19'),
+          L(['Frytki z batata', 'Sweet potato fries'], '24'), L(['Grillowane warzywa', 'Grilled vegetables'], '24'), L(['Mix sałat', 'Side salad'], '24'), L(['Pomidory z chimichurri', 'Tomatoes with chimichurri'], '24'),
+          L(['Buraczki z kozim serem', 'Beetroot with goat’s cheese'], '24'), L(['Groszek cukrowy', 'Sugar snap peas'], '24')
+        ]),
+         list('sosy', ['Sosy', 'Sauces'], [
+          L(['Sos pieprzowy', 'Peppercorn sauce'], '9'), L(['Sos chimichurri', 'Chimichurri'], '9'), L(['Sos truflowy', 'Truffle sauce'], '12'), L(['Sos z grzybów leśnych', 'Wild mushroom sauce'], '12')
+        ])]
+      ]},
+      { id: 'fish', title: ['Ryby i owoce morza', 'Fish & Seafood'], cols: [
+        [dishes('ryby', null, [
+          D(['Stek z tuńczyka', 'Tuna Steak'], ['Tuńczyk, fasola z szałwią, sos sojowy, oliwa z oliwek, sos ponzu', 'Tuna, beans with sage, soy sauce, olive oil, ponzu'], '119'),
+          D(['Macka ośmiornicy', 'Octopus Tentacle'], ['Ośmiornica, seler naciowy, kapary, cukinia, białe wino, oliwki, opiekane ziemniaki', 'Octopus, celery, capers, courgette, white wine, olives, roasted potatoes'], '109'),
+          D(['Krewetki z chorizo', 'King Prawns with Chorizo'], ['Krewetki królewskie, masło, chorizo, czosnek, pomidorki cherry, białe wino, natka pietruszki', 'King prawns, butter, chorizo, garlic, parsley, cherry tomatoes, white wine'], '57')
+        ])],
+        [dishes('ryby-2', null, [
+          D(['Pieczony okoń morski', 'Roasted Sea Bass'], ['Labraks (branzino) pieczony w całości, grillowane warzywa, ziemniaki francuskie', 'Whole roasted sea bass (branzino), grilled vegetables, roast potatoes'], '109'),
+          D(['Mule w białym winie', 'Mussels in White Wine'], ['Chorwackie mule w białym wytrawnym winie z szalotką, czosnkiem i natką pietruszki', 'Croatian-style mussels in dry white wine with shallots, garlic and parsley'], '69')
+        ])]
+      ]},
+      { id: 'starters', cols: [
+        [dishes('przystawki', ['Przystawki', 'Starters'], [
+          D(['Tatar wołowy', 'Beef Tartare'], ['Polędwica wołowa, żółtko pasteryzowane, ogórek kiszony, oliwa szczypiorowa, cebula, grzyby marynowane, anchois', 'Beef fillet, pasteurised egg yolk, fermented cucumber, chive oil, onion, pickled mushrooms, anchovies'], '100 g · 59'),
+          D(['Tatar z tuńczyka', 'Tuna Tartare'], ['Tuńczyk błękitnopłetwy, awokado, sos ponzu, sezam, sok z limonki, czerwona cebula, kapary', 'Bluefin tuna, avocado, ponzu, sesame, lime juice, red onion, capers'], '100 g · 59'),
+          D(['Tataki z tuńczyka', 'Tuna Tataki'], ['Tuńczyk, miód, prażony sezam, sos ponzu, olej sezamowy, majonez homarowy', 'Tuna, honey, toasted sesame, ponzu, sesame oil, lobster mayonnaise'], '100 g · 69'),
+          D(['Carpaccio z buraków', 'Beetroot Carpaccio'], ['Buraki, orzechy włoskie, rukola, kozi ser, sos balsamiczny', 'Beetroot, walnuts, rocket, goat’s cheese, balsamic dressing'], '48'),
+          D(['Carpaccio z polędwicy', 'Beef Carpaccio'], ['Polędwica wołowa, pasta truflowa, parmezan, grzyby marynowane, rukola', 'Beef fillet, truffle paste, Parmesan, pickled mushrooms, rocket'], '59'),
+          D('Burrata Beef & Reef', ['Burrata, ceviche z krewetek, grillowany antrykot, pomidorki cherry, sos chimichurri', 'Burrata, prawn ceviche, grilled ribeye, cherry tomatoes, chimichurri'], '48')
+        ])],
+        [dishes('salatki', ['Sałatki', 'Salads'], [
+          D(['Sałatka Beef & Reef', 'Beef & Reef Salad'], ['Sałata rzymska, krewetki, grzanki, pomidorki cherry, grillowana wołowina', 'Romaine lettuce, prawns, croutons, cherry tomatoes, grilled beef'], '69'),
+          D(['Cezar z kurczakiem', 'Chicken Caesar'], ['Sałata rzymska, sos cezar, chipsy z kaparów, grzanki, parmezan, anchois, pierś z kurczaka', 'Romaine lettuce, Caesar dressing, caper crisps, croutons, Parmesan, anchovies, chicken breast'], '52'),
+          D(['Cezar z krewetkami', 'Prawn Caesar'], ['Sałata rzymska, sos cezar, chipsy z kaparów, grzanki, parmezan, anchois, krewetki', 'Romaine lettuce, Caesar dressing, caper crisps, croutons, Parmesan, anchovies, prawns'], '55'),
+          D(['Sałatka z kozim serem', 'Goat’s Cheese Salad'], ['Sałata rzymska, karmelizowany kozi ser, pomidorki cherry, winegret', 'Romaine lettuce, caramelised goat’s cheese, cherry tomatoes, vinaigrette'], '49')
+        ])]
+      ]},
+      { id: 'mains', cols: [
+        [dishes('makarony', ['Makarony', 'Pasta'], [
+          D(['Makaron Beef & Reef', 'Beef & Reef Pasta'], ['Makaron tagliatelle, owoce morza, wołowina, pomidorki cherry, emulsja maślana', 'Tagliatelle, seafood, beef, cherry tomatoes, butter emulsion'], '69'),
+          D(['Tagliatelle z truflą', 'Truffle Tagliatelle'], ['Makaron tagliatelle, masło, parmezan, pasta truflowa, płatki świeżych trufli', 'Tagliatelle, butter, Parmesan, truffle paste, fresh truffle shavings'], '75'),
+          D(['Tagliatelle z leśnymi grzybami', 'Forest Mushroom Tagliatelle'], ['Makaron tagliatelle, podgrzybki, białe wino, czosnek, natka pietruszki, parmezan, wiejska śmietana', 'Tagliatelle, bay bolete mushrooms, white wine, garlic, parsley, Parmesan, farmhouse cream'], '59'),
+          D(['Borowikowe tortellacci', 'Porcini Tortellacci'], ['Włoskie pierożki faszerowane borowikami i ricottą, w sosie z podgrzybków ze śmietaną i serem Grana Padano', 'Italian pasta parcels filled with porcini and ricotta, in a creamy bay bolete sauce with Grana Padano'], '59'),
+          D(['Zielone tortellacci', 'Green Tortellacci'], ['Włoskie zielone pierożki faszerowane mozzarellą i szpinakiem, w sosie z wiejskiej śmietany, z oliwą ziołową i parmezanem', 'Green Italian pasta parcels filled with mozzarella and spinach, in a farmhouse cream sauce with herb oil and Parmesan'], '53')
+        ])],
+        [dishes('dania-glowne', ['Dania główne', 'Main Courses'], [
+          D(['Grillowana pierś z kurczaka', 'Grilled Chicken Breast'], ['Grillowana pierś z kurczaka z miksem sałat i frytkami z batata', 'Grilled chicken breast with a fresh salad and sweet potato fries'], '49'),
+          D(['Policzki wołowe', 'Beef Cheeks'], ['Policzki wołowe z purée ziemniaczanym i sosem demi-glace', 'Beef cheeks with mashed potatoes and demi-glace'], '89'),
+          D(['Udko z gęsi confit', 'Goose Leg Confit'], ['Udko z gęsi, wolno gotowane we własnym tłuszczu, z kluskami śląskimi, sosem żurawinowym i burakami na słodko', 'Goose leg slow-cooked in its own fat, with Silesian dumplings, cranberry sauce and sweet glazed beetroot'], '450 g · 199'),
+          D(['Żebro wieprzowe BBQ', 'BBQ Pork Rib'], ['Żebro sous-vide w sosie BBQ, ziemniaki francuskie, surówka z białej kapusty', 'Sous-vide rib in BBQ sauce, roast potatoes, white cabbage slaw'], '99'),
+          D(['Pierś z kaczki', 'Duck Breast'], ['Pierś z kaczki sous-vide, sos pomarańczowy, purée selerowe, brokuł łodygowy', 'Sous-vide duck breast, orange sauce, celeriac purée, tenderstem broccoli'], '109')
+        ])]
+      ]},
+      { id: 'soups', cols: [
+        [dishes('zupy', ['Zupy', 'Soups'], [
+          D(['Zupa Beef & Reef', 'Beef & Reef Soup'], ['Mule, krewetki, wołowina, aromatyczny wywar, pieczone warzywa', 'Mussels, prawns, beef, aromatic broth, roasted vegetables'], '52'),
+          D(['Krem z cukinii', 'Courgette Cream Soup'], ['Cukinia, mięta, masło, grzanki, oliwa ziołowa', 'Courgette, mint, butter, croutons, herb oil'], '39')
+        ]),
+         dishes('dla-dzieci', ['Menu dla dzieci', 'Kids’ Menu'], [
+          D(['Stripsy z kurczaka', 'Chicken Strips'], ['Filet z kurczaka, frytki, mizeria', 'Chicken fillet, fries, creamy cucumber salad'], '33'),
+          D(['Tagliatelle z parmezanem', 'Tagliatelle with Parmesan'], ['Makaron tagliatelle, masło, parmezan', 'Tagliatelle, butter, Parmesan'], '36')
+        ])],
+        [dishes('sandwich', 'Sandwich', [
+          D('Beef & Reef', ['Polędwica wołowa, krewetki, mix sałat, grzyby marynowane, majonez homarowy', 'Beef fillet, prawns, mixed leaves, pickled mushrooms, lobster mayonnaise'], '52'),
+          D('Black Angus', ['Sezonowana wołowina rasy Black Angus, sos BBQ, ogórek konserwowy, prażona cebula, ser cheddar', 'Aged Black Angus beef, BBQ sauce, cheddar, pickled gherkin, crispy onions'], '49')
+        ])]
+      ]},
+      { id: 'desserts', title: ['Desery', 'Desserts'], cols: [
+        [dishes('desery', null, [
+          D('Crème brûlée', ['Francuski deser opalany brązowym cukrem', 'Classic French custard with a caramelised brown sugar crust'], '37'),
+          D(['Kremowy sernik', 'Creamy Cheesecake'], ['Lody waniliowe, mus malinowy, owoce', 'Vanilla ice cream, raspberry mousse, fruit'], '39')
+        ])],
+        [dishes('desery-2', null, [
+          D(['Szarlotka z pieca', 'Polish Apple Pie'], ['Lody waniliowe, owoce, cukier puder', 'Oven-baked, with vanilla ice cream, fruit and icing sugar'], '34')
+        ])]
+      ]},
+      { id: 'drinks', cols: [
+        [list('herbaty', ['Herbaty', 'Tea'], [
+          L('Ceylon gold', '20'), L('Earl Grey', '20'), L('Black chili chocolate', '20'), L('Gunpowder green', '20'), L('Green jasmine', '20'), L('Forest fruits', '20'), L('Raspberry pear', '20'), L('Rooibos', '20')
+        ]),
+         list('lemoniady', ['Lemoniady', 'Lemonades'], [
+          L(['Klasyczna (szklanka / karafka)', 'Classic (glass / carafe)'], '18 / 40'), L(['Smakowa (szklanka / karafka)', 'Flavoured (glass / carafe)'], '20 / 48')
+        ])],
+        [list('kawy', ['Kawy', 'Coffee'], [
+          L(['Espresso (pojedyncze / podwójne)', 'Espresso (single / double)'], '10 / 12'), L('Americano', '12'), L('Cappuccino', '14'), L('Latte', '15'), L('Flat white', '17')
+        ]),
+         list('softy', ['Softy', 'Soft Drinks'], [
+          L(['Woda', 'Water'], '10 · 330 ml / 20 · 700 ml'), L('Fanta / Sprite', '12 · 250 ml'), L('Coca-Cola (original / zero)', '12 · 250 ml'),
+          L(['Cappy (pomarańcza / jabłko / multiwitamina)', 'Cappy (orange / apple / multivitamin)'], '12 · 250 ml'), L(['Fuze Tea (brzoskwinia / cytryna)', 'Fuze Tea (peach / lemon)'], '12 · 250 ml')
+        ])]
+      ]},
+      { id: 'bar', cols: [
+        [list('piwa', ['Piwa', 'Beer'], [
+          S(['Z beczki (330 / 500 ml)', 'Draught (330 / 500 ml)']),
+          L('Grimbergen Blanche', '19 / 29'), L('Grimbergen Blonde', '19 / 29'), L('Grimbergen Double-Ambrée', '19 / 29'),
+          S(['Butelkowe', 'Bottled']),
+          L('Carlsberg Pilsner', '18 · 500 ml'), L('Somersby', '19 · 400 ml'), L('1664 Blanc', '21 · 330 ml'),
+          S(['Butelkowe 0%', 'Alcohol-free']),
+          L('Žatecký', '14 · 500 ml'), L('Somersby', '18 · 400 ml'), L('Carlsberg', '18 · 500 ml'), L('1664 Blanc', '18 · 330 ml'), L(['Paulaner pszeniczny', 'Paulaner Wheat Beer'], '20 · 500 ml')
+        ]),
+         list('whisky', 'Whisky', [
+          L('Tullamore D.E.W.', '22 · 50 ml'), L('Jack Daniel’s', '26 · 50 ml'), L('Chivas Regal 12', '29 · 50 ml'), L('Maker’s Mark', '29 · 50 ml'),
+          L('Monkey Shoulder', '33 · 50 ml'), L('Glenfiddich 12', '44 · 50 ml'), L('Glenfiddich 15', '59 · 50 ml')
+        ])],
+        [list('wodka', ['Wódka', 'Vodka'], [
+          L('Żubrówka Czarna', '19 · 50 ml'), L(['Chopin (żytni)', 'Chopin (rye)'], '24 · 50 ml'), L(['Chopin (ziemniaczany / pszeniczny)', 'Chopin (potato / wheat)'], '35 · 50 ml'), L('Belvedere', '37 · 50 ml')
+        ]),
+         list('koktajle-0', ['Koktajle bezalkoholowe', 'Mocktails'], [
+          L('Aperol Spritz', '35'), L('Hugo Spritz', '35'), L('Passion Spritz', '35'), L('Mojito', '35'), L('Gin Tonic', '35')
+        ]),
+         list('koktajle', ['Koktajle alkoholowe', 'Cocktails'], [
+          L('Aperol Spritz', '39'), L('Cosmopolitan', '39'), L('Espresso Martini', '39'), L('Hugo Spritz', '39'), L('Old Fashioned', '39'), L('Pornstar Martini', '39'),
+          L('Whisky Sour', '39'), L('Gin Tonic', '39'), L('Mojito', '39'), L('Negroni', '45'), L(['Koktajl autorski', 'Signature cocktail'], '45')
+        ])]
+      ]},
+      { id: 'wine', cols: [
+        [list('wina-biale', ['Wina białe', 'White Wine'], [
+          L('Canyon Road Chardonnay', '130'), L('Nocturne Viorica (Purcari)', '170'), L('Pulpo Sauvignon Blanc', '190'), L('Ulrich Langguth Riesling', '250'), L(['Chablis „Saint Martin” (Laroche)', 'Chablis “Saint Martin” (Laroche)'], '399')
+        ]),
+         list('wina-czerwone', ['Wina czerwone', 'Red Wine'], [
+          L('Canyon Road Cabernet Sauvignon', '130'), L('Spier Signature Pinotage', '150'), L('Condado de Oriza Crianza', '170'), L('Edna Valley Pinot Noir', '240'), L('Primitivo di Manduria', '240'), L('Penfolds Max’s Shiraz-Cabernet', '320')
+        ]),
+         list('wina-rozowe', ['Wina różowe', 'Rosé Wine'], [ L('Cicada La Legende', '190') ]),
+         list('wina-musujace', ['Wina musujące', 'Sparkling Wine'], [
+          L('Lamia Prosecco (Botter)', '140'), L('Bastets Cava Brut', '200'), L('Palmer La Réserve (Palmer & Co)', '740')
+        ])],
+        [list('wina-kieliszek', ['Wina na kieliszki', 'Wine by the Glass'], [
+          S(['Białe (150 ml)', 'White (150 ml)']), L('Canyon Road Chardonnay', '26'), L('Pulpo Sauvignon Blanc', '34'), L('Nocturne Viorica (Purcari)', '37'),
+          S(['Czerwone (150 ml)', 'Red (150 ml)']), L('Canyon Road Cabernet Sauvignon', '26'), L('Condado de Oriza Crianza', '34'), L('Primitivo di Manduria', '48'),
+          S(['Różowe (150 ml)', 'Rosé (150 ml)']), L('Cicada La Legende', '38'),
+          S(['Musujące (150 ml)', 'Sparkling (150 ml)']), L('Lamia Prosecco (Botter)', '28')
+        ])]
+      ]}
+    ];
+
+    const groups = raw.map((g, n) => ({
+      anchor: 'g-' + g.id,
+      notFirst: n > 0,
+      hasTitle: !!g.title,
+      title: g.title ? t(g.title) : '',
+      cols: g.cols.map((c) => ({ sections: c }))
+    }));
+    return { groups: groups, priceNote: lang === 'en' ? 'PRICES IN PLN' : 'CENY W PLN' };
+  }
+}
+</script>
+</body>
+</html>
