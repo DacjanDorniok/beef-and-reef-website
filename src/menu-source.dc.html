@@ -184,12 +184,14 @@ class Component extends DCLogic {
         ])]
       ]},
       { id: 'bar', cols: [
-        [list('piwa', ['Piwa', 'Beer'], [
-          S(['Z beczki (330 / 500 ml)', 'Draught (330 / 500 ml)']),
-          L('Grimbergen Blanche', '19 / 29'), L('Grimbergen Blonde', '19 / 29'), L('Grimbergen Double-Ambrée', '19 / 29'),
-          S(['Butelkowe', 'Bottled']),
-          L('Carlsberg Pilsner', '18 · 500 ml'), L('Somersby', '19 · 400 ml'), L('1664 Blanc', '21 · 330 ml'),
-          S(['Butelkowe 0%', 'Alcohol-free']),
+        [list('piwa-beczka', ['Piwa z beczki', 'Draught Beer'], [
+          S('330 / 500 ml'),
+          L('Grimbergen Blanche', '19 / 29'), L('Grimbergen Blonde', '19 / 29'), L('Grimbergen Double-Ambrée', '19 / 29')
+        ]),
+         list('piwa-butelkowe', ['Piwa butelkowe', 'Bottled Beer'], [
+          L('Carlsberg Pilsner', '18 · 500 ml'), L('Somersby', '19 · 400 ml'), L('1664 Blanc', '21 · 330 ml')
+        ]),
+         list('piwa-0', ['Piwa butelkowe 0%', 'Alcohol-free Beer'], [
           L('Žatecký', '14 · 500 ml'), L('Somersby', '18 · 400 ml'), L('Carlsberg', '18 · 500 ml'), L('1664 Blanc', '18 · 330 ml'), L(['Paulaner pszeniczny', 'Paulaner Wheat Beer'], '20 · 500 ml')
         ]),
          list('whisky', 'Whisky', [
@@ -219,7 +221,7 @@ class Component extends DCLogic {
           L('Lamia Prosecco (Botter)', '140'), L('Bastets Cava Brut', '200'), L('Palmer La Réserve (Palmer & Co)', '740')
         ])],
         [list('wina-kieliszek', ['Wina na kieliszki', 'Wine by the Glass'], [
-          S(['Białe (150 ml)', 'White (150 ml)']), L('Canyon Road Chardonnay', '26'), L('Pulpo Sauvignon Blanc', '34'), L('Nocturne Viorica (Purcari)', '37'),
+          S(['Białe (150 ml)', 'White (150 ml)']), L('Canyon Road Chardonnay', '26'), L('Nocturne Viorica (Purcari)', '34'), L('Pulpo Sauvignon Blanc', '37'),
           S(['Czerwone (150 ml)', 'Red (150 ml)']), L('Canyon Road Cabernet Sauvignon', '26'), L('Condado de Oriza Crianza', '34'), L('Primitivo di Manduria', '48'),
           S(['Różowe (150 ml)', 'Rosé (150 ml)']), L('Cicada La Legende', '38'),
           S(['Musujące (150 ml)', 'Sparkling (150 ml)']), L('Lamia Prosecco (Botter)', '28')
