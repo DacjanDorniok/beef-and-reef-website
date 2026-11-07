@@ -555,3 +555,62 @@ ul,ol{list-style:none;padding:0}
 .btn-line{background:transparent}
 :root[data-theme="dark"] .event-media img{-webkit-mask-image:radial-gradient(ellipse 50% 50% at 50% 55%,#000 45%,transparent 100%);mask-image:radial-gradient(ellipse 50% 50% at 50% 55%,#000 45%,transparent 100%);opacity:.9}
 @media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .event-media img{-webkit-mask-image:radial-gradient(ellipse 50% 50% at 50% 55%,#000 45%,transparent 100%);mask-image:radial-gradient(ellipse 50% 50% at 50% 55%,#000 45%,transparent 100%);opacity:.9}}
+
+/* ---------- Zieleń jako akcent (08.11) — zamiast kopiować odznakę z ulotki ---------- */
+:root{--accent:#1b3e2d;--grain:url(../img/grain.png)}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--accent:#9cbfaa}}
+:root[data-theme="dark"]{--accent:#9cbfaa}
+
+/* odznaka: faktura z pliku (stabilnie także na iPhonie) */
+.badge{background:#1b3e2d var(--grain)}
+.badge .noise{display:none}
+
+/* hero: godziny jako cichy zielony akcent z liniami po bokach */
+.hero .kicker{margin-top:56px}
+.hero-hours{margin-top:40px;display:flex;align-items:center;justify-content:center;flex-wrap:wrap;gap:8px 16px;font-size:15px;line-height:24px;font-weight:600;letter-spacing:.3em;text-transform:uppercase;color:var(--accent)}
+.hero-hours::before,.hero-hours::after{content:"";width:48px;height:.5px;background:currentColor}
+.hh-dot{width:5px;height:5px;background:currentColor;transform:rotate(45deg)}
+
+/* hero: steki na „obrusie” w zieleni butelkowej — kolor dopełniający do czerwieni mięsa */
+.hero-stage{position:relative;width:calc(100% + 2 * var(--gutter));margin:32px calc(-1 * var(--gutter)) 0;display:flex;justify-content:center;isolation:isolate}
+.hero-stage::before{content:"";position:absolute;left:0;right:0;bottom:0;height:46%;z-index:-1;
+  background:linear-gradient(#d2ac5a,#d2ac5a) 0 8px/100% .5px no-repeat,radial-gradient(ellipse 55% 140% at 50% 0%,rgba(255,255,255,.10),rgba(255,255,255,0) 70%),var(--grain),#1b3e2d;
+  border-top:1px solid #d2ac5a}
+.hero-stage .hero-img{margin-top:0;filter:var(--hero-img-filter) drop-shadow(0 24px 24px rgba(0,0,0,.35))}
+
+/* wydarzenie w trybie ciemnym: zdjęcie na jasnej karcie w złotej ramce, jak wydruk */
+.event-photo{position:relative}
+:root[data-theme="dark"] .event-photo{width:min(960px,100%);margin:-48px auto 0;padding:16px;background:linear-gradient(180deg,#ffffff 0%,#f4f4f5 60%,#e6e7e9 100%);box-shadow:0 24px 48px rgba(0,0,0,.55)}
+:root[data-theme="dark"] .event-photo::after{content:"";position:absolute;inset:8px;border:.5px solid #d2ac5a;pointer-events:none;z-index:2}
+:root[data-theme="dark"] .event-photo img{-webkit-mask-image:none;mask-image:none;opacity:1;margin:0;width:100%}
+:root[data-theme="dark"] .event{padding-bottom:96px}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]) .event-photo{width:min(960px,100%);margin:-48px auto 0;padding:16px;background:linear-gradient(180deg,#ffffff 0%,#f4f4f5 60%,#e6e7e9 100%);box-shadow:0 24px 48px rgba(0,0,0,.55)}
+  :root:not([data-theme="light"]) .event-photo::after{content:"";position:absolute;inset:8px;border:.5px solid #d2ac5a;pointer-events:none;z-index:2}
+  :root:not([data-theme="light"]) .event-photo img{-webkit-mask-image:none;mask-image:none;opacity:1;margin:0;width:100%}
+  :root:not([data-theme="light"]) .event{padding-bottom:96px}
+}
+@media (max-width:720px){
+  .hero .kicker{margin-top:40px}
+  .hero-hours{margin-top:24px;font-size:12px;letter-spacing:.24em;gap:8px 12px}
+  .hero-hours::before,.hero-hours::after{width:24px}
+  .hero-stage{width:calc(100% + 32px);margin:16px -16px 0}
+  .hero-stage .hero-img{width:116%}
+  :root[data-theme="dark"] .event-photo{margin-top:-24px;padding:8px}
+  :root[data-theme="dark"] .event-photo::after{inset:4px}
+  :root[data-theme="dark"] .event{padding-bottom:64px}
+}
+@media (max-width:720px) and (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]) .event-photo{margin-top:-24px;padding:8px}
+  :root:not([data-theme="light"]) .event-photo::after{inset:4px}
+  :root:not([data-theme="light"]) .event{padding-bottom:64px}
+}
+/* poprawki: ciemna karta zdjęcia bez nachodzenia; godziny na telefonie w dwóch liniach */
+:root[data-theme="dark"] .event-photo{margin-top:32px}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .event-photo{margin-top:32px}}
+@media (max-width:720px){
+  :root[data-theme="dark"] .event-photo{margin-top:24px}
+  .hero-hours{flex-direction:column;gap:8px}
+  .hero-hours::before,.hero-hours::after{display:none}
+}
+@media (max-width:720px) and (prefers-color-scheme: dark){:root:not([data-theme="light"]) .event-photo{margin-top:24px}}

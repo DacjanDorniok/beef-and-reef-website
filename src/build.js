@@ -39,7 +39,7 @@ const EVENT = {
     alt: 'St. Martin’s croissants with icing and nuts on paper' }
 };
 const noise = (id) => `<svg class="noise" aria-hidden="true" width="100%" height="100%"><filter id="${id}"><feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" stitchTiles="stitch"/><feColorMatrix type="saturate" values="0"/></filter><rect width="100%" height="100%" filter="url(#${id})"/></svg>`;
-const badge = (text, id) => `<p class="badge">${noise(id)}<span class="badge-frame" aria-hidden="true"></span><span class="badge-text">${text}</span></p>`;
+const badge = (text) => `<p class="badge"><span class="badge-frame" aria-hidden="true"></span><span class="badge-text">${text}</span></p>`;
 // Public address of the site (used for og:image, og:url and hreflang). Change it when the site moves to its own domain.
 const SITE = 'https://dacjandorniok.github.io/beef-and-reef-website/';
 const esc = (s) => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
@@ -320,7 +320,6 @@ function home(lang) {
     <h1 id="hero-title" class="wordmark">BEEF &amp; REEF</h1>
     <p class="tagline">STEAKHOUSE · SEAFOOD</p>
     <div class="double-rule full" aria-hidden="true"><span></span><span></span></div>
-    ${badge(c.hoursBadge, 'nz-hero')}
     <p class="kicker">${c.res}</p>
     <a class="hero-phone" href="${TEL}">${PHONE}</a>
     <p class="hero-text">${c.heroText}</p>
@@ -328,18 +327,19 @@ function home(lang) {
       <a class="btn btn-gold" href="${TEL}">${c.callBook}</a>
       <p class="hero-links"><a class="u" href="${DELIVERY}">${c.order}</a><span>${c.or}</span><a class="u" href="${BOOK}">${c.book}</a></p>
     </div>
-    <img class="hero-img" src="${img('steki-hero.webp')}" srcset="${img('steki-hero-702.webp')} 702w, ${img('steki-hero.webp')} 1404w" sizes="(max-width: 1092px) 116vw, 1180px" width="1404" height="503" alt="${c.heroAlt}" fetchpriority="high">
+    <p class="hero-hours"><span>${c.daily} 12:00 – 23:00</span><span class="hh-dot" aria-hidden="true"></span><span>${c.kitchen} ${c.kitchenTime}</span></p>
+    <div class="hero-stage"><img class="hero-img" src="${img('steki-hero.webp')}" srcset="${img('steki-hero-702.webp')} 702w, ${img('steki-hero.webp')} 1404w" sizes="(max-width: 1092px) 116vw, 1180px" width="1404" height="503" alt="${c.heroAlt}" fetchpriority="high"></div>
   </section>
 ${EVENT.on ? `
   <section id="${lang === 'en' ? 'event' : 'wydarzenie'}" class="section pg event" aria-labelledby="event-title" data-until="${EVENT.until}">
-    ${badge(ev.badge, 'nz-event')}
+    ${badge(ev.badge)}
     <p class="kicker">${ev.kicker}</p>
     <h2 id="event-title" class="headline">${ev.title}</h2>
     <p class="body-l">${ev.text}</p>
     <a class="u event-book" href="${TEL}">${ev.book}: ${PHONE}</a>
     <div class="event-media">
       <div class="callout"><div class="callout-frame"><p class="kicker">${ev.noteHead}</p><p class="body-l">${ev.note}</p></div></div>
-      <img class="fade-photo" src="${img(EVENT.img)}" srcset="${img(EVENT.img800)} 800w, ${img(EVENT.img)} 1600w" sizes="(max-width: 1120px) 100vw, 1120px" width="${EVENT.w}" height="${EVENT.h}" alt="${ev.alt}" loading="lazy" style="height:auto">
+      <div class="event-photo"><img class="fade-photo" src="${img(EVENT.img)}" srcset="${img(EVENT.img800)} 800w, ${img(EVENT.img)} 1600w" sizes="(max-width: 1120px) 100vw, 1120px" width="${EVENT.w}" height="${EVENT.h}" alt="${ev.alt}" loading="lazy" style="height:auto"></div>
     </div>
   </section>
 ` : ''}
