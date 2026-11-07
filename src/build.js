@@ -14,7 +14,28 @@ const DELIVERY = 'https://online.beefandreef.pl/delivery';
 const MAIL = 'kontakt@beefandreef.pl';
 const FB = 'https://www.facebook.com/beef.and.reef.wilanow';
 const IG = 'https://www.instagram.com/beef.and.reef_steak_seafood';
-const MAPS = 'https://maps.google.com/?q=Kazachska+1,+02-999+Warszawa';
+const MAPS = 'https://www.google.com/maps/dir/?api=1&amp;destination=Beef%20%26%20Reef%2C%20Kazachska%201%2C%2002-999%20Warszawa';
+const MAPS_OPEN = 'https://www.google.com/maps/search/?api=1&amp;query=Beef%20%26%20Reef%2C%20Kazachska%201%2C%2002-999%20Warszawa';
+const MAPS_EMBED = 'https://www.google.com/maps?q=Beef+%26+Reef,+Kazachska+1,+02-999+Warszawa&amp;output=embed';
+const arrow = '<svg aria-hidden="true" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M9 7h8v8"/></svg>';
+const handset = '<svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg>';
+// Seasonal event block on the home page (PL + EN). Set on:false to hide it; it also hides itself after `until` (main.js).
+const EVENT = {
+  on: true, until: '2026-11-15',
+  img: 'rogale-swietomarcinskie.webp', img800: 'rogale-swietomarcinskie-800.webp', w: 1600, h: 1222,
+  pl: { badge: 'Od 7 do 15 listopada', kicker: 'Zapraszamy na wyjątkowe menu', title: 'Z okazji Świętego Marcina',
+    text: 'Królować będzie gęsina, przygotowana z dbałością o każdy detal, w autorskich odsłonach naszego Szefa Kuchni.',
+    book: 'Zarezerwuj stolik', noteHead: 'Dodatkowo <b>11</b> listopada',
+    note: 'Serwujemy oryginalne rogale świętomarcińskie sprowadzane z certyfikowanej piekarni w Poznaniu.',
+    alt: 'Rogale świętomarcińskie z lukrem i orzechami na papierze' },
+  en: { badge: '7 to 15 November', kicker: 'Join us for a special menu', title: 'Celebrating St. Martin’s Day',
+    text: 'Goose takes centre stage, prepared with care down to the last detail, in our head chef’s own creations.',
+    book: 'Book a table', noteHead: 'Also on <b>11</b> November',
+    note: 'We serve original St. Martin’s croissants (rogale świętomarcińskie) from a certified bakery in Poznań.',
+    alt: 'St. Martin’s croissants with icing and nuts on paper' }
+};
+const noise = (id) => `<svg class="noise" aria-hidden="true" width="100%" height="100%"><filter id="${id}"><feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" stitchTiles="stitch"/><feColorMatrix type="saturate" values="0"/></filter><rect width="100%" height="100%" filter="url(#${id})"/></svg>`;
+const badge = (text, id) => `<p class="badge">${noise(id)}<span class="badge-frame" aria-hidden="true"></span><span class="badge-text">${text}</span></p>`;
 // Public address of the site (used for og:image, og:url and hreflang). Change it when the site moves to its own domain.
 const SITE = 'https://dacjandorniok.github.io/beef-and-reef-website/';
 const esc = (s) => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
@@ -145,7 +166,7 @@ ${items.map(([k, short, , h]) => `        <a href="${h}"${cur(k)}>${short}</a>`)
       <a class="lang-switch quiet" href="${otherHref}" lang="${t.otherLang}" hreflang="${t.otherLang}" data-lang="${t.otherLang}" aria-label="${t.otherAria}">${globe}<span>${t.other}</span></a>
       <span class="hdr-sep" aria-hidden="true"></span>
       <button class="theme-btn quiet" type="button" aria-pressed="false" data-label-dark="${t.themeDark}" data-label-light="${t.themeLight}" aria-label="${t.themeDark}" title="${t.themeDark}">${moon}${sun}</button>
-      <button class="icon-btn burger" type="button" aria-controls="menu-mobilne" aria-expanded="false" aria-label="${t.open}" data-label-open="${t.open}" data-label-close="${t.close}"><span class="burger-lines" aria-hidden="true"><span></span><span></span><span></span></span></button>
+${ctx.page === 'home' ? `      <div class="call-slot" aria-hidden="true"><a class="btn btn-gold btn-sm" href="${TEL}" tabindex="-1" aria-label="${t.drawerCall}: ${PHONE}">${handset}<span>${PHONE}</span></a></div>\n` : ''}      <button class="icon-btn burger" type="button" aria-controls="menu-mobilne" aria-expanded="false" aria-label="${t.open}" data-label-open="${t.open}" data-label-close="${t.close}"><span class="burger-lines" aria-hidden="true"><span></span><span></span><span></span></span></button>
     </div>
   </div>
   <nav id="menu-mobilne" class="mnav" aria-label="${t.mainMenu}" hidden>
@@ -161,14 +182,15 @@ function footer(ctx) {
   const t = T[ctx.lang];
   return `<footer class="site-footer">
   <div class="wrap">
+    <div class="footer-mast"><p class="footer-word">BEEF &amp; REEF</p><p class="footer-tag">STEAKHOUSE · SEAFOOD</p></div>
+    <div class="double-rule full" aria-hidden="true"><span></span><span></span></div>
     <div class="footer-grid">
-      <div class="col brand wide"><img src="${rel(ctx.file, 'assets/img/logo-seal-192.png')}" alt="Beef &amp; Reef" width="88" height="88" loading="lazy"><p>STEAKHOUSE · SEAFOOD</p></div>
       <div class="col wide"><h2>${t.visit}</h2><p>Kazachska 1<br>02-999 Warszawa</p><p style="margin-top:8px">${t.daily} 12:00 – 23:00<br>${t.kitchenOpen}</p></div>
       <div class="col wide"><h2>${t.reserve}</h2><a class="nowrap" href="${TEL}">${PHONE}</a><a href="mailto:${MAIL}">${MAIL}</a><a href="${BOOK}">${t.online}</a></div>
       <nav class="col" aria-label="${t.footerLabel}"><h2>${t.shortcuts}</h2><a href="${link(ctx, 'menu')}">Menu</a><a href="${link(ctx, 'party')}">${t.partyLong}</a><a href="${link(ctx, 'home', 'about')}">${ctx.lang === 'en' ? 'About us' : t.about}</a><a href="${link(ctx, 'home', 'contact')}">${t.contact}</a></nav>
       <div class="col"><h2>${t.follow}</h2><a href="${FB}">Facebook</a><a href="${IG}">Instagram</a><a class="dim" href="${DELIVERY}">${t.delivery}</a></div>
     </div>
-    <div class="footer-bottom"><span>© 2026 BEEF &amp; REEF</span><nav aria-label="${t.legalLabel}"><a href="${link(ctx, 'privacy')}"${ctx.page === 'privacy' ? ' aria-current="page"' : ''}>${t.privacy}</a><a href="${link(ctx, 'cookies')}"${ctx.page === 'cookies' ? ' aria-current="page"' : ''}>COOKIES</a></nav></div>
+    <div class="footer-bottom"><span>© 2026 BEEF &amp; REEF · ${ctx.lang === 'en' ? 'PRICES IN PLN' : 'CENY W PLN'}</span><nav aria-label="${t.legalLabel}"><a href="${link(ctx, 'privacy')}"${ctx.page === 'privacy' ? ' aria-current="page"' : ''}>${t.privacy}</a><a href="${link(ctx, 'cookies')}"${ctx.page === 'cookies' ? ' aria-current="page"' : ''}>COOKIES</a></nav></div>
   </div>
 </footer>
 `;
@@ -260,105 +282,128 @@ const HOME = {
   }
 };
 
+// Copy added with the "print" direction (St. Martin insert + print menu, 07.11.2026)
+const HOME_X = {
+  pl: {
+    hoursBadge: 'Codziennie 12:00 – 23:00', heroText: 'Steki z najlepszych hodowli i regularnie dostarczane owoce morza. Kuchnia czynna do 22:00.',
+    partyShort: 'Organizujemy przyjęcia w naszej restauracji — wesela, urodziny, przyjęcia świąteczne i spotkania firmowe.',
+    exclusiveHead: 'Restauracja na wyłączność', exclusiveText: 'Chcesz mieć restaurację tylko dla siebie i swoich gości? Zarezerwujemy ją na wyłączność.',
+    mapKicker: 'Jak dojechać', mapPlace: 'Kazachska 1, Warszawa', showMap: 'Pokaż mapę', openMaps: 'Otwórz w Mapach Google',
+    newTab: ' (otwiera się w nowej karcie)', mapNote: 'Mapa Google wczyta się dopiero po kliknięciu. Google może wtedy zapisać pliki cookies —', more: 'więcej',
+    mapTitle: 'Mapa dojazdu do Beef &amp; Reef, Kazachska 1, Warszawa'
+  },
+  en: {
+    hoursBadge: 'Daily 12:00 – 23:00', heroText: 'Steaks from the finest farms and seafood delivered regularly. Kitchen open until 22:00.',
+    partyShort: 'We host parties at our restaurant — weddings, birthdays, Christmas parties and corporate events.',
+    exclusiveHead: 'Exclusive hire', exclusiveText: 'Want the whole restaurant to yourself and your guests? We’ll reserve it exclusively for you.',
+    mapKicker: 'Getting here', mapPlace: 'Kazachska 1, Warsaw', showMap: 'Show map', openMaps: 'Open in Google Maps',
+    newTab: ' (opens in a new tab)', mapNote: 'The Google map loads only after you click. Google may then set cookies —', more: 'learn more',
+    mapTitle: 'Map: how to find Beef &amp; Reef, Kazachska 1, Warsaw'
+  }
+};
+
 function home(lang) {
   const ctx = { lang, page: 'home', file: PAGES[lang].home };
-  const c = HOME[lang];
+  const c = Object.assign({}, HOME[lang], HOME_X[lang]);
+  const ev = EVENT[lang];
   const A = ANCHOR[lang];
   const img = (f) => rel(ctx.file, 'assets/img/' + f);
   ctx.extraBody = langPicker(ctx);
   return head(ctx, { title: c.title, desc: c.desc })
     + header(ctx) + `
 <main id="${A.content}" tabindex="-1">
-  <section class="hero" aria-labelledby="hero-title">
-    <img class="hero-img" src="${img('steki-hero.webp')}" srcset="${img('steki-hero-702.webp')} 702w, ${img('steki-hero.webp')} 1404w" sizes="(max-width: 1125px) 112vw, 1260px" width="1404" height="503" alt="${c.heroAlt}" fetchpriority="high">
-    <div class="hero-inner">
-      <div class="masthead">
-        <h1 id="hero-title" class="wordmark">BEEF &amp; REEF</h1>
-        <p class="tagline">STEAKHOUSE · SEAFOOD</p>
-        <div class="double-rule" aria-hidden="true"><span></span><span></span></div>
-      </div>
-      <div class="hero-res">
-        <p class="label muted">${c.res}</p>
-        <a class="hero-phone" href="${TEL}">${PHONE}</a>
-      </div>
-      <div class="hero-cta">
-        <a class="btn btn-gold" href="${TEL}">${c.callBook}</a>
-        <p class="hero-links"><a class="u" href="${DELIVERY}">${c.order}</a><span>${c.or}</span><a class="u" href="${BOOK}">${c.book}</a></p>
-      </div>
-      <div class="hero-info">
-        <span><span class="label muted">${c.daily}</span><span>12:00 – 23:00</span></span>
-        <span class="sep" aria-hidden="true"></span>
-        <span><span class="label muted">${c.kitchen}</span><span>${c.kitchenTime}</span></span>
-        <span class="sep" aria-hidden="true"></span>
-        <a class="u" href="${link(ctx, 'menu')}">${c.seeMenu}</a>
-      </div>
+  <section class="hero pg" aria-labelledby="hero-title">
+    <h1 id="hero-title" class="wordmark">BEEF &amp; REEF</h1>
+    <p class="tagline">STEAKHOUSE · SEAFOOD</p>
+    <div class="double-rule full" aria-hidden="true"><span></span><span></span></div>
+    ${badge(c.hoursBadge, 'nz-hero')}
+    <p class="kicker">${c.res}</p>
+    <a class="hero-phone" href="${TEL}">${PHONE}</a>
+    <p class="hero-text">${c.heroText}</p>
+    <div class="hero-cta">
+      <a class="btn btn-gold" href="${TEL}">${c.callBook}</a>
+      <p class="hero-links"><a class="u" href="${DELIVERY}">${c.order}</a><span>${c.or}</span><a class="u" href="${BOOK}">${c.book}</a></p>
+    </div>
+    <img class="hero-img" src="${img('steki-hero.webp')}" srcset="${img('steki-hero-702.webp')} 702w, ${img('steki-hero.webp')} 1404w" sizes="(max-width: 1092px) 116vw, 1180px" width="1404" height="503" alt="${c.heroAlt}" fetchpriority="high">
+  </section>
+${EVENT.on ? `
+  <section id="${lang === 'en' ? 'event' : 'wydarzenie'}" class="section pg event" aria-labelledby="event-title" data-until="${EVENT.until}">
+    ${badge(ev.badge, 'nz-event')}
+    <p class="kicker">${ev.kicker}</p>
+    <h2 id="event-title" class="headline">${ev.title}</h2>
+    <p class="body-l">${ev.text}</p>
+    <a class="u event-book" href="${TEL}">${ev.book}: ${PHONE}</a>
+    <div class="event-media">
+      <div class="callout"><div class="callout-frame"><p class="kicker">${ev.noteHead}</p><p class="body-l">${ev.note}</p></div></div>
+      <img class="fade-photo" src="${img(EVENT.img)}" srcset="${img(EVENT.img800)} 800w, ${img(EVENT.img)} 1600w" sizes="(max-width: 1120px) 100vw, 1120px" width="${EVENT.w}" height="${EVENT.h}" alt="${ev.alt}" loading="lazy">
     </div>
   </section>
-
-  <section class="section bg-warm" aria-labelledby="menu-title">
-    <div class="wrap">
-      <div class="center-head"><h2 id="menu-title" class="section-title">Menu</h2><p>${c.menuLead}</p></div>
-      <div class="dish-grid">
-${c.dishes.map(([f, w, h, alt, name, d, price]) => `        <article class="dish-card"><div class="plate"><img src="${img(f)}" alt="${alt}" width="${w}" height="${h}" loading="lazy"></div><h3>${name}</h3><p>${d}</p><p class="price">${price}</p></article>`).join('\n')}
-      </div>
-      <div class="teaser-foot">
-        <a class="btn btn-ink" href="${link(ctx, 'menu')}">${c.fullMenu}</a>
-        <p class="links"><span class="muted">${c.download}</span>${c.pdfs.map(([l, hl]) => `<a class="u" href="#"${hl !== lang ? ` lang="${hl}"` : ''}>${l}</a>`).join('')}</p>
-        <p class="label muted">${c.prices}</p>
-      </div>
-    </div>
-  </section>
-
-  <section id="${A.about}" class="section" aria-labelledby="about-title">
+` : ''}
+  <section id="${A.about}" class="section pg" aria-labelledby="about-title">
     <div class="narrow">
       <h2 id="about-title" class="section-title">${c.aboutTitle}</h2>
       <p class="lead">${c.aboutLead}</p>
-      <p>${c.aboutText}</p>
+      <p class="body-l">${c.aboutText}</p>
+      <a class="u see-menu" href="${link(ctx, 'menu')}">${c.seeMenu}</a>
     </div>
     <div class="event-box">
       <span class="amp" aria-hidden="true">&amp;</span>
-      <p class="eyebrow">${c.eventEyebrow}</p>
+      <p class="eyebrow">${c.eventEyebrow.replace(/ (można|you can)/, '<br>$1')}</p>
       <p class="big">${c.eventBig}</p>
       <p class="note">${c.eventNote}</p>
-      <a class="u" href="${TEL}" style="font-size:17px;padding:10px 0">${c.eventAsk}: ${PHONE}</a>
+      <a class="u ask" href="${TEL}">${c.eventAsk}: ${PHONE}</a>
     </div>
   </section>
 
-  <section id="${A.chef}" class="section bg-warm" aria-labelledby="chef-title">
+  <section id="${A.chef}" class="section pg" aria-labelledby="chef-title">
     <div class="split">
       <div class="media placeholder" role="img" aria-label="${c.chefAria}">${c.chefPh}</div>
       <div class="text">
-        <p class="eyebrow">${c.chefEyebrow}</p>
-        <h2 id="chef-title" class="title">Klaudiusz Danowski</h2>
-        <div class="short-rule" aria-hidden="true"></div>
-${c.chefText.map((p) => `        <p>${p}</p>`).join('\n')}
+        <p class="kicker">${c.chefEyebrow}</p>
+        <h2 id="chef-title" class="headline">Klaudiusz Danowski</h2>
+        <div class="double-rule short" aria-hidden="true"><span></span><span></span></div>
+${c.chefText.map((p) => `        <p class="body-l">${p}</p>`).join('\n')}
       </div>
     </div>
   </section>
 
-  <section class="section" aria-labelledby="party-title">
+  <section class="section pg" aria-labelledby="party-title">
     <div class="split reverse">
       <div class="text">
-        <p class="eyebrow">${c.partyEyebrow}</p>
-        <h2 id="party-title" class="title">${c.partyTitle}</h2>
-        <div class="short-rule" aria-hidden="true"></div>
-        <p>${c.partyText}</p>
-        <div class="actions"><a class="btn btn-ink" href="${link(ctx, 'party')}">${c.partyBtn}</a><a class="u nowrap" href="${TEL}" style="display:inline-flex;align-items:center;min-height:56px">${c.partyAsk}: ${PHONE}</a></div>
+        <p class="kicker">${c.partyEyebrow}</p>
+        <h2 id="party-title" class="headline">${c.partyTitle}</h2>
+        <p class="body-l">${c.partyShort}</p>
+        <div class="callout"><div class="callout-frame"><p class="kicker sm">${c.exclusiveHead}</p><p class="body-l">${c.exclusiveText}</p></div></div>
+        <div class="actions"><a class="btn btn-ink" href="${link(ctx, 'party')}">${c.partyBtn}</a><a class="u nowrap" href="${TEL}">${c.partyAsk}: ${PHONE}</a></div>
       </div>
       <div class="media placeholder" role="img" aria-label="${c.partyAria}">${c.partyPh}</div>
     </div>
   </section>
 
-  <section id="${A.contact}" class="section contact" aria-labelledby="contact-title">
+  <section id="${A.contact}" class="section pg contact" aria-labelledby="contact-title">
     <div class="contact-wrap">
       <h2 id="contact-title" class="section-title">${c.contactTitle}</h2>
       <div class="contact-grid">
-        <div><h3 class="label">${c.address}</h3><p class="val">Kazachska 1<br>02-999 ${T[lang].city}</p><a class="u" href="${MAPS}" style="font-size:17px;padding:10px 0">${c.directions}</a></div>
-        <div><h3 class="label">${c.reservations}</h3><a class="val nowrap" href="${TEL}">${PHONE}</a><a class="val" href="mailto:${MAIL}">${MAIL}</a></div>
+        <div><h3 class="label">${c.address}</h3><p class="val">Kazachska 1<br>02-999 ${T[lang].city}</p><a class="u ext" href="${MAPS}" target="_blank" rel="noopener">${c.directions}${arrow}<span class="sr-only">${c.newTab}</span></a></div>
+        <div><h3 class="label">${c.reservations}</h3><a class="val strong nowrap" href="${TEL}">${PHONE}</a><a class="val" href="mailto:${MAIL}">${MAIL}</a></div>
         <div><h3 class="label">${c.hours}</h3><p class="val">${c.hoursText}</p></div>
       </div>
       <div class="btn-row"><a class="btn btn-gold" href="${TEL}">${c.callBook}</a><a class="btn btn-line" href="${BOOK}">${c.bookOnline}</a></div>
-      <div class="map placeholder" role="img" aria-label="${c.mapAria}">${c.mapPh}</div>
+      <div class="callout map-card">
+        <div class="callout-frame map" data-embed="${MAPS_EMBED}" data-title="${c.mapTitle}">
+          <svg class="rings" aria-hidden="true" width="640" height="640" viewBox="0 0 640 640" fill="none"><circle cx="320" cy="320" r="96" stroke="#d2ac5a" stroke-opacity=".55" stroke-width=".5"/><circle cx="320" cy="320" r="176" stroke="#d2ac5a" stroke-opacity=".38" stroke-width=".5"/><circle cx="320" cy="320" r="256" stroke="#d2ac5a" stroke-opacity=".22" stroke-width=".5"/><path d="M0 320H640M320 0V640" stroke="#d2ac5a" stroke-opacity=".18" stroke-width=".5"/></svg>
+          <div class="map-facade">
+            <p class="kicker sm">${c.mapKicker}</p>
+            <p class="map-place">${c.mapPlace}</p>
+            <a class="btn btn-ink map-dir" href="${MAPS}" target="_blank" rel="noopener">${c.directions}${arrow}<span class="sr-only">${c.newTab}</span></a>
+            <div class="map-actions">
+              <button class="btn btn-line btn-sm map-load" type="button">${c.showMap}</button>
+              <a class="u ext" href="${MAPS_OPEN}" target="_blank" rel="noopener">${c.openMaps}${arrow}<span class="sr-only">${c.newTab}</span></a>
+            </div>
+            <p class="map-note">${c.mapNote} <a class="u" href="${link(ctx, 'cookies')}">${c.more}</a>.</p>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 </main>

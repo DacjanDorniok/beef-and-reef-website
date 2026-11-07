@@ -42,6 +42,7 @@
       <a class="lang-switch quiet" href="../index.html" lang="pl" hreflang="pl" data-lang="pl" aria-label="Wersja polska"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.6 3.7 5.6 3.7 9s-1.2 6.4-3.7 9c-2.5-2.6-3.7-5.6-3.7-9s1.2-6.4 3.7-9z"/></svg><span>PL</span></a>
       <span class="hdr-sep" aria-hidden="true"></span>
       <button class="theme-btn quiet" type="button" aria-pressed="false" data-label-dark="Switch to dark mode" data-label-light="Switch to light mode" aria-label="Switch to dark mode" title="Switch to dark mode"><svg class="i-moon" aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z"/></svg><svg class="i-sun" aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"><circle cx="12" cy="12" r="4.5"/><path d="M12 2v2.5M12 19.5V22M2 12h2.5M19.5 12H22M4.9 4.9l1.8 1.8M17.3 17.3l1.8 1.8M4.9 19.1l1.8-1.8M17.3 6.7l1.8-1.8"/></svg></button>
+      <div class="call-slot" aria-hidden="true"><a class="btn btn-gold btn-sm" href="tel:+48222538860" tabindex="-1" aria-label="Call us: +48 222 538 860"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg><span>+48 222 538 860</span></a></div>
       <button class="icon-btn burger" type="button" aria-controls="menu-mobilne" aria-expanded="false" aria-label="Open menu" data-label-open="Open menu" data-label-close="Close menu"><span class="burger-lines" aria-hidden="true"><span></span><span></span><span></span></span></button>
     </div>
   </div>
@@ -57,112 +58,113 @@
 </header>
 
 <main id="content" tabindex="-1">
-  <section class="hero" aria-labelledby="hero-title">
-    <img class="hero-img" src="../assets/img/steki-hero.webp" srcset="../assets/img/steki-hero-702.webp 702w, ../assets/img/steki-hero.webp 1404w" sizes="(max-width: 1125px) 112vw, 1260px" width="1404" height="503" alt="Two raw marbled ribeye steaks on a wooden board with thyme and chillies" fetchpriority="high">
-    <div class="hero-inner">
-      <div class="masthead">
-        <h1 id="hero-title" class="wordmark">BEEF &amp; REEF</h1>
-        <p class="tagline">STEAKHOUSE · SEAFOOD</p>
-        <div class="double-rule" aria-hidden="true"><span></span><span></span></div>
-      </div>
-      <div class="hero-res">
-        <p class="label muted">Reservations by phone</p>
-        <a class="hero-phone" href="tel:+48222538860">+48 222 538 860</a>
-      </div>
-      <div class="hero-cta">
-        <a class="btn btn-gold" href="tel:+48222538860">Call to book</a>
-        <p class="hero-links"><a class="u" href="https://online.beefandreef.pl/delivery">Order</a><span>or</span><a class="u" href="https://online.beefandreef.pl/booking">book online</a></p>
-      </div>
-      <div class="hero-info">
-        <span><span class="label muted">Daily</span><span>12:00 – 23:00</span></span>
-        <span class="sep" aria-hidden="true"></span>
-        <span><span class="label muted">Kitchen</span><span>until 22:00</span></span>
-        <span class="sep" aria-hidden="true"></span>
-        <a class="u" href="menu.html">See the menu</a>
-      </div>
+  <section class="hero pg" aria-labelledby="hero-title">
+    <h1 id="hero-title" class="wordmark">BEEF &amp; REEF</h1>
+    <p class="tagline">STEAKHOUSE · SEAFOOD</p>
+    <div class="double-rule full" aria-hidden="true"><span></span><span></span></div>
+    <p class="badge"><svg class="noise" aria-hidden="true" width="100%" height="100%"><filter id="nz-hero"><feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" stitchTiles="stitch"/><feColorMatrix type="saturate" values="0"/></filter><rect width="100%" height="100%" filter="url(#nz-hero)"/></svg><span class="badge-frame" aria-hidden="true"></span><span class="badge-text">Daily 12:00 – 23:00</span></p>
+    <p class="kicker">Reservations by phone</p>
+    <a class="hero-phone" href="tel:+48222538860">+48 222 538 860</a>
+    <p class="hero-text">Steaks from the finest farms and seafood delivered regularly. Kitchen open until 22:00.</p>
+    <div class="hero-cta">
+      <a class="btn btn-gold" href="tel:+48222538860">Call to book</a>
+      <p class="hero-links"><a class="u" href="https://online.beefandreef.pl/delivery">Order</a><span>or</span><a class="u" href="https://online.beefandreef.pl/booking">book online</a></p>
+    </div>
+    <img class="hero-img" src="../assets/img/steki-hero.webp" srcset="../assets/img/steki-hero-702.webp 702w, ../assets/img/steki-hero.webp 1404w" sizes="(max-width: 1092px) 116vw, 1180px" width="1404" height="503" alt="Two raw marbled ribeye steaks on a wooden board with thyme and chillies" fetchpriority="high">
+  </section>
+
+  <section id="event" class="section pg event" aria-labelledby="event-title" data-until="2026-11-15">
+    <p class="badge"><svg class="noise" aria-hidden="true" width="100%" height="100%"><filter id="nz-event"><feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" stitchTiles="stitch"/><feColorMatrix type="saturate" values="0"/></filter><rect width="100%" height="100%" filter="url(#nz-event)"/></svg><span class="badge-frame" aria-hidden="true"></span><span class="badge-text">7 to 15 November</span></p>
+    <p class="kicker">Join us for a special menu</p>
+    <h2 id="event-title" class="headline">Celebrating St. Martin’s Day</h2>
+    <p class="body-l">Goose takes centre stage, prepared with care down to the last detail, in our head chef’s own creations.</p>
+    <a class="u event-book" href="tel:+48222538860">Book a table: +48 222 538 860</a>
+    <div class="event-media">
+      <div class="callout"><div class="callout-frame"><p class="kicker">Also on <b>11</b> November</p><p class="body-l">We serve original St. Martin’s croissants (rogale świętomarcińskie) from a certified bakery in Poznań.</p></div></div>
+      <img class="fade-photo" src="../assets/img/rogale-swietomarcinskie.webp" srcset="../assets/img/rogale-swietomarcinskie-800.webp 800w, ../assets/img/rogale-swietomarcinskie.webp 1600w" sizes="(max-width: 1120px) 100vw, 1120px" width="1600" height="1222" alt="St. Martin’s croissants with icing and nuts on paper" loading="lazy">
     </div>
   </section>
 
-  <section class="section bg-warm" aria-labelledby="menu-title">
-    <div class="wrap">
-      <div class="center-head"><h2 id="menu-title" class="section-title">Menu</h2><p>Steaks from the finest farms, prepared with the utmost precision, and seafood delivered regularly.</p></div>
-      <div class="dish-grid">
-        <article class="dish-card"><div class="plate"><img src="../assets/img/stek-z-poledwicy.webp" alt="Fillet steak with pea shoots and herb oil on a white plate" width="1000" height="1000" loading="lazy"></div><h3>Fillet Steak</h3><p>Beef fillet (filet mignon), exceptionally tender and juicy, with a pure, refined flavour</p><p class="price">200 g · 119 / 300 g · 179</p></article>
-        <article class="dish-card"><div class="plate"><img src="../assets/img/macka-osmiornicy.webp" alt="Octopus tentacle with courgette and red caviar on a white plate" width="1000" height="903" loading="lazy"></div><h3>Octopus Tentacle</h3><p>Octopus, celery, capers, courgette, white wine, olives, roasted potatoes</p><p class="price">109</p></article>
-        <article class="dish-card"><div class="plate"><img src="../assets/img/piers-z-kaczki.webp" alt="Duck breast with orange sauce and broccoli on a white plate" width="1000" height="909" loading="lazy"></div><h3>Duck Breast</h3><p>Sous-vide duck breast, orange sauce, celeriac purée, tenderstem broccoli</p><p class="price">109</p></article>
-      </div>
-      <div class="teaser-foot">
-        <a class="btn btn-ink" href="menu.html">See the full menu</a>
-        <p class="links"><span class="muted">Download the menu:</span><a class="u" href="#">PDF in English</a><a class="u" href="#" lang="pl">PDF in Polish</a></p>
-        <p class="label muted">Prices in PLN</p>
-      </div>
-    </div>
-  </section>
-
-  <section id="about" class="section" aria-labelledby="about-title">
+  <section id="about" class="section pg" aria-labelledby="about-title">
     <div class="narrow">
       <h2 id="about-title" class="section-title">About us</h2>
       <p class="lead">A place born of a passion for top-quality steaks and fresh seafood.</p>
-      <p>We combine classic culinary techniques with a modern approach, creating dishes with bold flavour, perfect texture and exceptional presentation. Here fine cooking meets an elegant atmosphere and professional service — the ideal setting for a special dinner, a business meeting or celebrating the moments that matter.</p>
+      <p class="body-l">We combine classic culinary techniques with a modern approach, creating dishes with bold flavour, perfect texture and exceptional presentation. Here fine cooking meets an elegant atmosphere and professional service — the ideal setting for a special dinner, a business meeting or celebrating the moments that matter.</p>
+      <a class="u see-menu" href="menu.html">See the menu</a>
     </div>
     <div class="event-box">
       <span class="amp" aria-hidden="true">&amp;</span>
-      <p class="eyebrow">On selected days you can enjoy:</p>
+      <p class="eyebrow">On selected days<br>you can enjoy:</p>
       <p class="big">Live music<br>Live cooking*</p>
       <p class="note">*Hand-chopped beef tartare at your table and pan-fried prawns with chorizo, cooked live.</p>
-      <a class="u" href="tel:+48222538860" style="font-size:17px;padding:10px 0">Ask about upcoming dates: +48 222 538 860</a>
+      <a class="u ask" href="tel:+48222538860">Ask about upcoming dates: +48 222 538 860</a>
     </div>
   </section>
 
-  <section id="chef" class="section bg-warm" aria-labelledby="chef-title">
+  <section id="chef" class="section pg" aria-labelledby="chef-title">
     <div class="split">
       <div class="media placeholder" role="img" aria-label="Photo placeholder: head chef">[PHOTO: KLAUDIUSZ DANOWSKI]</div>
       <div class="text">
-        <p class="eyebrow">Head chef</p>
-        <h2 id="chef-title" class="title">Klaudiusz Danowski</h2>
-        <div class="short-rule" aria-hidden="true"></div>
-        <p>At the heart of our kitchen is head chef Klaudiusz Danowski, who composes every dish with remarkable attention to detail, using only carefully selected produce.</p>
-        <p>Our steaks come from the finest farms and are prepared with the utmost precision for perfect doneness and depth of flavour. Our seafood is delivered regularly, guaranteeing freshness and the highest quality.</p>
+        <p class="kicker">Head chef</p>
+        <h2 id="chef-title" class="headline">Klaudiusz Danowski</h2>
+        <div class="double-rule short" aria-hidden="true"><span></span><span></span></div>
+        <p class="body-l">At the heart of our kitchen is head chef Klaudiusz Danowski, who composes every dish with remarkable attention to detail, using only carefully selected produce.</p>
+        <p class="body-l">Our steaks come from the finest farms and are prepared with the utmost precision for perfect doneness and depth of flavour. Our seafood is delivered regularly, guaranteeing freshness and the highest quality.</p>
       </div>
     </div>
   </section>
 
-  <section class="section" aria-labelledby="party-title">
+  <section class="section pg" aria-labelledby="party-title">
     <div class="split reverse">
       <div class="text">
-        <p class="eyebrow">Parties &amp; events</p>
-        <h2 id="party-title" class="title">Celebrate with us</h2>
-        <div class="short-rule" aria-hidden="true"></div>
-        <p>We host parties at our restaurant — weddings, birthdays, Christmas parties and corporate events. Want the whole restaurant to yourself and your guests? We’ll reserve it exclusively for you.</p>
-        <div class="actions"><a class="btn btn-ink" href="parties.html">View the offer</a><a class="u nowrap" href="tel:+48222538860" style="display:inline-flex;align-items:center;min-height:56px">Ask: +48 222 538 860</a></div>
+        <p class="kicker">Parties &amp; events</p>
+        <h2 id="party-title" class="headline">Celebrate with us</h2>
+        <p class="body-l">We host parties at our restaurant — weddings, birthdays, Christmas parties and corporate events.</p>
+        <div class="callout"><div class="callout-frame"><p class="kicker sm">Exclusive hire</p><p class="body-l">Want the whole restaurant to yourself and your guests? We’ll reserve it exclusively for you.</p></div></div>
+        <div class="actions"><a class="btn btn-ink" href="parties.html">View the offer</a><a class="u nowrap" href="tel:+48222538860">Ask: +48 222 538 860</a></div>
       </div>
       <div class="media placeholder" role="img" aria-label="Photo placeholder: room set for a party">[PHOTO: ROOM SET FOR A PARTY]</div>
     </div>
   </section>
 
-  <section id="contact" class="section contact" aria-labelledby="contact-title">
+  <section id="contact" class="section pg contact" aria-labelledby="contact-title">
     <div class="contact-wrap">
       <h2 id="contact-title" class="section-title">Reservations &amp; contact</h2>
       <div class="contact-grid">
-        <div><h3 class="label">Address</h3><p class="val">Kazachska 1<br>02-999 Warsaw</p><a class="u" href="https://maps.google.com/?q=Kazachska+1,+02-999+Warszawa" style="font-size:17px;padding:10px 0">Get directions</a></div>
-        <div><h3 class="label">Reservations</h3><a class="val nowrap" href="tel:+48222538860">+48 222 538 860</a><a class="val" href="mailto:kontakt@beefandreef.pl">kontakt@beefandreef.pl</a></div>
+        <div><h3 class="label">Address</h3><p class="val">Kazachska 1<br>02-999 Warsaw</p><a class="u ext" href="https://www.google.com/maps/dir/?api=1&amp;destination=Beef%20%26%20Reef%2C%20Kazachska%201%2C%2002-999%20Warszawa" target="_blank" rel="noopener">Get directions<svg aria-hidden="true" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M9 7h8v8"/></svg><span class="sr-only"> (opens in a new tab)</span></a></div>
+        <div><h3 class="label">Reservations</h3><a class="val strong nowrap" href="tel:+48222538860">+48 222 538 860</a><a class="val" href="mailto:kontakt@beefandreef.pl">kontakt@beefandreef.pl</a></div>
         <div><h3 class="label">Opening hours</h3><p class="val">Daily: 12:00 – 23:00<br>Kitchen open until 22:00</p></div>
       </div>
       <div class="btn-row"><a class="btn btn-gold" href="tel:+48222538860">Call to book</a><a class="btn btn-line" href="https://online.beefandreef.pl/booking">Book online</a></div>
-      <div class="map placeholder" role="img" aria-label="Map placeholder">[GOOGLE MAP — KAZACHSKA 1]</div>
+      <div class="callout map-card">
+        <div class="callout-frame map" data-embed="https://www.google.com/maps?q=Beef+%26+Reef,+Kazachska+1,+02-999+Warszawa&amp;output=embed" data-title="Map: how to find Beef &amp; Reef, Kazachska 1, Warsaw">
+          <svg class="rings" aria-hidden="true" width="640" height="640" viewBox="0 0 640 640" fill="none"><circle cx="320" cy="320" r="96" stroke="#d2ac5a" stroke-opacity=".55" stroke-width=".5"/><circle cx="320" cy="320" r="176" stroke="#d2ac5a" stroke-opacity=".38" stroke-width=".5"/><circle cx="320" cy="320" r="256" stroke="#d2ac5a" stroke-opacity=".22" stroke-width=".5"/><path d="M0 320H640M320 0V640" stroke="#d2ac5a" stroke-opacity=".18" stroke-width=".5"/></svg>
+          <div class="map-facade">
+            <p class="kicker sm">Getting here</p>
+            <p class="map-place">Kazachska 1, Warsaw</p>
+            <a class="btn btn-ink map-dir" href="https://www.google.com/maps/dir/?api=1&amp;destination=Beef%20%26%20Reef%2C%20Kazachska%201%2C%2002-999%20Warszawa" target="_blank" rel="noopener">Get directions<svg aria-hidden="true" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M9 7h8v8"/></svg><span class="sr-only"> (opens in a new tab)</span></a>
+            <div class="map-actions">
+              <button class="btn btn-line btn-sm map-load" type="button">Show map</button>
+              <a class="u ext" href="https://www.google.com/maps/search/?api=1&amp;query=Beef%20%26%20Reef%2C%20Kazachska%201%2C%2002-999%20Warszawa" target="_blank" rel="noopener">Open in Google Maps<svg aria-hidden="true" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M9 7h8v8"/></svg><span class="sr-only"> (opens in a new tab)</span></a>
+            </div>
+            <p class="map-note">The Google map loads only after you click. Google may then set cookies — <a class="u" href="cookies.html">learn more</a>.</p>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 </main>
 <footer class="site-footer">
   <div class="wrap">
+    <div class="footer-mast"><p class="footer-word">BEEF &amp; REEF</p><p class="footer-tag">STEAKHOUSE · SEAFOOD</p></div>
+    <div class="double-rule full" aria-hidden="true"><span></span><span></span></div>
     <div class="footer-grid">
-      <div class="col brand wide"><img src="../assets/img/logo-seal-192.png" alt="Beef &amp; Reef" width="88" height="88" loading="lazy"><p>STEAKHOUSE · SEAFOOD</p></div>
       <div class="col wide"><h2>Visit us</h2><p>Kazachska 1<br>02-999 Warszawa</p><p style="margin-top:8px">Daily 12:00 – 23:00<br>Kitchen open until 22:00</p></div>
       <div class="col wide"><h2>Reservations</h2><a class="nowrap" href="tel:+48222538860">+48 222 538 860</a><a href="mailto:kontakt@beefandreef.pl">kontakt@beefandreef.pl</a><a href="https://online.beefandreef.pl/booking">Book online</a></div>
       <nav class="col" aria-label="Footer"><h2>Explore</h2><a href="menu.html">Menu</a><a href="parties.html">Parties &amp; events</a><a href="#about">About us</a><a href="#contact">Contact</a></nav>
       <div class="col"><h2>Follow us</h2><a href="https://www.facebook.com/beef.and.reef.wilanow">Facebook</a><a href="https://www.instagram.com/beef.and.reef_steak_seafood">Instagram</a><a class="dim" href="https://online.beefandreef.pl/delivery">Order online for delivery</a></div>
     </div>
-    <div class="footer-bottom"><span>© 2026 BEEF &amp; REEF</span><nav aria-label="Legal information"><a href="privacy.html">PRIVACY POLICY</a><a href="cookies.html">COOKIES</a></nav></div>
+    <div class="footer-bottom"><span>© 2026 BEEF &amp; REEF · PRICES IN PLN</span><nav aria-label="Legal information"><a href="privacy.html">PRIVACY POLICY</a><a href="cookies.html">COOKIES</a></nav></div>
   </div>
 </footer>
 <div class="action-bar"><a class="call" href="tel:+48222538860">Call</a><a class="alt" href="https://online.beefandreef.pl/booking">Online</a></div>

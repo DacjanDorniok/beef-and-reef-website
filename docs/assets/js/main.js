@@ -143,4 +143,39 @@
       links[browserLang].focus();
     }
   }
+  /* ---- Header call button: appears once the hero has scrolled under the header (home, desktop) ---- */
+  var slot = document.querySelector('.call-slot');
+  var hero = document.querySelector('.hero');
+  if (slot && hero && 'IntersectionObserver' in window) {
+    var slotLink = slot.querySelector('a');
+    new IntersectionObserver(function (entries) {
+      var past = !entries[0].isIntersecting && entries[0].boundingClientRect.top < 0;
+      slot.classList.toggle('is-on', past);
+      slot.setAttribute('aria-hidden', past ? 'false' : 'true');
+      if (slotLink) slotLink.setAttribute('tabindex', past ? '0' : '-1');
+    }, { rootMargin: '-80px 0px 0px 0px' }).observe(hero);
+  }
+
+  /* ---- Seasonal event block hides itself after its last day ---- */
+  document.querySelectorAll('[data-until]').forEach(function (el) {
+    var end = new Date(el.getAttribute('data-until') + 'T23:59:59');
+    if (!isNaN(end) && new Date() > end) el.classList.add('is-over');
+  });
+
+  /* ---- Google map loads only on request (no Google cookies before the click) ---- */
+  document.querySelectorAll('.map[data-embed]').forEach(function (box) {
+    var btn = box.querySelector('.map-load');
+    if (!btn) return;
+    btn.addEventListener('click', function () {
+      var f = document.createElement('iframe');
+      f.src = box.getAttribute('data-embed');
+      f.title = box.getAttribute('data-title') || 'Google Maps';
+      f.loading = 'lazy';
+      f.referrerPolicy = 'no-referrer-when-downgrade';
+      f.setAttribute('allowfullscreen', '');
+      box.appendChild(f);
+      box.classList.add('is-loaded');
+      f.focus();
+    });
+  });
 })();

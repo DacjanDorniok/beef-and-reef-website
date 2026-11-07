@@ -42,6 +42,7 @@
       <a class="lang-switch quiet" href="en/index.html" lang="en" hreflang="en" data-lang="en" aria-label="English version"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.6 3.7 5.6 3.7 9s-1.2 6.4-3.7 9c-2.5-2.6-3.7-5.6-3.7-9s1.2-6.4 3.7-9z"/></svg><span>EN</span></a>
       <span class="hdr-sep" aria-hidden="true"></span>
       <button class="theme-btn quiet" type="button" aria-pressed="false" data-label-dark="Włącz tryb ciemny" data-label-light="Włącz tryb jasny" aria-label="Włącz tryb ciemny" title="Włącz tryb ciemny"><svg class="i-moon" aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z"/></svg><svg class="i-sun" aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"><circle cx="12" cy="12" r="4.5"/><path d="M12 2v2.5M12 19.5V22M2 12h2.5M19.5 12H22M4.9 4.9l1.8 1.8M17.3 17.3l1.8 1.8M4.9 19.1l1.8-1.8M17.3 6.7l1.8-1.8"/></svg></button>
+      <div class="call-slot" aria-hidden="true"><a class="btn btn-gold btn-sm" href="tel:+48222538860" tabindex="-1" aria-label="Zadzwoń: +48 222 538 860"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg><span>+48 222 538 860</span></a></div>
       <button class="icon-btn burger" type="button" aria-controls="menu-mobilne" aria-expanded="false" aria-label="Otwórz menu" data-label-open="Otwórz menu" data-label-close="Zamknij menu"><span class="burger-lines" aria-hidden="true"><span></span><span></span><span></span></span></button>
     </div>
   </div>
@@ -57,112 +58,113 @@
 </header>
 
 <main id="tresc" tabindex="-1">
-  <section class="hero" aria-labelledby="hero-title">
-    <img class="hero-img" src="assets/img/steki-hero.webp" srcset="assets/img/steki-hero-702.webp 702w, assets/img/steki-hero.webp 1404w" sizes="(max-width: 1125px) 112vw, 1260px" width="1404" height="503" alt="Dwa surowe, marmurkowe antrykoty na drewnianej desce z tymiankiem i papryczkami chili" fetchpriority="high">
-    <div class="hero-inner">
-      <div class="masthead">
-        <h1 id="hero-title" class="wordmark">BEEF &amp; REEF</h1>
-        <p class="tagline">STEAKHOUSE · SEAFOOD</p>
-        <div class="double-rule" aria-hidden="true"><span></span><span></span></div>
-      </div>
-      <div class="hero-res">
-        <p class="label muted">Rezerwacje telefoniczne</p>
-        <a class="hero-phone" href="tel:+48222538860">+48 222 538 860</a>
-      </div>
-      <div class="hero-cta">
-        <a class="btn btn-gold" href="tel:+48222538860">Zadzwoń i zarezerwuj</a>
-        <p class="hero-links"><a class="u" href="https://online.beefandreef.pl/delivery">Zamów</a><span>lub</span><a class="u" href="https://online.beefandreef.pl/booking">zarezerwuj online</a></p>
-      </div>
-      <div class="hero-info">
-        <span><span class="label muted">Codziennie</span><span>12:00 – 23:00</span></span>
-        <span class="sep" aria-hidden="true"></span>
-        <span><span class="label muted">Kuchnia</span><span>do 22:00</span></span>
-        <span class="sep" aria-hidden="true"></span>
-        <a class="u" href="menu.html">Zobacz menu</a>
-      </div>
+  <section class="hero pg" aria-labelledby="hero-title">
+    <h1 id="hero-title" class="wordmark">BEEF &amp; REEF</h1>
+    <p class="tagline">STEAKHOUSE · SEAFOOD</p>
+    <div class="double-rule full" aria-hidden="true"><span></span><span></span></div>
+    <p class="badge"><svg class="noise" aria-hidden="true" width="100%" height="100%"><filter id="nz-hero"><feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" stitchTiles="stitch"/><feColorMatrix type="saturate" values="0"/></filter><rect width="100%" height="100%" filter="url(#nz-hero)"/></svg><span class="badge-frame" aria-hidden="true"></span><span class="badge-text">Codziennie 12:00 – 23:00</span></p>
+    <p class="kicker">Rezerwacje telefoniczne</p>
+    <a class="hero-phone" href="tel:+48222538860">+48 222 538 860</a>
+    <p class="hero-text">Steki z najlepszych hodowli i regularnie dostarczane owoce morza. Kuchnia czynna do 22:00.</p>
+    <div class="hero-cta">
+      <a class="btn btn-gold" href="tel:+48222538860">Zadzwoń i zarezerwuj</a>
+      <p class="hero-links"><a class="u" href="https://online.beefandreef.pl/delivery">Zamów</a><span>lub</span><a class="u" href="https://online.beefandreef.pl/booking">zarezerwuj online</a></p>
+    </div>
+    <img class="hero-img" src="assets/img/steki-hero.webp" srcset="assets/img/steki-hero-702.webp 702w, assets/img/steki-hero.webp 1404w" sizes="(max-width: 1092px) 116vw, 1180px" width="1404" height="503" alt="Dwa surowe, marmurkowe antrykoty na drewnianej desce z tymiankiem i papryczkami chili" fetchpriority="high">
+  </section>
+
+  <section id="wydarzenie" class="section pg event" aria-labelledby="event-title" data-until="2026-11-15">
+    <p class="badge"><svg class="noise" aria-hidden="true" width="100%" height="100%"><filter id="nz-event"><feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" stitchTiles="stitch"/><feColorMatrix type="saturate" values="0"/></filter><rect width="100%" height="100%" filter="url(#nz-event)"/></svg><span class="badge-frame" aria-hidden="true"></span><span class="badge-text">Od 7 do 15 listopada</span></p>
+    <p class="kicker">Zapraszamy na wyjątkowe menu</p>
+    <h2 id="event-title" class="headline">Z okazji Świętego Marcina</h2>
+    <p class="body-l">Królować będzie gęsina, przygotowana z dbałością o każdy detal, w autorskich odsłonach naszego Szefa Kuchni.</p>
+    <a class="u event-book" href="tel:+48222538860">Zarezerwuj stolik: +48 222 538 860</a>
+    <div class="event-media">
+      <div class="callout"><div class="callout-frame"><p class="kicker">Dodatkowo <b>11</b> listopada</p><p class="body-l">Serwujemy oryginalne rogale świętomarcińskie sprowadzane z certyfikowanej piekarni w Poznaniu.</p></div></div>
+      <img class="fade-photo" src="assets/img/rogale-swietomarcinskie.webp" srcset="assets/img/rogale-swietomarcinskie-800.webp 800w, assets/img/rogale-swietomarcinskie.webp 1600w" sizes="(max-width: 1120px) 100vw, 1120px" width="1600" height="1222" alt="Rogale świętomarcińskie z lukrem i orzechami na papierze" loading="lazy">
     </div>
   </section>
 
-  <section class="section bg-warm" aria-labelledby="menu-title">
-    <div class="wrap">
-      <div class="center-head"><h2 id="menu-title" class="section-title">Menu</h2><p>Steki z najlepszych hodowli, przygotowywane z najwyższą precyzją, oraz regularnie dostarczane owoce morza.</p></div>
-      <div class="dish-grid">
-        <article class="dish-card"><div class="plate"><img src="assets/img/stek-z-poledwicy.webp" alt="Stek z polędwicy z kiełkami groszku i oliwą ziołową na białym talerzu" width="1000" height="1000" loading="lazy"></div><h3>Stek z polędwicy</h3><p>Polędwica wołowa (filet mignon), wyjątkowo krucha i soczysta, o naturalnym, szlachetnym smaku</p><p class="price">200 g · 119 / 300 g · 179</p></article>
-        <article class="dish-card"><div class="plate"><img src="assets/img/macka-osmiornicy.webp" alt="Macka ośmiornicy z cukinią i czerwonym kawiorem na białym talerzu" width="1000" height="903" loading="lazy"></div><h3>Macka ośmiornicy</h3><p>Ośmiornica, seler naciowy, kapary, cukinia, białe wino, oliwki, opiekane ziemniaki</p><p class="price">109</p></article>
-        <article class="dish-card"><div class="plate"><img src="assets/img/piers-z-kaczki.webp" alt="Pierś z kaczki z sosem pomarańczowym i brokułem na białym talerzu" width="1000" height="909" loading="lazy"></div><h3>Pierś z kaczki</h3><p>Pierś z kaczki sous-vide, sos pomarańczowy, purée selerowe, brokuł łodygowy</p><p class="price">109</p></article>
-      </div>
-      <div class="teaser-foot">
-        <a class="btn btn-ink" href="menu.html">Zobacz pełne menu</a>
-        <p class="links"><span class="muted">Menu do pobrania:</span><a class="u" href="#">PDF po polsku</a><a class="u" href="#" lang="en">PDF in English</a></p>
-        <p class="label muted">Ceny w PLN</p>
-      </div>
-    </div>
-  </section>
-
-  <section id="o-nas" class="section" aria-labelledby="about-title">
+  <section id="o-nas" class="section pg" aria-labelledby="about-title">
     <div class="narrow">
       <h2 id="about-title" class="section-title">O nas</h2>
       <p class="lead">Miejsce stworzone z pasji do najwyższej jakości steków oraz świeżych owoców morza.</p>
-      <p>Łączymy klasyczne techniki kulinarne z nowoczesnym podejściem, tworząc dania o wyrazistym smaku, perfekcyjnej teksturze i wyjątkowej estetyce. Tworzymy miejsce, w którym doskonała kuchnia spotyka się z elegancką atmosferą i profesjonalną obsługą — idealną przestrzeń na wyjątkową kolację, spotkanie biznesowe i celebrację ważnych chwil.</p>
+      <p class="body-l">Łączymy klasyczne techniki kulinarne z nowoczesnym podejściem, tworząc dania o wyrazistym smaku, perfekcyjnej teksturze i wyjątkowej estetyce. Tworzymy miejsce, w którym doskonała kuchnia spotyka się z elegancką atmosferą i profesjonalną obsługą — idealną przestrzeń na wyjątkową kolację, spotkanie biznesowe i celebrację ważnych chwil.</p>
+      <a class="u see-menu" href="menu.html">Zobacz menu</a>
     </div>
     <div class="event-box">
       <span class="amp" aria-hidden="true">&amp;</span>
-      <p class="eyebrow">W wybrane dni można doświadczyć:</p>
+      <p class="eyebrow">W wybrane dni<br>można doświadczyć:</p>
       <p class="big">Muzyki na żywo<br>Live cookingu*</p>
       <p class="note">*Siekany tatar wołowy przy stole oraz smażone krewetki z chorizo w formie live cookingu.</p>
-      <a class="u" href="tel:+48222538860" style="font-size:17px;padding:10px 0">Zapytaj o najbliższe terminy: +48 222 538 860</a>
+      <a class="u ask" href="tel:+48222538860">Zapytaj o najbliższe terminy: +48 222 538 860</a>
     </div>
   </section>
 
-  <section id="szef" class="section bg-warm" aria-labelledby="chef-title">
+  <section id="szef" class="section pg" aria-labelledby="chef-title">
     <div class="split">
       <div class="media placeholder" role="img" aria-label="Miejsce na zdjęcie szefa kuchni">[ZDJĘCIE: KLAUDIUSZ DANOWSKI]</div>
       <div class="text">
-        <p class="eyebrow">Szef kuchni</p>
-        <h2 id="chef-title" class="title">Klaudiusz Danowski</h2>
-        <div class="short-rule" aria-hidden="true"></div>
-        <p>Sercem naszej kuchni jest szef kuchni Klaudiusz Danowski, który z niezwykłą dbałością o detale komponuje każde danie, bazując wyłącznie na starannie wyselekcjonowanych produktach.</p>
-        <p>Nasze steki pochodzą z najlepszych hodowli i są przygotowywane z najwyższą precyzją, aby osiągnąć idealny stopień wysmażenia i głębię smaku. Owoce morza dostarczane są regularnie, co gwarantuje ich świeżość i najwyższą jakość.</p>
+        <p class="kicker">Szef kuchni</p>
+        <h2 id="chef-title" class="headline">Klaudiusz Danowski</h2>
+        <div class="double-rule short" aria-hidden="true"><span></span><span></span></div>
+        <p class="body-l">Sercem naszej kuchni jest szef kuchni Klaudiusz Danowski, który z niezwykłą dbałością o detale komponuje każde danie, bazując wyłącznie na starannie wyselekcjonowanych produktach.</p>
+        <p class="body-l">Nasze steki pochodzą z najlepszych hodowli i są przygotowywane z najwyższą precyzją, aby osiągnąć idealny stopień wysmażenia i głębię smaku. Owoce morza dostarczane są regularnie, co gwarantuje ich świeżość i najwyższą jakość.</p>
       </div>
     </div>
   </section>
 
-  <section class="section" aria-labelledby="party-title">
+  <section class="section pg" aria-labelledby="party-title">
     <div class="split reverse">
       <div class="text">
-        <p class="eyebrow">Przyjęcia i eventy</p>
-        <h2 id="party-title" class="title">Świętuj z nami</h2>
-        <div class="short-rule" aria-hidden="true"></div>
-        <p>Organizujemy przyjęcia w naszej restauracji — wesela, urodziny, przyjęcia świąteczne i spotkania firmowe. Chcesz mieć restaurację tylko dla siebie i swoich gości? Zarezerwujemy ją na wyłączność.</p>
-        <div class="actions"><a class="btn btn-ink" href="przyjecia.html">Poznaj ofertę</a><a class="u nowrap" href="tel:+48222538860" style="display:inline-flex;align-items:center;min-height:56px">Zapytaj: +48 222 538 860</a></div>
+        <p class="kicker">Przyjęcia i eventy</p>
+        <h2 id="party-title" class="headline">Świętuj z nami</h2>
+        <p class="body-l">Organizujemy przyjęcia w naszej restauracji — wesela, urodziny, przyjęcia świąteczne i spotkania firmowe.</p>
+        <div class="callout"><div class="callout-frame"><p class="kicker sm">Restauracja na wyłączność</p><p class="body-l">Chcesz mieć restaurację tylko dla siebie i swoich gości? Zarezerwujemy ją na wyłączność.</p></div></div>
+        <div class="actions"><a class="btn btn-ink" href="przyjecia.html">Poznaj ofertę</a><a class="u nowrap" href="tel:+48222538860">Zapytaj: +48 222 538 860</a></div>
       </div>
       <div class="media placeholder" role="img" aria-label="Miejsce na zdjęcie sali przygotowanej na przyjęcie">[ZDJĘCIE: SALA NA PRZYJĘCIE]</div>
     </div>
   </section>
 
-  <section id="kontakt" class="section contact" aria-labelledby="contact-title">
+  <section id="kontakt" class="section pg contact" aria-labelledby="contact-title">
     <div class="contact-wrap">
       <h2 id="contact-title" class="section-title">Rezerwacja i kontakt</h2>
       <div class="contact-grid">
-        <div><h3 class="label">Adres</h3><p class="val">Kazachska 1<br>02-999 Warszawa</p><a class="u" href="https://maps.google.com/?q=Kazachska+1,+02-999+Warszawa" style="font-size:17px;padding:10px 0">Wyznacz trasę</a></div>
-        <div><h3 class="label">Rezerwacje</h3><a class="val nowrap" href="tel:+48222538860">+48 222 538 860</a><a class="val" href="mailto:kontakt@beefandreef.pl">kontakt@beefandreef.pl</a></div>
+        <div><h3 class="label">Adres</h3><p class="val">Kazachska 1<br>02-999 Warszawa</p><a class="u ext" href="https://www.google.com/maps/dir/?api=1&amp;destination=Beef%20%26%20Reef%2C%20Kazachska%201%2C%2002-999%20Warszawa" target="_blank" rel="noopener">Wyznacz trasę<svg aria-hidden="true" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M9 7h8v8"/></svg><span class="sr-only"> (otwiera się w nowej karcie)</span></a></div>
+        <div><h3 class="label">Rezerwacje</h3><a class="val strong nowrap" href="tel:+48222538860">+48 222 538 860</a><a class="val" href="mailto:kontakt@beefandreef.pl">kontakt@beefandreef.pl</a></div>
         <div><h3 class="label">Godziny otwarcia</h3><p class="val">Codziennie: 12:00 – 23:00<br>Kuchnia czynna do 22:00</p></div>
       </div>
       <div class="btn-row"><a class="btn btn-gold" href="tel:+48222538860">Zadzwoń i zarezerwuj</a><a class="btn btn-line" href="https://online.beefandreef.pl/booking">Rezerwacja online</a></div>
-      <div class="map placeholder" role="img" aria-label="Miejsce na mapę dojazdu">[MAPA GOOGLE — KAZACHSKA 1]</div>
+      <div class="callout map-card">
+        <div class="callout-frame map" data-embed="https://www.google.com/maps?q=Beef+%26+Reef,+Kazachska+1,+02-999+Warszawa&amp;output=embed" data-title="Mapa dojazdu do Beef &amp; Reef, Kazachska 1, Warszawa">
+          <svg class="rings" aria-hidden="true" width="640" height="640" viewBox="0 0 640 640" fill="none"><circle cx="320" cy="320" r="96" stroke="#d2ac5a" stroke-opacity=".55" stroke-width=".5"/><circle cx="320" cy="320" r="176" stroke="#d2ac5a" stroke-opacity=".38" stroke-width=".5"/><circle cx="320" cy="320" r="256" stroke="#d2ac5a" stroke-opacity=".22" stroke-width=".5"/><path d="M0 320H640M320 0V640" stroke="#d2ac5a" stroke-opacity=".18" stroke-width=".5"/></svg>
+          <div class="map-facade">
+            <p class="kicker sm">Jak dojechać</p>
+            <p class="map-place">Kazachska 1, Warszawa</p>
+            <a class="btn btn-ink map-dir" href="https://www.google.com/maps/dir/?api=1&amp;destination=Beef%20%26%20Reef%2C%20Kazachska%201%2C%2002-999%20Warszawa" target="_blank" rel="noopener">Wyznacz trasę<svg aria-hidden="true" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M9 7h8v8"/></svg><span class="sr-only"> (otwiera się w nowej karcie)</span></a>
+            <div class="map-actions">
+              <button class="btn btn-line btn-sm map-load" type="button">Pokaż mapę</button>
+              <a class="u ext" href="https://www.google.com/maps/search/?api=1&amp;query=Beef%20%26%20Reef%2C%20Kazachska%201%2C%2002-999%20Warszawa" target="_blank" rel="noopener">Otwórz w Mapach Google<svg aria-hidden="true" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M9 7h8v8"/></svg><span class="sr-only"> (otwiera się w nowej karcie)</span></a>
+            </div>
+            <p class="map-note">Mapa Google wczyta się dopiero po kliknięciu. Google może wtedy zapisać pliki cookies — <a class="u" href="cookies.html">więcej</a>.</p>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 </main>
 <footer class="site-footer">
   <div class="wrap">
+    <div class="footer-mast"><p class="footer-word">BEEF &amp; REEF</p><p class="footer-tag">STEAKHOUSE · SEAFOOD</p></div>
+    <div class="double-rule full" aria-hidden="true"><span></span><span></span></div>
     <div class="footer-grid">
-      <div class="col brand wide"><img src="assets/img/logo-seal-192.png" alt="Beef &amp; Reef" width="88" height="88" loading="lazy"><p>STEAKHOUSE · SEAFOOD</p></div>
       <div class="col wide"><h2>Odwiedź nas</h2><p>Kazachska 1<br>02-999 Warszawa</p><p style="margin-top:8px">Codziennie 12:00 – 23:00<br>Kuchnia czynna do 22:00</p></div>
       <div class="col wide"><h2>Rezerwacje</h2><a class="nowrap" href="tel:+48222538860">+48 222 538 860</a><a href="mailto:kontakt@beefandreef.pl">kontakt@beefandreef.pl</a><a href="https://online.beefandreef.pl/booking">Rezerwacja online</a></div>
       <nav class="col" aria-label="Stopka"><h2>Na skróty</h2><a href="menu.html">Menu</a><a href="przyjecia.html">Przyjęcia i eventy</a><a href="#o-nas">O nas</a><a href="#kontakt">Kontakt</a></nav>
       <div class="col"><h2>Obserwuj nas</h2><a href="https://www.facebook.com/beef.and.reef.wilanow">Facebook</a><a href="https://www.instagram.com/beef.and.reef_steak_seafood">Instagram</a><a class="dim" href="https://online.beefandreef.pl/delivery">Zamów online z dostawą</a></div>
     </div>
-    <div class="footer-bottom"><span>© 2026 BEEF &amp; REEF</span><nav aria-label="Informacje prawne"><a href="polityka-prywatnosci.html">POLITYKA PRYWATNOŚCI</a><a href="cookies.html">COOKIES</a></nav></div>
+    <div class="footer-bottom"><span>© 2026 BEEF &amp; REEF · CENY W PLN</span><nav aria-label="Informacje prawne"><a href="polityka-prywatnosci.html">POLITYKA PRYWATNOŚCI</a><a href="cookies.html">COOKIES</a></nav></div>
   </div>
 </footer>
 <div class="action-bar"><a class="call" href="tel:+48222538860">Zadzwoń</a><a class="alt" href="https://online.beefandreef.pl/booking">Online</a></div>
