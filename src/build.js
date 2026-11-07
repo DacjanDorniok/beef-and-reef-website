@@ -6,6 +6,10 @@ const fs = require('fs');
 const path = require('path');
 
 const DIST = path.join(__dirname, '..', 'docs');
+// Cache-busting: CSS/JS links carry a hash of the file, so phones never mix new HTML with an old cached stylesheet.
+const ver = (f) => require('crypto').createHash('md5').update(fs.readFileSync(path.join(DIST, f))).digest('hex').slice(0, 8);
+const V_CSS = ver('assets/css/style.css');
+const V_JS = ver('assets/js/main.js');
 const MENU_SRC = process.argv[2] || path.join(__dirname, 'menu-source.dc.html');
 const PHONE = '+48 222 538 860';
 const TEL = 'tel:+48222538860';
@@ -25,12 +29,12 @@ const EVENT = {
   img: 'rogale-swietomarcinskie.webp', img800: 'rogale-swietomarcinskie-800.webp', w: 1600, h: 1222,
   pl: { badge: 'Od 7 do 15 listopada', kicker: 'Zapraszamy na wyjątkowe menu', title: 'Z okazji Świętego Marcina',
     text: 'Królować będzie gęsina, przygotowana z dbałością o każdy detal, w autorskich odsłonach naszego Szefa Kuchni.',
-    book: 'Zarezerwuj stolik', noteHead: 'Dodatkowo <b>11</b> listopada',
+    book: 'Zarezerwuj stolik', noteHead: 'Dodatkowo <span class="nowrap"><b>11</b> listopada</span>',
     note: 'Serwujemy oryginalne rogale świętomarcińskie sprowadzane z certyfikowanej piekarni w Poznaniu.',
     alt: 'Rogale świętomarcińskie z lukrem i orzechami na papierze' },
   en: { badge: '7 to 15 November', kicker: 'Join us for a special menu', title: 'Celebrating St. Martin’s Day',
     text: 'Goose takes centre stage, prepared with care down to the last detail, in our head chef’s own creations.',
-    book: 'Book a table', noteHead: 'Also on <b>11</b> November',
+    book: 'Book a table', noteHead: 'Also on <span class="nowrap"><b>11</b> November</span>',
     note: 'We serve original St. Martin’s croissants (rogale świętomarcińskie) from a certified bakery in Poznań.',
     alt: 'St. Martin’s croissants with icing and nuts on paper' }
 };
@@ -115,7 +119,7 @@ ${alternates(ctx)}
 ${extraHead}<link rel="icon" type="image/png" sizes="32x32" href="${a('assets/img/favicon-32.png')}">
 <link rel="apple-touch-icon" href="${a('assets/img/apple-touch-icon.png')}">
 <link rel="preload" href="${a('assets/fonts/cormorant-garamond-latin-ext-400-normal.woff2')}" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="${a('assets/css/style.css')}">
+<link rel="stylesheet" href="${a('assets/css/style.css')}?v=${V_CSS}">
 <script>try{var t=localStorage.getItem('br-theme');if(t==='light'||t==='dark')document.documentElement.setAttribute('data-theme',t)}catch(e){}</script>
 <script type="application/ld+json">${JSON.stringify({
     '@context': 'https://schema.org', '@type': 'Restaurant', name: 'Beef & Reef', servesCuisine: ['Steakhouse', 'Seafood'],
@@ -199,7 +203,7 @@ function footer(ctx) {
 function actionBar(ctx, alt) {
   const t = T[ctx.lang];
   return `<div class="action-bar"><a class="call" href="${TEL}">${t.barCall}</a><a class="alt" href="${alt.href}">${alt.label}</a></div>
-${ctx.extraBody || ''}<script src="${rel(ctx.file, 'assets/js/main.js')}" defer></script>
+${ctx.extraBody || ''}<script src="${rel(ctx.file, 'assets/js/main.js')}?v=${V_JS}" defer></script>
 </body>
 </html>
 `;
@@ -335,7 +339,7 @@ ${EVENT.on ? `
     <a class="u event-book" href="${TEL}">${ev.book}: ${PHONE}</a>
     <div class="event-media">
       <div class="callout"><div class="callout-frame"><p class="kicker">${ev.noteHead}</p><p class="body-l">${ev.note}</p></div></div>
-      <img class="fade-photo" src="${img(EVENT.img)}" srcset="${img(EVENT.img800)} 800w, ${img(EVENT.img)} 1600w" sizes="(max-width: 1120px) 100vw, 1120px" width="${EVENT.w}" height="${EVENT.h}" alt="${ev.alt}" loading="lazy">
+      <img class="fade-photo" src="${img(EVENT.img)}" srcset="${img(EVENT.img800)} 800w, ${img(EVENT.img)} 1600w" sizes="(max-width: 1120px) 100vw, 1120px" width="${EVENT.w}" height="${EVENT.h}" alt="${ev.alt}" loading="lazy" style="height:auto">
     </div>
   </section>
 ` : ''}
