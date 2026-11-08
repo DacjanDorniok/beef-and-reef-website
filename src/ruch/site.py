@@ -217,8 +217,23 @@ def ctx_for(lang, kind):
         'mapClosed': Wrap('div', 'map-a'), 'mapOpen': Wrap('div', 'map-b', True),
     }
 
+PDF = {'pl': 'assets/pdf/beef-and-reef-menu-pl.pdf', 'en': 'assets/pdf/beef-and-reef-menu-en.pdf'}  # z Karta_Menu/DRUCK, przycięte do formatu A4, 150–170 dpi
+
+def pdf_links(lang):
+    """Linki „Pobierz menu w PDF” na stronie menu (na płótnie zostają jako #)."""
+    file = page_file(lang, 'menu')
+    names = gen.MENUC[lang]['pdf']
+    order = ['pl', 'en'] if lang == 'pl' else ['en', 'pl']
+    return [(n, rel(file, PDF[l])) for (n, _), l in zip(names, order)]
+
 def body_for(lang, kind):
-    full = gen.page(lang, kind)
+    saved = gen.MENUC[lang]['pdf']
+    if kind == 'menu':
+        gen.MENUC[lang]['pdf'] = pdf_links(lang)
+    try:
+        full = gen.page(lang, kind)
+    finally:
+        gen.MENUC[lang]['pdf'] = saved
     start = full.index('<sc-if value="{{isRuch}}"')
     start = full.index('>', start) + 1
     end = full.index('</sc-if>\n<sc-if value="{{drukDesk}}"') if '{{drukDesk}}' in full else full.rindex('</sc-if>')
@@ -235,6 +250,9 @@ def body_for(lang, kind):
     if kind == 'menu':
         menu = D['menuHtml'][lang]
         out = re.sub(r'<dc-import name="MenuList"[^>]*></dc-import>', lambda m: menu, out)
+    # PDF menu: otwiera się w nowej karcie
+    nt = ' (PDF, otwiera się w nowej karcie)' if lang == 'pl' else ' (PDF, opens in a new tab)'
+    out = re.sub(r'<a class="u" href="([^"]*\.pdf)">([^<]+)</a>', lambda m: f'<a class="u" href="{m.group(1)}" target="_blank" rel="noopener" type="application/pdf" aria-label="{m.group(2)}{nt}">{m.group(2)}</a>', out)
     # mapa: adres osadzenia dla skryptu
     out = out.replace('class="rise d4 map" role="region"', f'class="rise d4 map" data-embed="{MAPS_EMBED}" role="region"')
     return out

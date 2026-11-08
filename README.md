@@ -30,5 +30,5 @@ Przebudowa po zmianach: `node src/ruch/extract.js && python3 src/ruch/site.py`
 ## Do uzupełnienia przed startem
 - Zdjęcie szefa kuchni. Zdjęcie steków to podgląd z Adobe Stock (nr 328832358, ze znakiem wodnym) do akceptacji właściciela — po zakupie licencji podmienić `docs/assets/img/steki-foto.webp` (+ `-600`).
 - Opis sernika w menu a zdjęcie (migdały, lody, winogrona) — ujednolicić.
-- Linki do PDF menu (teraz `#`).
+- PDF menu: `docs/assets/pdf/beef-and-reef-menu-pl.pdf` i `-en.pdf` (z `Karta_Menu/DRUCK`, przycięte do A4, zmniejszone do ~1,4 MB). Po zmianie karty podmień oba pliki.
 - Polityka prywatności i cookies: dane firmy ([NAZWA FIRMY], [NIP], [KRS/CEIDG], [DOSTAWCA SYSTEMU REZERWACJI], [OKRES], [DATA]) i przegląd prawny. Mapa jest ładowana po kliknięciu — opisać to w polityce cookies.
