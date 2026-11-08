@@ -10,7 +10,7 @@ Nowa strona restauracji Beef & Reef (Kazachska 1, Warszawa). Zbudowana na podsta
 - Responsywność: desktop (≥1200), laptop (1100–1199), tablet poziomo (<1100: menu w szufladzie, kompaktowy przycisk „Zadzwoń”), tablet pionowo (600–899), telefon (<600: pasek „Zadzwoń / Online” na dole). Sprawdzone przy 1440, 1024, 768, 390 i 360 px.
 - Karuzela na stronie głównej (wydarzenia + dania) i w menu („Poleca szef kuchni”): przeciąganie palcem/myszą, strzałki, pauza, autoodtwarzanie co 5,2 s. Wydarzenie (Św. Marcin) jest pierwszym slajdem i znika samo po dacie `until`.
 - Zdjęcia restauracji: ogródek (kontakt, obok mapy), bar i sala (strona główna, przyjęcia).
-- Przyciski główne w kolorze zieleni ze złotą ramką; złote: stała `BUTTONS` w `src/ruch/site.py`.
+- Przyciski główne złote; zielone ze złotą ramką: stała `BUTTONS = 'gbtn'` w `src/ruch/site.py`.
 - Mapa Google ładowana dopiero po kliknięciu „Pokaż mapę”.
 - Okno wyboru języka przy pierwszej wizycie (tylko strona główna, wejście bezpośrednie): desktop — okno na środku, telefon — panel od dołu; złoty przycisk = język przeglądarki; wybór w `localStorage` (`br-lang`).
 - Tryb jasny / ciemny — domyślnie według ustawień urządzenia, wybór zapamiętywany (`br-theme`).

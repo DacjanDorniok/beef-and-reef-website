@@ -16,7 +16,7 @@ SITE = 'https://dacjandorniok.github.io/beef-and-reef-website/'
 PAGES = D['PAGES']  # pl/en -> home, menu, party, privacy, cookies
 KINDS = ('home', 'menu', 'party', 'privacy', 'cookies')
 MAPS_EMBED = 'https://www.google.com/maps?q=Beef+%26+Reef,+Kazachska+1,+02-999+Warszawa&amp;output=embed'
-BUTTONS = 'gbtn'  # przyciski na stronie: '' = złote, 'gbtn' = zielone ze złotą ramką, 'gbtn gflat' = zielone bez ramki
+BUTTONS = ''  # przyciski na stronie: '' = złote, 'gbtn' = zielone ze złotą ramką, 'gbtn gflat' = zielone bez ramki
 
 # zasoby płótna -> pliki strony
 IMG = {
