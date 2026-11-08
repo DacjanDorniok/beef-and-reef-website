@@ -14,6 +14,14 @@
   function on(name, fn) { $$('[data-on-click="' + name + '"]').forEach(function (b) { b.addEventListener('click', fn); }); }
   root.classList.add('js');
 
+  /* ---------- po odświeżeniu zawsze od góry (chyba że adres wskazuje sekcję, np. #kontakt) ---------- */
+  function toStart() {
+    if (location.hash && document.getElementById(location.hash.slice(1))) return;
+    window.scrollTo(0, 0);
+  }
+  toStart();
+  window.addEventListener('pageshow', function (e) { if (e.persisted) return; toStart(); });
+
   /* ---------- motyw ---------- */
   function theme() {
     var t = root.getAttribute('data-theme');

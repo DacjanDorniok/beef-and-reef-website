@@ -312,7 +312,7 @@ def head(lang, kind, file, title, desc, extra=''):
 <link rel="apple-touch-icon" href="{a('assets/img/apple-touch-icon.png')}">
 <link rel="preload" href="{a('assets/fonts/cormorant-garamond-latin-ext-400-normal.woff2')}" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="{a('assets/css/style.css')}?v={ver('assets/css/style.css')}">
-<script>(function(){{var d=document.documentElement,t=null;try{{t=localStorage.getItem('br-theme')}}catch(e){{}}if(t!=='light'&&t!=='dark')t=window.matchMedia&&matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';d.setAttribute('data-theme',t)}})()</script>
+<script>(function(){{try{{if('scrollRestoration' in history)history.scrollRestoration='manual'}}catch(e){{}}var d=document.documentElement,t=null;try{{t=localStorage.getItem('br-theme')}}catch(e){{}}if(t!=='light'&&t!=='dark')t=window.matchMedia&&matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';d.setAttribute('data-theme',t)}})()</script>
 <noscript><style>.rx .float,.rx .rise,.rx .bar{{opacity:1!important;transform:none!important}}.rx .wd{{color:var(--ink)}}.rx .call.off{{opacity:1;visibility:visible;transform:none}}.rx .pbar.off{{transform:none;visibility:visible}}</style></noscript>
 <script type="application/ld+json">{json.dumps(LD, ensure_ascii=False)}</script>
 </head>
