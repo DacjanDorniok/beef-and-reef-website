@@ -130,7 +130,7 @@ class Component extends DCLogic {
     const pad = (v) => (v < 10 ? '0' : '') + v;
     const paused = this.state.paused || still;
     const slides = L.map((x, i) => ({
-      src: x.src, alt: x.alt, kicker: x.kicker, title: x.title, desc: x.desc, price: x.price, imgCls: x.imgCls, size: x.size, cta: x.cta, href: x.href, until: x.until || '',
+      src: x.src, alt: x.alt, kicker: x.kicker, title: x.title, desc: x.desc, descS: x.descS || x.desc, price: x.price, imgCls: x.imgCls, size: x.size, cta: x.cta, href: x.href, until: x.until || '',
       label: pad(i + 1) + ' / ' + pad(n) + ': ' + x.title,
       cls: 'slide' + (i === cur ? ' cur' : (i === this.state.prev ? ' out' : '')),
       st: i === cur && this.state.dragX ? 'transform: translateX(' + this.state.dragX + 'px); opacity: ' + Math.max(0.35, 1 - Math.abs(this.state.dragX) / 900).toFixed(2) : '',

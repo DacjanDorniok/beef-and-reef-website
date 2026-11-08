@@ -183,6 +183,7 @@ def ctx_for(lang, kind):
     for s in slides:
         for k in ('cta', 'href'):
             s.setdefault(k, '')
+        s.setdefault('descS', s['desc'])
     home = kind == 'home'
     c = {k: '' for k in ('about', 'chef', 'party', 'live', 'contact', 'picks', 'res', 'photo', 'occ', 'excl', 'how', 'ask')}
     c['hero'] = 'js-hero'
