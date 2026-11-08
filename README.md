@@ -6,27 +6,29 @@ Nowa strona restauracji Beef & Reef (Kazachska 1, Warszawa). Zbudowana na podsta
 **Strony (EN):** `en/index.html`, `en/menu.html`, `en/parties.html`, `en/privacy.html`, `en/cookies.html`.
 
 ## Co jest w środku
-- Responsywny układ (telefon, tablet, desktop), menu „burger” poniżej 1200 px, przyklejony pasek „Zadzwoń” na telefonach.
-- Kierunek „druk” (07.11.2026, wg karty menu i ulotki Św. Marcin): biel → chłodna szarość, złote linie, zielona odznaka z ramką, pogrubione tytuły, białe ramki-callouty, jasna stopka. Tryb ciemny w tym samym stylu.
-- Strona główna: masthead z podwójną złotą linią, telefon w nagłówku pojawia się dopiero po przewinięciu hero (desktop).
-- Blok wydarzenia (teraz: Św. Marcin 7–15.11) — stała `EVENT` w `src/build.js` (`on: false` wyłącza, po dacie `until` chowa się sam).
-- Mapa Google ładowana dopiero po kliknięciu „Pokaż mapę”; „Wyznacz trasę” otwiera nawigację w Mapach Google.
-- Nagłówek: Start, Menu, Przyjęcia, O nas, Kontakt; cichy przełącznik języka (globus) i trybu jasny/ciemny.
-- Pasek kategorii w menu przyklejony bezpośrednio pod nagłówkiem; kliknięcie kategorii przewija tak, że jej tytuł jest widoczny.
-- Okno wyboru języka przy pierwszej wizycie (tylko strona główna, wejście bezpośrednie): na desktopie okno modalne, na telefonie panel od dołu. Wybór zapisywany w `localStorage` (`br-lang`).
+- Kierunek „Ruch” (08.11.2026, wg samara.com/homes): spokojny ruch, który pracuje z tekstem — wejścia sekcji, nagłówki „słowo ——— słowo” z zieloną linią, zdania zapalające się przy przewijaniu, delikatna paralaksa. Wyłącza się przy `prefers-reduced-motion`.
+- Responsywność: desktop (≥1200), laptop (1100–1199), tablet poziomo (<1100: menu w szufladzie, kompaktowy przycisk „Zadzwoń”), tablet pionowo (600–899), telefon (<600: pasek „Zadzwoń / Online” na dole). Sprawdzone przy 1440, 1024, 768, 390 i 360 px.
+- Karuzela na stronie głównej (wydarzenia + dania) i w menu („Poleca szef kuchni”): przeciąganie palcem/myszą, strzałki, pauza, autoodtwarzanie co 5,2 s. Wydarzenie (Św. Marcin) jest pierwszym slajdem i znika samo po dacie `until`.
+- Zdjęcia restauracji: ogródek (kontakt, obok mapy), bar i sala (strona główna, przyjęcia).
+- Przyciski główne w kolorze zieleni ze złotą ramką; złote: stała `BUTTONS` w `src/ruch/site.py`.
+- Mapa Google ładowana dopiero po kliknięciu „Pokaż mapę”.
+- Okno wyboru języka przy pierwszej wizycie (tylko strona główna, wejście bezpośrednie): desktop — okno na środku, telefon — panel od dołu; złoty przycisk = język przeglądarki; wybór w `localStorage` (`br-lang`).
 - Tryb jasny / ciemny — domyślnie według ustawień urządzenia, wybór zapamiętywany (`br-theme`).
-- Dostępność (WCAG 2.1/2.2 AA): kontrast, „Przejdź do treści”, widoczny fokus, przyciski min. 44 px, `prefers-reduced-motion`. Sprawdzone narzędziem axe-core — 0 błędów.
-- Czcionka Cormorant Garamond hostowana lokalnie (licencja SIL OFL 1.1) — bez Google Fonts (RODO).
-- Dane strukturalne schema.org `Restaurant`, `hreflang` PL/EN, obraz do udostępniania `assets/img/og-image.jpg`.
+- Dostępność (WCAG 2.1 AA): axe-core — 0 błędów (jasny i ciemny, desktop i telefon).
+- Czcionka Cormorant Garamond hostowana lokalnie (także kursywa 300/400) — bez Google Fonts.
+- Dane strukturalne schema.org `Restaurant`, `hreflang` PL/EN, `og:image`.
 
 ## Struktura
-- `docs/` — gotowa strona (GitHub Pages serwuje ten folder).
-- `src/build.js` — generator stron (teksty PL i EN są w tym pliku); `src/menu-source.dc.html` — dane menu (komponent MenuList z projektu).
-- Adres strony do `og:image`, `canonical` i `hreflang` ustawia stała `SITE` w `src/build.js` — zmień ją przy przenosinach na własną domenę.
+- `docs/` — gotowa strona (GitHub Pages serwuje ten folder). Nie edytuj ręcznie.
+- `src/ruch/` — generator kierunku „Ruch”, wspólny z płótnem Claude Design:
+  - `gen.py` szablony stron (te same co na płótnie), `style.css` style, `logic.js` logika płótna, `site.py` wersja statyczna strony, `site.js` → `docs/assets/js/main.js`, `fonts.css`, `menu.css`.
+  - `extract.js` czyta teksty z `src/build.js` i menu z `src/menu-source.dc.html` do `content.json`.
+- `src/build.js` — teksty PL i EN (źródło treści); poprzednią wersję „druk” zbudujesz przez `node src/build.js --legacy`.
 
-Przebudowa po zmianach: `node src/build.js`
+Przebudowa po zmianach: `node src/ruch/extract.js && python3 src/ruch/site.py`
 
 ## Do uzupełnienia przed startem
-- Zdjęcia: szef kuchni, sala; licencja na zdjęcie steków w pełnej rozdzielczości.
+- Zdjęcie szefa kuchni. Zdjęcie steków z Adobe Stock (na płótnie) — po zakupie licencji podmienić; na stronie do tego czasu jest wycięte zdjęcie steków.
+- Opis sernika w menu a zdjęcie (migdały, lody, winogrona) — ujednolicić.
 - Linki do PDF menu (teraz `#`).
 - Polityka prywatności i cookies: dane firmy ([NAZWA FIRMY], [NIP], [KRS/CEIDG], [DOSTAWCA SYSTEMU REZERWACJI], [OKRES], [DATA]) i przegląd prawny. Mapa jest ładowana po kliknięciu — opisać to w polityce cookies.

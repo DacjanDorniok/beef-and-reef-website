@@ -705,15 +705,22 @@ function notFound() {
 ` + footer(ctx) + actionBar(ctx, { href: BOOK, label: 'Online' });
 }
 
-/* ---------------- Write ---------------- */
-fs.mkdirSync(path.join(DIST, 'en'), { recursive: true });
+/* ---------------- Write ----------------
+   Since 08.11.2026 the pages are built by src/ruch (direction "Ruch"); this file is the copy/content source.
+     node src/ruch/extract.js && python3 src/ruch/site.py
+   Run with --legacy to rebuild the previous "druk" pages instead. */
 const write = (file, html) => fs.writeFileSync(path.join(DIST, file), html);
-for (const lang of ['pl', 'en']) {
-  write(PAGES[lang].home, home(lang));
-  write(PAGES[lang].menu, menuPage(lang));
-  write(PAGES[lang].party, partyPage(lang));
-  write(PAGES[lang].privacy, privacyPage(lang));
-  write(PAGES[lang].cookies, cookiesPage(lang));
+if (process.argv.includes('--legacy')) {
+  fs.mkdirSync(path.join(DIST, 'en'), { recursive: true });
+  for (const lang of ['pl', 'en']) {
+    write(PAGES[lang].home, home(lang));
+    write(PAGES[lang].menu, menuPage(lang));
+    write(PAGES[lang].party, partyPage(lang));
+    write(PAGES[lang].privacy, privacyPage(lang));
+    write(PAGES[lang].cookies, cookiesPage(lang));
+  }
+  write('404.html', notFound());
+  console.log('built (legacy)');
+} else {
+  console.log('Pages are built by src/ruch: node src/ruch/extract.js && python3 src/ruch/site.py  (or: node src/build.js --legacy)');
 }
-write('404.html', notFound());
-console.log('built');

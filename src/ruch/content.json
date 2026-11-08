@@ -1,0 +1,555 @@
+{
+ "T": {
+  "pl": {
+   "skip": "Przejdź do treści",
+   "logo": "Beef &amp; Reef — strona główna",
+   "navLabel": "Główna",
+   "mainMenu": "Menu główne",
+   "home": "Start",
+   "menu": "Menu",
+   "party": "Przyjęcia",
+   "partyLong": "Przyjęcia i eventy",
+   "about": "O nas",
+   "contact": "Kontakt",
+   "other": "EN",
+   "otherAria": "English version",
+   "otherLang": "en",
+   "themeDark": "Włącz tryb ciemny",
+   "themeLight": "Włącz tryb jasny",
+   "open": "Otwórz menu",
+   "close": "Zamknij menu",
+   "drawerCall": "Zadzwoń",
+   "barCall": "Zadzwoń",
+   "email": "E-mail",
+   "visit": "Odwiedź nas",
+   "daily": "Codziennie",
+   "kitchenOpen": "Kuchnia czynna do 22:00",
+   "reserve": "Rezerwacje",
+   "online": "Rezerwacja online",
+   "shortcuts": "Na skróty",
+   "footerLabel": "Stopka",
+   "follow": "Obserwuj nas",
+   "delivery": "Zamów online z dostawą",
+   "privacy": "POLITYKA PRYWATNOŚCI",
+   "legalLabel": "Informacje prawne",
+   "city": "Warszawa"
+  },
+  "en": {
+   "skip": "Skip to content",
+   "logo": "Beef &amp; Reef — home",
+   "navLabel": "Main",
+   "mainMenu": "Main menu",
+   "home": "Home",
+   "menu": "Menu",
+   "party": "Parties",
+   "partyLong": "Parties &amp; events",
+   "about": "About",
+   "contact": "Contact",
+   "other": "PL",
+   "otherAria": "Wersja polska",
+   "otherLang": "pl",
+   "themeDark": "Switch to dark mode",
+   "themeLight": "Switch to light mode",
+   "open": "Open menu",
+   "close": "Close menu",
+   "drawerCall": "Call us",
+   "barCall": "Call",
+   "email": "Email",
+   "visit": "Visit us",
+   "daily": "Daily",
+   "kitchenOpen": "Kitchen open until 22:00",
+   "reserve": "Reservations",
+   "online": "Book online",
+   "shortcuts": "Explore",
+   "footerLabel": "Footer",
+   "follow": "Follow us",
+   "delivery": "Order online for delivery",
+   "privacy": "PRIVACY POLICY",
+   "legalLabel": "Legal information",
+   "city": "Warsaw"
+  }
+ },
+ "HOME": {
+  "pl": {
+   "title": "Beef & Reef — steki i owoce morza w Wilanowie",
+   "desc": "Steakhouse i owoce morza w Wilanowie, Kazachska 1, Warszawa. Rezerwacje telefoniczne: +48 222 538 860. Codziennie 12:00–23:00.",
+   "heroAlt": "Dwa surowe, marmurkowe antrykoty na drewnianej desce z tymiankiem i papryczkami chili",
+   "res": "Rezerwacje telefoniczne",
+   "callBook": "Zadzwoń i zarezerwuj",
+   "order": "Zamów",
+   "or": "lub",
+   "book": "zarezerwuj online",
+   "daily": "Codziennie",
+   "kitchen": "Kuchnia",
+   "kitchenTime": "do 22:00",
+   "seeMenu": "Zobacz menu",
+   "menuLead": "Steki z najlepszych hodowli, przygotowywane z najwyższą precyzją, oraz regularnie dostarczane owoce morza.",
+   "dishes": [
+    [
+     "stek-z-poledwicy.webp",
+     1000,
+     1000,
+     "Stek z polędwicy z kiełkami groszku i oliwą ziołową na białym talerzu",
+     "Stek z polędwicy",
+     "Polędwica wołowa (filet mignon), wyjątkowo krucha i soczysta, o naturalnym, szlachetnym smaku",
+     "200 g · 119 / 300 g · 179"
+    ],
+    [
+     "macka-osmiornicy.webp",
+     1000,
+     903,
+     "Macka ośmiornicy z cukinią i czerwonym kawiorem na białym talerzu",
+     "Macka ośmiornicy",
+     "Ośmiornica, seler naciowy, kapary, cukinia, białe wino, oliwki, opiekane ziemniaki",
+     "109"
+    ],
+    [
+     "piers-z-kaczki.webp",
+     1000,
+     909,
+     "Pierś z kaczki z sosem pomarańczowym i brokułem na białym talerzu",
+     "Pierś z kaczki",
+     "Pierś z kaczki sous-vide, sos pomarańczowy, purée selerowe, brokuł łodygowy",
+     "109"
+    ]
+   ],
+   "fullMenu": "Zobacz pełne menu",
+   "download": "Menu do pobrania:",
+   "pdfs": [
+    [
+     "PDF po polsku",
+     "pl"
+    ],
+    [
+     "PDF in English",
+     "en"
+    ]
+   ],
+   "prices": "Ceny w PLN",
+   "aboutTitle": "O nas",
+   "aboutLead": "Miejsce stworzone z pasji do najwyższej jakości steków oraz świeżych owoców morza.",
+   "aboutText": "Łączymy klasyczne techniki kulinarne z nowoczesnym podejściem, tworząc dania o wyrazistym smaku, perfekcyjnej teksturze i wyjątkowej estetyce. Tworzymy miejsce, w którym doskonała kuchnia spotyka się z elegancką atmosferą i profesjonalną obsługą — idealną przestrzeń na wyjątkową kolację, spotkanie biznesowe i celebrację ważnych chwil.",
+   "eventEyebrow": "W wybrane dni można doświadczyć:",
+   "eventBig": "Muzyki na żywo<br>Live cookingu*",
+   "eventNote": "*Siekany tatar wołowy przy stole oraz smażone krewetki z chorizo w formie live cookingu.",
+   "eventAsk": "Zapytaj o najbliższe terminy",
+   "chefAria": "Miejsce na zdjęcie szefa kuchni",
+   "chefPh": "[ZDJĘCIE: KLAUDIUSZ DANOWSKI]",
+   "chefEyebrow": "Szef kuchni",
+   "chefText": [
+    "Sercem naszej kuchni jest szef kuchni Klaudiusz Danowski, który z niezwykłą dbałością o detale komponuje każde danie, bazując wyłącznie na starannie wyselekcjonowanych produktach.",
+    "Nasze steki pochodzą z najlepszych hodowli i są przygotowywane z najwyższą precyzją, aby osiągnąć idealny stopień wysmażenia i głębię smaku. Owoce morza dostarczane są regularnie, co gwarantuje ich świeżość i najwyższą jakość."
+   ],
+   "partyEyebrow": "Przyjęcia i eventy",
+   "partyTitle": "Świętuj z nami",
+   "partyText": "Organizujemy przyjęcia w naszej restauracji — wesela, urodziny, przyjęcia świąteczne i spotkania firmowe. Chcesz mieć restaurację tylko dla siebie i swoich gości? Zarezerwujemy ją na wyłączność.",
+   "partyBtn": "Poznaj ofertę",
+   "partyAsk": "Zapytaj",
+   "partyAria": "Miejsce na zdjęcie sali przygotowanej na przyjęcie",
+   "partyPh": "[ZDJĘCIE: SALA NA PRZYJĘCIE]",
+   "contactTitle": "Rezerwacja i kontakt",
+   "address": "Adres",
+   "directions": "Wyznacz trasę",
+   "reservations": "Rezerwacje",
+   "hours": "Godziny otwarcia",
+   "hoursText": "Codziennie: 12:00 – 23:00<br>Kuchnia czynna do 22:00",
+   "bookOnline": "Rezerwacja online",
+   "mapAria": "Miejsce na mapę dojazdu",
+   "mapPh": "[MAPA GOOGLE — KAZACHSKA 1]"
+  },
+  "en": {
+   "title": "Beef & Reef — steakhouse & seafood in Wilanów, Warsaw",
+   "desc": "Steakhouse and seafood restaurant in Wilanów, Kazachska 1, Warsaw. Phone reservations: +48 222 538 860. Open daily 12:00–23:00.",
+   "heroAlt": "Two raw marbled ribeye steaks on a wooden board with thyme and chillies",
+   "res": "Reservations by phone",
+   "callBook": "Call to book",
+   "order": "Order",
+   "or": "or",
+   "book": "book online",
+   "daily": "Daily",
+   "kitchen": "Kitchen",
+   "kitchenTime": "until 22:00",
+   "seeMenu": "See the menu",
+   "menuLead": "Steaks from the finest farms, prepared with the utmost precision, and seafood delivered regularly.",
+   "dishes": [
+    [
+     "stek-z-poledwicy.webp",
+     1000,
+     1000,
+     "Fillet steak with pea shoots and herb oil on a white plate",
+     "Fillet Steak",
+     "Beef fillet (filet mignon), exceptionally tender and juicy, with a pure, refined flavour",
+     "200 g · 119 / 300 g · 179"
+    ],
+    [
+     "macka-osmiornicy.webp",
+     1000,
+     903,
+     "Octopus tentacle with courgette and red caviar on a white plate",
+     "Octopus Tentacle",
+     "Octopus, celery, capers, courgette, white wine, olives, roasted potatoes",
+     "109"
+    ],
+    [
+     "piers-z-kaczki.webp",
+     1000,
+     909,
+     "Duck breast with orange sauce and broccoli on a white plate",
+     "Duck Breast",
+     "Sous-vide duck breast, orange sauce, celeriac purée, tenderstem broccoli",
+     "109"
+    ]
+   ],
+   "fullMenu": "See the full menu",
+   "download": "Download the menu:",
+   "pdfs": [
+    [
+     "PDF in English",
+     "en"
+    ],
+    [
+     "PDF in Polish",
+     "pl"
+    ]
+   ],
+   "prices": "Prices in PLN",
+   "aboutTitle": "About us",
+   "aboutLead": "A place born of a passion for top-quality steaks and fresh seafood.",
+   "aboutText": "We combine classic culinary techniques with a modern approach, creating dishes with bold flavour, perfect texture and exceptional presentation. Here fine cooking meets an elegant atmosphere and professional service — the ideal setting for a special dinner, a business meeting or celebrating the moments that matter.",
+   "eventEyebrow": "On selected days you can enjoy:",
+   "eventBig": "Live music<br>Live cooking*",
+   "eventNote": "*Hand-chopped beef tartare at your table and pan-fried prawns with chorizo, cooked live.",
+   "eventAsk": "Ask about upcoming dates",
+   "chefAria": "Photo placeholder: head chef",
+   "chefPh": "[PHOTO: KLAUDIUSZ DANOWSKI]",
+   "chefEyebrow": "Head chef",
+   "chefText": [
+    "At the heart of our kitchen is head chef Klaudiusz Danowski, who composes every dish with remarkable attention to detail, using only carefully selected produce.",
+    "Our steaks come from the finest farms and are prepared with the utmost precision for perfect doneness and depth of flavour. Our seafood is delivered regularly, guaranteeing freshness and the highest quality."
+   ],
+   "partyEyebrow": "Parties &amp; events",
+   "partyTitle": "Celebrate with us",
+   "partyText": "We host parties at our restaurant — weddings, birthdays, Christmas parties and corporate events. Want the whole restaurant to yourself and your guests? We’ll reserve it exclusively for you.",
+   "partyBtn": "View the offer",
+   "partyAsk": "Ask",
+   "partyAria": "Photo placeholder: room set for a party",
+   "partyPh": "[PHOTO: ROOM SET FOR A PARTY]",
+   "contactTitle": "Reservations &amp; contact",
+   "address": "Address",
+   "directions": "Get directions",
+   "reservations": "Reservations",
+   "hours": "Opening hours",
+   "hoursText": "Daily: 12:00 – 23:00<br>Kitchen open until 22:00",
+   "bookOnline": "Book online",
+   "mapAria": "Map placeholder",
+   "mapPh": "[GOOGLE MAP — KAZACHSKA 1]"
+  }
+ },
+ "HOME_X": {
+  "pl": {
+   "hoursBadge": "Codziennie 12:00 – 23:00",
+   "heroText": "Steki z najlepszych hodowli i regularnie dostarczane owoce morza. Kuchnia czynna do 22:00.",
+   "partyShort": "Organizujemy przyjęcia w naszej restauracji — wesela, urodziny, przyjęcia świąteczne i spotkania firmowe.",
+   "exclusiveHead": "Restauracja na wyłączność",
+   "exclusiveText": "Chcesz mieć restaurację tylko dla siebie i swoich gości? Zarezerwujemy ją na wyłączność.",
+   "mapKicker": "Jak dojechać",
+   "mapPlace": "Kazachska 1, Warszawa",
+   "showMap": "Pokaż mapę",
+   "openMaps": "Otwórz w Mapach Google",
+   "newTab": " (otwiera się w nowej karcie)",
+   "mapNote": "Mapa Google wczyta się dopiero po kliknięciu. Google może wtedy zapisać pliki cookies —",
+   "more": "więcej",
+   "mapTitle": "Mapa dojazdu do Beef &amp; Reef, Kazachska 1, Warszawa"
+  },
+  "en": {
+   "hoursBadge": "Daily 12:00 – 23:00",
+   "heroText": "Steaks from the finest farms and seafood delivered regularly. Kitchen open until 22:00.",
+   "partyShort": "We host parties at our restaurant — weddings, birthdays, Christmas parties and corporate events.",
+   "exclusiveHead": "Exclusive hire",
+   "exclusiveText": "Want the whole restaurant to yourself and your guests? We’ll reserve it exclusively for you.",
+   "mapKicker": "Getting here",
+   "mapPlace": "Kazachska 1, Warsaw",
+   "showMap": "Show map",
+   "openMaps": "Open in Google Maps",
+   "newTab": " (opens in a new tab)",
+   "mapNote": "The Google map loads only after you click. Google may then set cookies —",
+   "more": "learn more",
+   "mapTitle": "Map: how to find Beef &amp; Reef, Kazachska 1, Warsaw"
+  }
+ },
+ "EVENT": {
+  "on": true,
+  "until": "2026-11-15",
+  "img": "rogale-swietomarcinskie.webp",
+  "img800": "rogale-swietomarcinskie-800.webp",
+  "w": 1600,
+  "h": 1222,
+  "pl": {
+   "badge": "Od 7 do 15 listopada",
+   "kicker": "Zapraszamy na wyjątkowe menu",
+   "title": "Z okazji Świętego Marcina",
+   "text": "Królować będzie gęsina, przygotowana z dbałością o każdy detal, w autorskich odsłonach naszego Szefa Kuchni.",
+   "book": "Zarezerwuj stolik",
+   "noteHead": "Dodatkowo <span class=\"nowrap\"><b>11</b> listopada</span>",
+   "note": "Serwujemy oryginalne rogale świętomarcińskie sprowadzane z certyfikowanej piekarni w Poznaniu.",
+   "alt": "Rogale świętomarcińskie z lukrem i orzechami na papierze"
+  },
+  "en": {
+   "badge": "7 to 15 November",
+   "kicker": "Join us for a special menu",
+   "title": "Celebrating St. Martin’s Day",
+   "text": "Goose takes centre stage, prepared with care down to the last detail, in our head chef’s own creations.",
+   "book": "Book a table",
+   "noteHead": "Also on <span class=\"nowrap\"><b>11</b> November</span>",
+   "note": "We serve original St. Martin’s croissants (rogale świętomarcińskie) from a certified bakery in Poznań.",
+   "alt": "St. Martin’s croissants with icing and nuts on paper"
+  }
+ },
+ "PARTY": {
+  "pl": {
+   "title": "Przyjęcia i eventy — Beef & Reef",
+   "desc": "Przyjęcia w Beef & Reef w Wilanowie: wesela, urodziny, przyjęcia świąteczne, spotkania firmowe. Restauracja na wyłączność. Zadzwoń: +48 222 538 860.",
+   "subject": "Zapytanie%20o%20przyj%C4%99cie",
+   "eyebrow": "Przyjęcia i eventy",
+   "h1": "Twoje przyjęcie w Beef &amp; Reef",
+   "intro": "Organizujemy przyjęcia w naszej restauracji — od kameralnych kolacji po wydarzenia na całą salę. Wszystkie szczegóły ustalamy z Tobą indywidualnie.",
+   "callAsk": "Zadzwoń i zapytaj",
+   "write": "Napisz do nas",
+   "photoAria": "Miejsce na zdjęcie sali przygotowanej na przyjęcie",
+   "photoPh": "[ZDJĘCIE: SALA NA PRZYJĘCIE]",
+   "occTitle": "Okazje",
+   "occId": "okazje-title",
+   "occasions": [
+    [
+     "Wesela",
+     "Przyjęcie weselne w eleganckiej oprawie"
+    ],
+    [
+     "Urodziny",
+     "Urodziny, jubileusze i rocznice"
+    ],
+    [
+     "Przyjęcia świąteczne",
+     "Wigilie firmowe i spotkania świąteczne"
+    ],
+    [
+     "Spotkania firmowe",
+     "Kolacje biznesowe i wydarzenia dla zespołów"
+    ]
+   ],
+   "occMore": "…i każda inna okazja, którą chcesz świętować.",
+   "exEyebrow": "Tylko dla Ciebie i Twoich gości",
+   "exTitle": "Restauracja<br>na wyłączność",
+   "exId": "wylacznosc-title",
+   "exText": "Chcesz, aby cała restauracja była tylko dla Was? Nie ma problemu — zarezerwujemy ją na wyłączność na Twoje wydarzenie.",
+   "howTitle": "Jak to działa",
+   "howId": "jak-title",
+   "steps": [
+    [
+     "Skontaktuj się z nami",
+     "Zadzwoń lub napisz — powiedz nam, jaką okazję chcesz świętować."
+    ],
+    [
+     "Ustalimy szczegóły",
+     "Termin, liczbę gości, menu i oprawę dopasujemy indywidualnie do Twoich potrzeb."
+    ],
+    [
+     "Świętujcie",
+     "Resztą zajmiemy się my — Ty możesz cieszyć się chwilą z gośćmi."
+    ]
+   ],
+   "askTitle": "Zapytaj o przyjęcie",
+   "askLine": "Codziennie 12:00 – 23:00 · Kazachska 1, Warszawa",
+   "mail": "Napisz e-mail"
+  },
+  "en": {
+   "title": "Parties & events — Beef & Reef",
+   "desc": "Parties at Beef & Reef in Wilanów: weddings, birthdays, Christmas parties and corporate events. Exclusive hire of the whole restaurant. Call +48 222 538 860.",
+   "subject": "Party%20enquiry",
+   "eyebrow": "Parties &amp; events",
+   "h1": "Your party at Beef &amp; Reef",
+   "intro": "We host parties at our restaurant — from intimate dinners to events for the whole dining room. Every detail is arranged with you individually.",
+   "callAsk": "Call to ask",
+   "write": "Write to us",
+   "photoAria": "Photo placeholder: room set for a party",
+   "photoPh": "[PHOTO: ROOM SET FOR A PARTY]",
+   "occTitle": "Occasions",
+   "occId": "occasions-title",
+   "occasions": [
+    [
+     "Weddings",
+     "A wedding reception in an elegant setting"
+    ],
+    [
+     "Birthdays",
+     "Birthdays, milestones and anniversaries"
+    ],
+    [
+     "Christmas parties",
+     "Company Christmas dinners and festive gatherings"
+    ],
+    [
+     "Corporate events",
+     "Business dinners and team events"
+    ]
+   ],
+   "occMore": "…and any other occasion you’d like to celebrate.",
+   "exEyebrow": "Just for you and your guests",
+   "exTitle": "The whole<br>restaurant to yourself",
+   "exId": "exclusive-title",
+   "exText": "Want the entire restaurant just for your group? No problem — we’ll reserve it exclusively for your event.",
+   "howTitle": "How it works",
+   "howId": "how-title",
+   "steps": [
+    [
+     "Get in touch",
+     "Call or write — tell us what you’d like to celebrate."
+    ],
+    [
+     "We arrange the details",
+     "Date, number of guests, menu and setting — all tailored to your needs."
+    ],
+    [
+     "Celebrate",
+     "Leave the rest to us — you can simply enjoy the moment with your guests."
+    ]
+   ],
+   "askTitle": "Ask about a party",
+   "askLine": "Daily 12:00 – 23:00 · Kazachska 1, Warsaw",
+   "mail": "Send an email"
+  }
+ },
+ "MENU": {
+  "pl": {
+   "title": "Menu — Beef & Reef",
+   "desc": "Menu restauracji Beef & Reef: steki Black Angus, ryby i owoce morza, przystawki, desery, wina i koktajle. Ceny w PLN.",
+   "langLabel": "Język menu",
+   "pdf": "Pobierz menu w PDF",
+   "catLabel": "Kategorie menu",
+   "resTitle": "Zarezerwuj stolik",
+   "hours": "Codziennie 12:00 – 23:00 · Kuchnia czynna do 22:00",
+   "call": "Zadzwoń",
+   "online": "Rezerwacja online"
+  },
+  "en": {
+   "title": "Menu — Beef & Reef",
+   "desc": "The Beef & Reef menu: Black Angus steaks, fish and seafood, starters, desserts, wine and cocktails. Prices in PLN.",
+   "langLabel": "Menu language",
+   "pdf": "Download PDF menu",
+   "catLabel": "Menu sections",
+   "resTitle": "Reserve a table",
+   "hours": "Daily 12:00 – 23:00 · Kitchen open until 22:00",
+   "call": "Call us",
+   "online": "Book online"
+  }
+ },
+ "CATS": [
+  [
+   "steaks",
+   "Steki",
+   "Steaks"
+  ],
+  [
+   "fish",
+   "Ryby i owoce morza",
+   "Fish & Seafood"
+  ],
+  [
+   "starters",
+   "Przystawki i sałatki",
+   "Starters & Salads"
+  ],
+  [
+   "mains",
+   "Makarony i dania główne",
+   "Pasta & Mains"
+  ],
+  [
+   "soups",
+   "Zupy i sandwiche",
+   "Soups & Sandwiches"
+  ],
+  [
+   "desserts",
+   "Desery",
+   "Desserts"
+  ],
+  [
+   "drinks",
+   "Kawa, herbata, napoje",
+   "Coffee, Tea & Soft Drinks"
+  ],
+  [
+   "bar",
+   "Piwo, alkohole, koktajle",
+   "Beer, Spirits & Cocktails"
+  ],
+  [
+   "wine",
+   "Wina",
+   "Wine"
+  ]
+ ],
+ "PAGES": {
+  "pl": {
+   "home": "index.html",
+   "menu": "menu.html",
+   "party": "przyjecia.html",
+   "privacy": "polityka-prywatnosci.html",
+   "cookies": "cookies.html"
+  },
+  "en": {
+   "home": "en/index.html",
+   "menu": "en/menu.html",
+   "party": "en/parties.html",
+   "privacy": "en/privacy.html",
+   "cookies": "en/cookies.html"
+  }
+ },
+ "legal": {
+  "privacy_pl": {
+   "title": "Polityka prywatności — Beef & Reef",
+   "desc": "Jakie dane zbiera Beef & Reef przy rezerwacji i zapytaniach o przyjęcia, w jakim celu i jakie masz prawa.",
+   "eyebrow": "INFORMACJE PRAWNE",
+   "h1": "Polityka prywatności",
+   "since": "Obowiązuje od [DATA]",
+   "lead": "Szanujemy Twoją prywatność. Poniżej wyjaśniamy, jakie dane zbieramy, gdy rezerwujesz stolik lub pytasz o przyjęcie, w jakim celu i jakie masz prawa.",
+   "toc": "    <nav class=\"legal-toc\" aria-labelledby=\"toc-h\"><h2 id=\"toc-h\" class=\"label muted\">SPIS TREŚCI</h2><ol>\n      <li><a class=\"u\" href=\"#pp-1\">Administrator danych</a></li>\n      <li><a class=\"u\" href=\"#pp-2\">Jakie dane zbieramy</a></li>\n      <li><a class=\"u\" href=\"#pp-3\">Cele i podstawy prawne</a></li>\n      <li><a class=\"u\" href=\"#pp-4\">Rezerwacja online</a></li>\n      <li><a class=\"u\" href=\"#pp-5\">Komu przekazujemy dane</a></li>\n      <li><a class=\"u\" href=\"#pp-6\">Jak długo przechowujemy dane</a></li>\n      <li><a class=\"u\" href=\"#pp-7\">Twoje prawa</a></li>\n      <li><a class=\"u\" href=\"#pp-8\">Cookies i media społecznościowe</a></li>\n      <li><a class=\"u\" href=\"#pp-9\">Zmiany polityki</a></li>\n    </ol></nav>\n",
+   "body": "    <section id=\"pp-1\" aria-labelledby=\"pp-1-h\">\n      <h2 id=\"pp-1-h\">1. Administrator danych</h2>\n      <p>Administratorem Twoich danych osobowych jest [NAZWA FIRMY], ul. Kazachska 1, 02-999 Warszawa, NIP [NIP], [KRS lub CEIDG: NUMER] — dalej „Beef &amp; Reef”.</p>\n      <p>W sprawach dotyczących danych osobowych napisz na <a class=\"u\" href=\"mailto:kontakt@beefandreef.pl\">kontakt@beefandreef.pl</a> lub zadzwoń: <a class=\"u nowrap\" href=\"tel:+48222538860\">+48 222 538 860</a>.</p>\n    </section>\n    <section id=\"pp-2\" aria-labelledby=\"pp-2-h\">\n      <h2 id=\"pp-2-h\">2. Jakie dane zbieramy</h2>\n      <p>Zbieramy tylko dane, które sam nam przekażesz:</p>\n      <ul>\n        <li>przy rezerwacji stolika — imię i nazwisko, numer telefonu, ewentualnie adres e-mail, termin i liczbę gości;</li>\n        <li>przy zapytaniu o przyjęcie — dane kontaktowe oraz informacje o wydarzeniu, które opiszesz w rozmowie lub wiadomości;</li>\n        <li>przy organizacji przyjęcia na fakturę — dane potrzebne do jej wystawienia.</li>\n      </ul>\n      <p>Podanie danych jest dobrowolne, ale bez nich nie przyjmiemy rezerwacji ani nie odpowiemy na zapytanie.</p>\n    </section>\n    <section id=\"pp-3\" aria-labelledby=\"pp-3-h\">\n      <h2 id=\"pp-3-h\">3. Cele i podstawy prawne</h2>\n      <ul>\n        <li>Obsługa rezerwacji i organizacja przyjęć — art. 6 ust. 1 lit. b RODO (działania przed zawarciem umowy i jej wykonanie).</li>\n        <li>Odpowiedzi na wiadomości i kontakt w sprawie wizyty — art. 6 ust. 1 lit. f RODO (nasz prawnie uzasadniony interes).</li>\n        <li>Wystawianie faktur i prowadzenie księgowości — art. 6 ust. 1 lit. c RODO (obowiązek prawny).</li>\n        <li>Ustalenie, dochodzenie lub obrona ewentualnych roszczeń — art. 6 ust. 1 lit. f RODO.</li>\n      </ul>\n    </section>\n    <section id=\"pp-4\" aria-labelledby=\"pp-4-h\">\n      <h2 id=\"pp-4-h\">4. Rezerwacja online</h2>\n      <p>Rezerwacja online odbywa się w zewnętrznym systemie rezerwacyjnym pod adresem <a class=\"u\" href=\"https://online.beefandreef.pl/booking\">online.beefandreef.pl</a>, prowadzonym przez [DOSTAWCA SYSTEMU REZERWACJI]. Dane z formularza trafiają do tego systemu i są przetwarzane w naszym imieniu na podstawie umowy powierzenia.</p>\n    </section>\n    <section id=\"pp-5\" aria-labelledby=\"pp-5-h\">\n      <h2 id=\"pp-5-h\">5. Komu przekazujemy dane</h2>\n      <p>Dane mogą otrzymać wyłącznie firmy, które pomagają nam prowadzić restaurację — w zakresie niezbędnym do wykonania ich zadań:</p>\n      <ul>\n        <li>dostawca systemu rezerwacji online,</li>\n        <li>dostawca hostingu strony i poczty e-mail,</li>\n        <li>biuro rachunkowe — w przypadku faktur.</li>\n      </ul>\n      <p>Nie sprzedajemy danych i nie przekazujemy ich do celów marketingowych innych firm.</p>\n    </section>\n    <section id=\"pp-6\" aria-labelledby=\"pp-6-h\">\n      <h2 id=\"pp-6-h\">6. Jak długo przechowujemy dane</h2>\n      <ul>\n        <li>Dane rezerwacji — do czasu realizacji wizyty, a następnie przez [OKRES], jeśli będą potrzebne do wyjaśnienia ewentualnych roszczeń.</li>\n        <li>Korespondencja w sprawie przyjęć — do zakończenia sprawy, a następnie przez [OKRES].</li>\n        <li>Dokumenty księgowe — przez okres wymagany przepisami podatkowymi.</li>\n      </ul>\n    </section>\n    <section id=\"pp-7\" aria-labelledby=\"pp-7-h\">\n      <h2 id=\"pp-7-h\">7. Twoje prawa</h2>\n      <p>Masz prawo do dostępu do swoich danych, ich sprostowania, usunięcia, ograniczenia przetwarzania i przeniesienia, a także do sprzeciwu wobec przetwarzania opartego na naszym prawnie uzasadnionym interesie.</p>\n      <p>Aby skorzystać z tych praw, napisz na <a class=\"u\" href=\"mailto:kontakt@beefandreef.pl\">kontakt@beefandreef.pl</a>. Masz też prawo złożyć skargę do Prezesa Urzędu Ochrony Danych Osobowych.</p>\n    </section>\n    <section id=\"pp-8\" aria-labelledby=\"pp-8-h\">\n      <h2 id=\"pp-8-h\">8. Cookies i media społecznościowe</h2>\n      <p>Strona nie używa plików cookies do analityki ani reklamy. Szczegóły znajdziesz w <a class=\"u\" href=\"cookies.html\">informacji o cookies</a>.</p>\n      <p>Linki do Facebooka i Instagrama prowadzą do zewnętrznych serwisów — nie osadzamy na stronie ich wtyczek. Po przejściu do nich obowiązują zasady prywatności tych serwisów.</p>\n    </section>\n    <section id=\"pp-9\" aria-labelledby=\"pp-9-h\">\n      <h2 id=\"pp-9-h\">9. Zmiany polityki</h2>\n      <p>Jeśli zmienimy sposób przetwarzania danych, zaktualizujemy tę stronę i datę na jej początku.</p>\n    </section>"
+  },
+  "cookies_pl": {
+   "title": "Cookies — Beef & Reef",
+   "desc": "Strona Beef & Reef nie używa plików cookies do analityki ani reklamy. Sprawdź, co zapisujemy w przeglądarce.",
+   "eyebrow": "INFORMACJE PRAWNE",
+   "h1": "Cookies",
+   "since": "Obowiązuje od [DATA]",
+   "lead": "W skrócie: ta strona nie śledzi Cię i nie używa plików cookies do analityki ani reklamy. Dlatego nie wyświetlamy banera zgody na cookies.",
+   "toc": "",
+   "body": "    <section id=\"ck-1\" aria-labelledby=\"ck-1-h\">\n      <h2 id=\"ck-1-h\">Co zapisujemy na Twoim urządzeniu</h2>\n      <p>Zapisujemy tylko dwie informacje, i to wyłącznie wtedy, gdy sam coś wybierzesz:</p>\n      <dl class=\"store-table\">\n        <div><dt>NAZWA</dt><dd><strong>br-theme</strong></dd></div>\n        <div><dt>RODZAJ</dt><dd>Pamięć lokalna przeglądarki (localStorage), nie plik cookie</dd></div>\n        <div><dt>CEL</dt><dd>Zapamiętuje, czy wybrałeś tryb jasny czy ciemny</dd></div>\n        <div><dt>KIEDY</dt><dd>Tylko po kliknięciu przełącznika trybu</dd></div>\n        <div><dt>JAK DŁUGO</dt><dd>Do czasu, aż usuniesz dane tej strony w przeglądarce</dd></div>\n      </dl>\n      <dl class=\"store-table\">\n        <div><dt>NAZWA</dt><dd><strong>br-lang</strong></dd></div>\n        <div><dt>RODZAJ</dt><dd>Pamięć lokalna przeglądarki (localStorage), nie plik cookie</dd></div>\n        <div><dt>CEL</dt><dd>Zapamiętuje wybrany język strony (polski lub angielski)</dd></div>\n        <div><dt>KIEDY</dt><dd>Tylko po wybraniu języka</dd></div>\n        <div><dt>JAK DŁUGO</dt><dd>Do czasu, aż usuniesz dane tej strony w przeglądarce</dd></div>\n      </dl>\n      <p>Te informacje zostają w Twojej przeglądarce — nie wysyłamy ich do nas ani nikomu innemu.</p>\n    </section>\n    <section id=\"ck-2\" aria-labelledby=\"ck-2-h\">\n      <h2 id=\"ck-2-h\">Usługi zewnętrzne</h2>\n      <div class=\"sub\"><h3>Mapa dojazdu</h3><p>Mapa Google wczytuje się dopiero wtedy, gdy klikniesz „Pokaż mapę”. Od tego momentu Google może zapisać własne pliki cookies, zgodnie ze swoją polityką prywatności.</p></div>\n      <div class=\"sub\"><h3>Rezerwacja online</h3><p>Formularz rezerwacji działa w osobnym serwisie <a class=\"u\" href=\"https://online.beefandreef.pl/booking\">online.beefandreef.pl</a>, który ma własne zasady dotyczące cookies.</p></div>\n      <div class=\"sub\"><h3>Czcionki</h3><p>Krój pisma ładujemy z naszego serwera, a nie z Google Fonts, więc przy wyświetlaniu strony Twój adres IP nie trafia do Google.</p></div>\n    </section>\n    <section id=\"ck-3\" aria-labelledby=\"ck-3-h\">\n      <h2 id=\"ck-3-h\">Jak usunąć zapisane dane</h2>\n      <p>W ustawieniach przeglądarki usuń pliki cookies i dane tej witryny. Strona wróci wtedy do trybu zgodnego z ustawieniami Twojego urządzenia.</p>\n    </section>\n    <section id=\"ck-4\" aria-labelledby=\"ck-4-h\">\n      <h2 id=\"ck-4-h\">Więcej informacji</h2>\n      <p>Jak przetwarzamy dane z rezerwacji i zapytań, opisujemy w <a class=\"u\" href=\"polityka-prywatnosci.html\">polityce prywatności</a>. Pytania? Napisz na <a class=\"u\" href=\"mailto:kontakt@beefandreef.pl\">kontakt@beefandreef.pl</a>.</p>\n    </section>"
+  },
+  "privacy_en": {
+   "title": "Privacy policy — Beef & Reef",
+   "desc": "What data Beef & Reef collects when you book a table or ask about a party, why, and what rights you have.",
+   "eyebrow": "LEGAL INFORMATION",
+   "h1": "Privacy Policy",
+   "since": "Effective from [DATE]",
+   "lead": "We respect your privacy. Below we explain what data we collect when you book a table or ask about a party, why we collect it and what rights you have.",
+   "toc": "    <nav class=\"legal-toc\" aria-labelledby=\"toc-h\"><h2 id=\"toc-h\" class=\"label muted\">CONTENTS</h2><ol>\n      <li><a class=\"u\" href=\"#pp-1\">Data controller</a></li>\n      <li><a class=\"u\" href=\"#pp-2\">What data we collect</a></li>\n      <li><a class=\"u\" href=\"#pp-3\">Purposes and legal bases</a></li>\n      <li><a class=\"u\" href=\"#pp-4\">Online booking</a></li>\n      <li><a class=\"u\" href=\"#pp-5\">Who we share data with</a></li>\n      <li><a class=\"u\" href=\"#pp-6\">How long we keep data</a></li>\n      <li><a class=\"u\" href=\"#pp-7\">Your rights</a></li>\n      <li><a class=\"u\" href=\"#pp-8\">Cookies and social media</a></li>\n      <li><a class=\"u\" href=\"#pp-9\">Changes to this policy</a></li>\n    </ol></nav>\n",
+   "body": "    <section id=\"pp-1\" aria-labelledby=\"pp-1-h\">\n      <h2 id=\"pp-1-h\">1. Data controller</h2>\n      <p>The controller of your personal data is [COMPANY NAME], ul. Kazachska 1, 02-999 Warszawa, NIP (tax ID) [NIP], [KRS or CEIDG: NUMBER] — hereinafter “Beef &amp; Reef”.</p>\n      <p>For any matters concerning your personal data, write to <a class=\"u\" href=\"mailto:kontakt@beefandreef.pl\">kontakt@beefandreef.pl</a> or call <a class=\"u nowrap\" href=\"tel:+48222538860\">+48 222 538 860</a>.</p>\n    </section>\n    <section id=\"pp-2\" aria-labelledby=\"pp-2-h\">\n      <h2 id=\"pp-2-h\">2. What data we collect</h2>\n      <p>We only collect the data you give us yourself:</p>\n      <ul>\n        <li>when you book a table — your name, phone number, possibly your e-mail address, the date and the number of guests;</li>\n        <li>when you ask about a party — your contact details and the information about the event that you describe in a conversation or message;</li>\n        <li>when a party is paid by invoice — the details needed to issue it.</li>\n      </ul>\n      <p>Providing your data is voluntary, but without it we cannot accept a booking or reply to an enquiry.</p>\n    </section>\n    <section id=\"pp-3\" aria-labelledby=\"pp-3-h\">\n      <h2 id=\"pp-3-h\">3. Purposes and legal bases</h2>\n      <ul>\n        <li>Handling bookings and organising parties — Art. 6(1)(b) GDPR (steps taken before entering into a contract, and its performance).</li>\n        <li>Replying to messages and contacting you about your visit — Art. 6(1)(f) GDPR (our legitimate interest).</li>\n        <li>Issuing invoices and keeping accounts — Art. 6(1)(c) GDPR (legal obligation).</li>\n        <li>Establishing, pursuing or defending possible claims — Art. 6(1)(f) GDPR.</li>\n      </ul>\n    </section>\n    <section id=\"pp-4\" aria-labelledby=\"pp-4-h\">\n      <h2 id=\"pp-4-h\">4. Online booking</h2>\n      <p>Online booking takes place in an external booking system at <a class=\"u\" href=\"https://online.beefandreef.pl/booking\">online.beefandreef.pl</a>, operated by [BOOKING SYSTEM PROVIDER]. Data from the form goes to that system and is processed on our behalf under a data processing agreement.</p>\n    </section>\n    <section id=\"pp-5\" aria-labelledby=\"pp-5-h\">\n      <h2 id=\"pp-5-h\">5. Who we share data with</h2>\n      <p>Your data may only be received by companies that help us run the restaurant — to the extent necessary for their tasks:</p>\n      <ul>\n        <li>the online booking system provider,</li>\n        <li>the website and e-mail hosting provider,</li>\n        <li>our accounting office — in the case of invoices.</li>\n      </ul>\n      <p>We do not sell your data or share it for other companies’ marketing purposes.</p>\n    </section>\n    <section id=\"pp-6\" aria-labelledby=\"pp-6-h\">\n      <h2 id=\"pp-6-h\">6. How long we keep data</h2>\n      <ul>\n        <li>Booking data — until your visit, and then for [PERIOD] if it is needed to resolve possible claims.</li>\n        <li>Correspondence about parties — until the matter is closed, and then for [PERIOD].</li>\n        <li>Accounting documents — for the period required by tax law.</li>\n      </ul>\n    </section>\n    <section id=\"pp-7\" aria-labelledby=\"pp-7-h\">\n      <h2 id=\"pp-7-h\">7. Your rights</h2>\n      <p>You have the right to access your data, to have it rectified, erased, restricted and transferred, and to object to processing based on our legitimate interest.</p>\n      <p>To exercise these rights, write to <a class=\"u\" href=\"mailto:kontakt@beefandreef.pl\">kontakt@beefandreef.pl</a>. You also have the right to lodge a complaint with the President of the Personal Data Protection Office (UODO).</p>\n    </section>\n    <section id=\"pp-8\" aria-labelledby=\"pp-8-h\">\n      <h2 id=\"pp-8-h\">8. Cookies and social media</h2>\n      <p>This website does not use cookies for analytics or advertising. You will find the details in the <a class=\"u\" href=\"cookies.html\">cookie information</a>.</p>\n      <p>The links to Facebook and Instagram lead to external services — we do not embed their plugins on the website. Once you go there, those services’ privacy policies apply.</p>\n    </section>\n    <section id=\"pp-9\" aria-labelledby=\"pp-9-h\">\n      <h2 id=\"pp-9-h\">9. Changes to this policy</h2>\n      <p>If we change the way we process data, we will update this page and the date at the top.</p>\n    </section>"
+  },
+  "cookies_en": {
+   "title": "Cookies — Beef & Reef",
+   "desc": "The Beef & Reef website does not use cookies for analytics or advertising. See what we store in your browser.",
+   "eyebrow": "LEGAL INFORMATION",
+   "h1": "Cookies",
+   "since": "Effective from [DATE]",
+   "lead": "In short: this website does not track you and does not use cookies for analytics or advertising. That is why we do not show a cookie consent banner.",
+   "toc": "",
+   "body": "    <section id=\"ck-1\" aria-labelledby=\"ck-1-h\">\n      <h2 id=\"ck-1-h\">What we store on your device</h2>\n      <p>We store only two pieces of information, and only when you choose something yourself:</p>\n      <dl class=\"store-table\">\n        <div><dt>NAME</dt><dd><strong>br-theme</strong></dd></div>\n        <div><dt>TYPE</dt><dd>Browser local storage (localStorage), not a cookie</dd></div>\n        <div><dt>PURPOSE</dt><dd>Remembers whether you chose light or dark mode</dd></div>\n        <div><dt>WHEN</dt><dd>Only after you click the mode switch</dd></div>\n        <div><dt>HOW LONG</dt><dd>Until you delete this website’s data in your browser</dd></div>\n      </dl>\n      <dl class=\"store-table\">\n        <div><dt>NAME</dt><dd><strong>br-lang</strong></dd></div>\n        <div><dt>TYPE</dt><dd>Browser local storage (localStorage), not a cookie</dd></div>\n        <div><dt>PURPOSE</dt><dd>Remembers the language you chose for the website (Polish or English)</dd></div>\n        <div><dt>WHEN</dt><dd>Only after you choose a language</dd></div>\n        <div><dt>HOW LONG</dt><dd>Until you delete this website’s data in your browser</dd></div>\n      </dl>\n      <p>This information stays in your browser — we do not send it to ourselves or to anyone else.</p>\n    </section>\n    <section id=\"ck-2\" aria-labelledby=\"ck-2-h\">\n      <h2 id=\"ck-2-h\">Third-party services</h2>\n      <div class=\"sub\"><h3>Directions map</h3><p>The Google map loads only when you click “Show map”. From that moment Google may store its own cookies, in line with its privacy policy.</p></div>\n      <div class=\"sub\"><h3>Online booking</h3><p>The booking form runs on a separate service, <a class=\"u\" href=\"https://online.beefandreef.pl/booking\">online.beefandreef.pl</a>, which has its own cookie rules.</p></div>\n      <div class=\"sub\"><h3>Fonts</h3><p>We load the typeface from our own server, not from Google Fonts, so your IP address is not sent to Google when the page is displayed.</p></div>\n    </section>\n    <section id=\"ck-3\" aria-labelledby=\"ck-3-h\">\n      <h2 id=\"ck-3-h\">How to delete stored data</h2>\n      <p>In your browser settings, delete the cookies and data for this website. The website will then return to the mode that matches your device settings.</p>\n    </section>\n    <section id=\"ck-4\" aria-labelledby=\"ck-4-h\">\n      <h2 id=\"ck-4-h\">More information</h2>\n      <p>We describe how we process booking and enquiry data in the <a class=\"u\" href=\"privacy.html\">privacy policy</a>. Questions? Write to <a class=\"u\" href=\"mailto:kontakt@beefandreef.pl\">kontakt@beefandreef.pl</a>.</p>\n    </section>"
+  }
+ },
+ "menuHtml": {
+  "pl": "<div class=\"menu-list\">\n<div class=\"m-group\" id=\"g-steaks\" data-group=\"steaks\"><div class=\"m-cols\"><div class=\"m-col\"><section class=\"m-section\"><h2 class=\"section-title\">Steki</h2><div class=\"m-dishes\"><article class=\"m-dish\"><h3>Stek z polędwicy</h3><p>Polędwica wołowa (filet mignon), wyjątkowo krucha i soczysta, o naturalnym, szlachetnym smaku</p><p class=\"price\">200 g · 119 / 300 g · 179</p></article><article class=\"m-dish\"><h3>Ribeye</h3><p>Wołowina rasy Black Angus, sezonowana na mokro. Stek intensywnie marmurkowany, niezwykle soczysty i pełen smaku</p><p class=\"price\">300 g · 179</p></article><article class=\"m-dish\"><h3>T-bone</h3><p>Wołowina rasy Black Angus, sezonowana na sucho min. 21 dni. Soczyste połączenie rostbefu i polędwicy</p><p class=\"price\">500 g · 229</p></article><article class=\"m-dish\"><h3>Porterhouse</h3><p>Wołowina rasy Black Angus, sezonowana na sucho min. 21 dni. Rostbef z dużą porcją delikatnej polędwicy, o głębokim smaku</p><p class=\"price\">600 g · 249</p></article><article class=\"m-dish\"><h3>Tomahawk</h3><p>Wołowina rasy Black Angus, sezonowana na sucho min. 21 dni. Spektakularny antrykot z zachowaną długą kością żebrową</p><p class=\"price\">900–1000 g · 499</p></article></div></section></div><div class=\"m-col\"><section class=\"m-section\"><h2 class=\"section-title\">Dodatki</h2><div class=\"m-list\"><p class=\"m-row\"><span>Frytki stekowe</span><span>19</span></p><p class=\"m-row\"><span>Fasolka szparagowa</span><span>19</span></p><p class=\"m-row\"><span>Purée ziemniaczane</span><span>19</span></p><p class=\"m-row\"><span>Ziemniaki francuskie</span><span>19</span></p><p class=\"m-row\"><span>Frytki z batata</span><span>24</span></p><p class=\"m-row\"><span>Grillowane warzywa</span><span>24</span></p><p class=\"m-row\"><span>Mix sałat</span><span>24</span></p><p class=\"m-row\"><span>Pomidory z chimichurri</span><span>24</span></p><p class=\"m-row\"><span>Buraczki z kozim serem</span><span>24</span></p><p class=\"m-row\"><span>Groszek cukrowy</span><span>24</span></p></div></section><section class=\"m-section\"><h2 class=\"section-title\">Sosy</h2><div class=\"m-list\"><p class=\"m-row\"><span>Sos pieprzowy</span><span>9</span></p><p class=\"m-row\"><span>Sos chimichurri</span><span>9</span></p><p class=\"m-row\"><span>Sos truflowy</span><span>12</span></p><p class=\"m-row\"><span>Sos z grzybów leśnych</span><span>12</span></p></div></section></div></div></div>\n<div class=\"m-group\" id=\"g-fish\" data-group=\"fish\"><div class=\"double-rule m-sep\" aria-hidden=\"true\"><span></span><span></span></div><h2 class=\"section-title\">Ryby i owoce morza</h2><div class=\"m-cols\"><div class=\"m-col\"><section class=\"m-section\"><div class=\"m-dishes\"><article class=\"m-dish\"><h3>Stek z tuńczyka</h3><p>Tuńczyk, fasola z szałwią, sos sojowy, oliwa z oliwek, sos ponzu</p><p class=\"price\">119</p></article><article class=\"m-dish\"><h3>Macka ośmiornicy</h3><p>Ośmiornica, seler naciowy, kapary, cukinia, białe wino, oliwki, opiekane ziemniaki</p><p class=\"price\">109</p></article><article class=\"m-dish\"><h3>Krewetki z chorizo</h3><p>Krewetki królewskie, masło, chorizo, czosnek, pomidorki cherry, białe wino, natka pietruszki</p><p class=\"price\">57</p></article></div></section></div><div class=\"m-col\"><section class=\"m-section\"><div class=\"m-dishes\"><article class=\"m-dish\"><h3>Pieczony okoń morski</h3><p>Labraks (branzino) pieczony w całości, grillowane warzywa, ziemniaki francuskie</p><p class=\"price\">109</p></article><article class=\"m-dish\"><h3>Mule w białym winie</h3><p>Chorwackie mule w białym wytrawnym winie z szalotką, czosnkiem i natką pietruszki</p><p class=\"price\">69</p></article></div></section></div></div></div>\n<div class=\"m-group\" id=\"g-starters\" data-group=\"starters\"><div class=\"double-rule m-sep\" aria-hidden=\"true\"><span></span><span></span></div><div class=\"m-cols\"><div class=\"m-col\"><section class=\"m-section\"><h2 class=\"section-title\">Przystawki</h2><div class=\"m-dishes\"><article class=\"m-dish\"><h3>Tatar wołowy</h3><p>Polędwica wołowa, żółtko pasteryzowane, ogórek kiszony, oliwa szczypiorowa, cebula, grzyby marynowane, anchois</p><p class=\"price\">100 g · 59</p></article><article class=\"m-dish\"><h3>Tatar z tuńczyka</h3><p>Tuńczyk błękitnopłetwy, awokado, sos ponzu, sezam, sok z limonki, czerwona cebula, kapary</p><p class=\"price\">100 g · 59</p></article><article class=\"m-dish\"><h3>Tataki z tuńczyka</h3><p>Tuńczyk, miód, prażony sezam, sos ponzu, olej sezamowy, majonez homarowy</p><p class=\"price\">100 g · 69</p></article><article class=\"m-dish\"><h3>Carpaccio z buraków</h3><p>Buraki, orzechy włoskie, rukola, kozi ser, sos balsamiczny</p><p class=\"price\">48</p></article><article class=\"m-dish\"><h3>Carpaccio z polędwicy</h3><p>Polędwica wołowa, pasta truflowa, parmezan, grzyby marynowane, rukola</p><p class=\"price\">59</p></article><article class=\"m-dish\"><h3>Burrata Beef &amp; Reef</h3><p>Burrata, ceviche z krewetek, grillowany antrykot, pomidorki cherry, sos chimichurri</p><p class=\"price\">48</p></article></div></section></div><div class=\"m-col\"><section class=\"m-section\"><h2 class=\"section-title\">Sałatki</h2><div class=\"m-dishes\"><article class=\"m-dish\"><h3>Sałatka Beef &amp; Reef</h3><p>Sałata rzymska, krewetki, grzanki, pomidorki cherry, grillowana wołowina</p><p class=\"price\">69</p></article><article class=\"m-dish\"><h3>Cezar z kurczakiem</h3><p>Sałata rzymska, sos cezar, chipsy z kaparów, grzanki, parmezan, anchois, pierś z kurczaka</p><p class=\"price\">52</p></article><article class=\"m-dish\"><h3>Cezar z krewetkami</h3><p>Sałata rzymska, sos cezar, chipsy z kaparów, grzanki, parmezan, anchois, krewetki</p><p class=\"price\">55</p></article><article class=\"m-dish\"><h3>Sałatka z kozim serem</h3><p>Sałata rzymska, karmelizowany kozi ser, pomidorki cherry, winegret</p><p class=\"price\">49</p></article></div></section></div></div></div>\n<div class=\"m-group\" id=\"g-mains\" data-group=\"mains\"><div class=\"double-rule m-sep\" aria-hidden=\"true\"><span></span><span></span></div><div class=\"m-cols\"><div class=\"m-col\"><section class=\"m-section\"><h2 class=\"section-title\">Makarony</h2><div class=\"m-dishes\"><article class=\"m-dish\"><h3>Makaron Beef &amp; Reef</h3><p>Makaron tagliatelle, owoce morza, wołowina, pomidorki cherry, emulsja maślana</p><p class=\"price\">69</p></article><article class=\"m-dish\"><h3>Tagliatelle z truflą</h3><p>Makaron tagliatelle, masło, parmezan, pasta truflowa, płatki świeżych trufli</p><p class=\"price\">75</p></article><article class=\"m-dish\"><h3>Tagliatelle z leśnymi grzybami</h3><p>Makaron tagliatelle, podgrzybki, białe wino, czosnek, natka pietruszki, parmezan, wiejska śmietana</p><p class=\"price\">59</p></article><article class=\"m-dish\"><h3>Borowikowe tortellacci</h3><p>Włoskie pierożki faszerowane borowikami i ricottą, w sosie z podgrzybków ze śmietaną i serem Grana Padano</p><p class=\"price\">59</p></article><article class=\"m-dish\"><h3>Zielone tortellacci</h3><p>Włoskie zielone pierożki faszerowane mozzarellą i szpinakiem, w sosie z wiejskiej śmietany, z oliwą ziołową i parmezanem</p><p class=\"price\">53</p></article></div></section></div><div class=\"m-col\"><section class=\"m-section\"><h2 class=\"section-title\">Dania główne</h2><div class=\"m-dishes\"><article class=\"m-dish\"><h3>Grillowana pierś z kurczaka</h3><p>Grillowana pierś z kurczaka z miksem sałat i frytkami z batata</p><p class=\"price\">49</p></article><article class=\"m-dish\"><h3>Policzki wołowe</h3><p>Policzki wołowe z purée ziemniaczanym i sosem demi-glace</p><p class=\"price\">89</p></article><article class=\"m-dish\"><h3>Udko z gęsi confit</h3><p>Udko z gęsi, wolno gotowane we własnym tłuszczu, z kluskami śląskimi, sosem żurawinowym i burakami na słodko</p><p class=\"price\">450 g · 199</p></article><article class=\"m-dish\"><h3>Żebro wieprzowe BBQ</h3><p>Żebro sous-vide w sosie BBQ, ziemniaki francuskie, surówka z białej kapusty</p><p class=\"price\">99</p></article><article class=\"m-dish\"><h3>Pierś z kaczki</h3><p>Pierś z kaczki sous-vide, sos pomarańczowy, purée selerowe, brokuł łodygowy</p><p class=\"price\">109</p></article></div></section></div></div></div>\n<div class=\"m-group\" id=\"g-soups\" data-group=\"soups\"><div class=\"double-rule m-sep\" aria-hidden=\"true\"><span></span><span></span></div><div class=\"m-cols\"><div class=\"m-col\"><section class=\"m-section\"><h2 class=\"section-title\">Zupy</h2><div class=\"m-dishes\"><article class=\"m-dish\"><h3>Zupa Beef &amp; Reef</h3><p>Mule, krewetki, wołowina, aromatyczny wywar, pieczone warzywa</p><p class=\"price\">52</p></article><article class=\"m-dish\"><h3>Krem z cukinii</h3><p>Cukinia, mięta, masło, grzanki, oliwa ziołowa</p><p class=\"price\">39</p></article></div></section><section class=\"m-section\"><h2 class=\"section-title\">Menu dla dzieci</h2><div class=\"m-dishes\"><article class=\"m-dish\"><h3>Stripsy z kurczaka</h3><p>Filet z kurczaka, frytki, mizeria</p><p class=\"price\">33</p></article><article class=\"m-dish\"><h3>Tagliatelle z parmezanem</h3><p>Makaron tagliatelle, masło, parmezan</p><p class=\"price\">36</p></article></div></section></div><div class=\"m-col\"><section class=\"m-section\"><h2 class=\"section-title\">Sandwich</h2><div class=\"m-dishes\"><article class=\"m-dish\"><h3>Beef &amp; Reef</h3><p>Polędwica wołowa, krewetki, mix sałat, grzyby marynowane, majonez homarowy</p><p class=\"price\">52</p></article><article class=\"m-dish\"><h3>Black Angus</h3><p>Sezonowana wołowina rasy Black Angus, sos BBQ, ogórek konserwowy, prażona cebula, ser cheddar</p><p class=\"price\">49</p></article></div></section></div></div></div>\n<div class=\"m-group\" id=\"g-desserts\" data-group=\"desserts\"><div class=\"double-rule m-sep\" aria-hidden=\"true\"><span></span><span></span></div><h2 class=\"section-title\">Desery</h2><div class=\"m-cols\"><div class=\"m-col\"><section class=\"m-section\"><div class=\"m-dishes\"><article class=\"m-dish\"><h3>Crème brûlée</h3><p>Francuski deser opalany brązowym cukrem</p><p class=\"price\">37</p></article><article class=\"m-dish\"><h3>Kremowy sernik</h3><p>Lody waniliowe, mus malinowy, owoce</p><p class=\"price\">39</p></article></div></section></div><div class=\"m-col\"><section class=\"m-section\"><div class=\"m-dishes\"><article class=\"m-dish\"><h3>Szarlotka z pieca</h3><p>Lody waniliowe, owoce, cukier puder</p><p class=\"price\">34</p></article></div></section></div></div></div>\n<div class=\"m-group\" id=\"g-drinks\" data-group=\"drinks\"><div class=\"double-rule m-sep\" aria-hidden=\"true\"><span></span><span></span></div><div class=\"m-cols\"><div class=\"m-col\"><section class=\"m-section\"><h2 class=\"section-title\">Herbaty</h2><div class=\"m-list\"><p class=\"m-row\"><span>Ceylon gold</span><span>20</span></p><p class=\"m-row\"><span>Earl Grey</span><span>20</span></p><p class=\"m-row\"><span>Black chili chocolate</span><span>20</span></p><p class=\"m-row\"><span>Gunpowder green</span><span>20</span></p><p class=\"m-row\"><span>Green jasmine</span><span>20</span></p><p class=\"m-row\"><span>Forest fruits</span><span>20</span></p><p class=\"m-row\"><span>Raspberry pear</span><span>20</span></p><p class=\"m-row\"><span>Rooibos</span><span>20</span></p></div></section><section class=\"m-section\"><h2 class=\"section-title\">Lemoniady</h2><div class=\"m-list\"><p class=\"m-row\"><span>Klasyczna (szklanka / karafka)</span><span>18 / 40</span></p><p class=\"m-row\"><span>Smakowa (szklanka / karafka)</span><span>20 / 48</span></p></div></section></div><div class=\"m-col\"><section class=\"m-section\"><h2 class=\"section-title\">Kawy</h2><div class=\"m-list\"><p class=\"m-row\"><span>Espresso (pojedyncze / podwójne)</span><span>10 / 12</span></p><p class=\"m-row\"><span>Americano</span><span>12</span></p><p class=\"m-row\"><span>Cappuccino</span><span>14</span></p><p class=\"m-row\"><span>Latte</span><span>15</span></p><p class=\"m-row\"><span>Flat white</span><span>17</span></p></div></section><section class=\"m-section\"><h2 class=\"section-title\">Softy</h2><div class=\"m-list\"><p class=\"m-row\"><span>Woda</span><span>10 · 330 ml / 20 · 700 ml</span></p><p class=\"m-row\"><span>Fanta / Sprite</span><span>12 · 250 ml</span></p><p class=\"m-row\"><span>Coca-Cola (original / zero)</span><span>12 · 250 ml</span></p><p class=\"m-row\"><span>Cappy (pomarańcza / jabłko / multiwitamina)</span><span>12 · 250 ml</span></p><p class=\"m-row\"><span>Fuze Tea (brzoskwinia / cytryna)</span><span>12 · 250 ml</span></p></div></section></div></div></div>\n<div class=\"m-group\" id=\"g-bar\" data-group=\"bar\"><div class=\"double-rule m-sep\" aria-hidden=\"true\"><span></span><span></span></div><div class=\"m-cols\"><div class=\"m-col\"><section class=\"m-section\"><h2 class=\"section-title\">Piwa z beczki</h2><div class=\"m-list\"><h3>330 / 500 ml</h3><p class=\"m-row\"><span>Grimbergen Blanche</span><span>19 / 29</span></p><p class=\"m-row\"><span>Grimbergen Blonde</span><span>19 / 29</span></p><p class=\"m-row\"><span>Grimbergen Double-Ambrée</span><span>19 / 29</span></p></div></section><section class=\"m-section\"><h2 class=\"section-title\">Piwa butelkowe</h2><div class=\"m-list\"><p class=\"m-row\"><span>Carlsberg Pilsner</span><span>18 · 500 ml</span></p><p class=\"m-row\"><span>Somersby</span><span>19 · 400 ml</span></p><p class=\"m-row\"><span>1664 Blanc</span><span>21 · 330 ml</span></p></div></section><section class=\"m-section\"><h2 class=\"section-title\">Piwa butelkowe 0%</h2><div class=\"m-list\"><p class=\"m-row\"><span>Žatecký</span><span>14 · 500 ml</span></p><p class=\"m-row\"><span>Somersby</span><span>18 · 400 ml</span></p><p class=\"m-row\"><span>Carlsberg</span><span>18 · 500 ml</span></p><p class=\"m-row\"><span>1664 Blanc</span><span>18 · 330 ml</span></p><p class=\"m-row\"><span>Paulaner pszeniczny</span><span>20 · 500 ml</span></p></div></section><section class=\"m-section\"><h2 class=\"section-title\">Whisky</h2><div class=\"m-list\"><p class=\"m-row\"><span>Tullamore D.E.W.</span><span>22 · 50 ml</span></p><p class=\"m-row\"><span>Jack Daniel’s</span><span>26 · 50 ml</span></p><p class=\"m-row\"><span>Chivas Regal 12</span><span>29 · 50 ml</span></p><p class=\"m-row\"><span>Maker’s Mark</span><span>29 · 50 ml</span></p><p class=\"m-row\"><span>Monkey Shoulder</span><span>33 · 50 ml</span></p><p class=\"m-row\"><span>Glenfiddich 12</span><span>44 · 50 ml</span></p><p class=\"m-row\"><span>Glenfiddich 15</span><span>59 · 50 ml</span></p></div></section></div><div class=\"m-col\"><section class=\"m-section\"><h2 class=\"section-title\">Wódka</h2><div class=\"m-list\"><p class=\"m-row\"><span>Żubrówka Czarna</span><span>19 · 50 ml</span></p><p class=\"m-row\"><span>Chopin (żytni)</span><span>24 · 50 ml</span></p><p class=\"m-row\"><span>Chopin (ziemniaczany / pszeniczny)</span><span>35 · 50 ml</span></p><p class=\"m-row\"><span>Belvedere</span><span>37 · 50 ml</span></p></div></section><section class=\"m-section\"><h2 class=\"section-title\">Koktajle bezalkoholowe</h2><div class=\"m-list\"><p class=\"m-row\"><span>Aperol Spritz</span><span>35</span></p><p class=\"m-row\"><span>Hugo Spritz</span><span>35</span></p><p class=\"m-row\"><span>Passion Spritz</span><span>35</span></p><p class=\"m-row\"><span>Mojito</span><span>35</span></p><p class=\"m-row\"><span>Gin Tonic</span><span>35</span></p></div></section><section class=\"m-section\"><h2 class=\"section-title\">Koktajle alkoholowe</h2><div class=\"m-list\"><p class=\"m-row\"><span>Aperol Spritz</span><span>39</span></p><p class=\"m-row\"><span>Cosmopolitan</span><span>39</span></p><p class=\"m-row\"><span>Espresso Martini</span><span>39</span></p><p class=\"m-row\"><span>Hugo Spritz</span><span>39</span></p><p class=\"m-row\"><span>Old Fashioned</span><span>39</span></p><p class=\"m-row\"><span>Pornstar Martini</span><span>39</span></p><p class=\"m-row\"><span>Whisky Sour</span><span>39</span></p><p class=\"m-row\"><span>Gin Tonic</span><span>39</span></p><p class=\"m-row\"><span>Mojito</span><span>39</span></p><p class=\"m-row\"><span>Negroni</span><span>45</span></p><p class=\"m-row\"><span>Koktajl autorski</span><span>45</span></p></div></section></div></div></div>\n<div class=\"m-group\" id=\"g-wine\" data-group=\"wine\"><div class=\"double-rule m-sep\" aria-hidden=\"true\"><span></span><span></span></div><div class=\"m-cols\"><div class=\"m-col\"><section class=\"m-section\"><h2 class=\"section-title\">Wina białe</h2><div class=\"m-list\"><p class=\"m-row\"><span>Canyon Road Chardonnay</span><span>130</span></p><p class=\"m-row\"><span>Nocturne Viorica (Purcari)</span><span>170</span></p><p class=\"m-row\"><span>Pulpo Sauvignon Blanc</span><span>190</span></p><p class=\"m-row\"><span>Ulrich Langguth Riesling</span><span>250</span></p><p class=\"m-row\"><span>Chablis „Saint Martin” (Laroche)</span><span>399</span></p></div></section><section class=\"m-section\"><h2 class=\"section-title\">Wina czerwone</h2><div class=\"m-list\"><p class=\"m-row\"><span>Canyon Road Cabernet Sauvignon</span><span>130</span></p><p class=\"m-row\"><span>Spier Signature Pinotage</span><span>150</span></p><p class=\"m-row\"><span>Condado de Oriza Crianza</span><span>170</span></p><p class=\"m-row\"><span>Edna Valley Pinot Noir</span><span>240</span></p><p class=\"m-row\"><span>Primitivo di Manduria</span><span>240</span></p><p class=\"m-row\"><span>Penfolds Max’s Shiraz-Cabernet</span><span>320</span></p></div></section><section class=\"m-section\"><h2 class=\"section-title\">Wina różowe</h2><div class=\"m-list\"><p class=\"m-row\"><span>Cicada La Legende</span><span>190</span></p></div></section><section class=\"m-section\"><h2 class=\"section-title\">Wina musujące</h2><div class=\"m-list\"><p class=\"m-row\"><span>Lamia Prosecco (Botter)</span><span>140</span></p><p class=\"m-row\"><span>Bastets Cava Brut</span><span>200</span></p><p class=\"m-row\"><span>Palmer La Réserve (Palmer &amp; Co)</span><span>740</span></p></div></section></div><div class=\"m-col\"><section class=\"m-section\"><h2 class=\"section-title\">Wina na kieliszki</h2><div class=\"m-list\"><h3>Białe (150 ml)</h3><p class=\"m-row\"><span>Canyon Road Chardonnay</span><span>26</span></p><p class=\"m-row\"><span>Nocturne Viorica (Purcari)</span><span>34</span></p><p class=\"m-row\"><span>Pulpo Sauvignon Blanc</span><span>37</span></p><h3>Czerwone (150 ml)</h3><p class=\"m-row\"><span>Canyon Road Cabernet Sauvignon</span><span>26</span></p><p class=\"m-row\"><span>Condado de Oriza Crianza</span><span>34</span></p><p class=\"m-row\"><span>Primitivo di Manduria</span><span>48</span></p><h3>Różowe (150 ml)</h3><p class=\"m-row\"><span>Cicada La Legende</span><span>38</span></p><h3>Musujące (150 ml)</h3><p class=\"m-row\"><span>Lamia Prosecco (Botter)</span><span>28</span></p></div></section></div></div></div>\n<p class=\"price-note\">CENY W PLN</p>\n</div>",
+  "en": "<div class=\"menu-list\">\n<div class=\"m-group\" id=\"g-steaks\" data-group=\"steaks\"><div class=\"m-cols\"><div class=\"m-col\"><section class=\"m-section\"><h2 class=\"section-title\">Steaks</h2><div class=\"m-dishes\"><article class=\"m-dish\"><h3>Fillet Steak</h3><p>Beef fillet (filet mignon), exceptionally tender and juicy, with a pure, refined flavour</p><p class=\"price\">200 g · 119 / 300 g · 179</p></article><article class=\"m-dish\"><h3>Ribeye</h3><p>Black Angus beef, wet-aged. Richly marbled, exceptionally juicy and full of flavour</p><p class=\"price\">300 g · 179</p></article><article class=\"m-dish\"><h3>T-bone</h3><p>Black Angus beef, dry-aged for at least 21 days. A juicy combination of sirloin and fillet</p><p class=\"price\">500 g · 229</p></article><article class=\"m-dish\"><h3>Porterhouse</h3><p>Black Angus beef, dry-aged for at least 21 days. Sirloin with a generous portion of tender fillet, deep in flavour</p><p class=\"price\">600 g · 249</p></article><article class=\"m-dish\"><h3>Tomahawk</h3><p>Black Angus beef, dry-aged for at least 21 days. A spectacular ribeye cut with the long rib bone left on</p><p class=\"price\">900–1000 g · 499</p></article></div></section></div><div class=\"m-col\"><section class=\"m-section\"><h2 class=\"section-title\">Sides</h2><div class=\"m-list\"><p class=\"m-row\"><span>Steak fries</span><span>19</span></p><p class=\"m-row\"><span>Green beans</span><span>19</span></p><p class=\"m-row\"><span>Mashed potatoes</span><span>19</span></p><p class=\"m-row\"><span>Roast potatoes</span><span>19</span></p><p class=\"m-row\"><span>Sweet potato fries</span><span>24</span></p><p class=\"m-row\"><span>Grilled vegetables</span><span>24</span></p><p class=\"m-row\"><span>Side salad</span><span>24</span></p><p class=\"m-row\"><span>Tomatoes with chimichurri</span><span>24</span></p><p class=\"m-row\"><span>Beetroot with goat’s cheese</span><span>24</span></p><p class=\"m-row\"><span>Sugar snap peas</span><span>24</span></p></div></section><section class=\"m-section\"><h2 class=\"section-title\">Sauces</h2><div class=\"m-list\"><p class=\"m-row\"><span>Peppercorn sauce</span><span>9</span></p><p class=\"m-row\"><span>Chimichurri</span><span>9</span></p><p class=\"m-row\"><span>Truffle sauce</span><span>12</span></p><p class=\"m-row\"><span>Wild mushroom sauce</span><span>12</span></p></div></section></div></div></div>\n<div class=\"m-group\" id=\"g-fish\" data-group=\"fish\"><div class=\"double-rule m-sep\" aria-hidden=\"true\"><span></span><span></span></div><h2 class=\"section-title\">Fish &amp; Seafood</h2><div class=\"m-cols\"><div class=\"m-col\"><section class=\"m-section\"><div class=\"m-dishes\"><article class=\"m-dish\"><h3>Tuna Steak</h3><p>Tuna, beans with sage, soy sauce, olive oil, ponzu</p><p class=\"price\">119</p></article><article class=\"m-dish\"><h3>Octopus Tentacle</h3><p>Octopus, celery, capers, courgette, white wine, olives, roasted potatoes</p><p class=\"price\">109</p></article><article class=\"m-dish\"><h3>King Prawns with Chorizo</h3><p>King prawns, butter, chorizo, garlic, parsley, cherry tomatoes, white wine</p><p class=\"price\">57</p></article></div></section></div><div class=\"m-col\"><section class=\"m-section\"><div class=\"m-dishes\"><article class=\"m-dish\"><h3>Roasted Sea Bass</h3><p>Whole roasted sea bass (branzino), grilled vegetables, roast potatoes</p><p class=\"price\">109</p></article><article class=\"m-dish\"><h3>Mussels in White Wine</h3><p>Croatian-style mussels in dry white wine with shallots, garlic and parsley</p><p class=\"price\">69</p></article></div></section></div></div></div>\n<div class=\"m-group\" id=\"g-starters\" data-group=\"starters\"><div class=\"double-rule m-sep\" aria-hidden=\"true\"><span></span><span></span></div><div class=\"m-cols\"><div class=\"m-col\"><section class=\"m-section\"><h2 class=\"section-title\">Starters</h2><div class=\"m-dishes\"><article class=\"m-dish\"><h3>Beef Tartare</h3><p>Beef fillet, pasteurised egg yolk, fermented cucumber, chive oil, onion, pickled mushrooms, anchovies</p><p class=\"price\">100 g · 59</p></article><article class=\"m-dish\"><h3>Tuna Tartare</h3><p>Bluefin tuna, avocado, ponzu, sesame, lime juice, red onion, capers</p><p class=\"price\">100 g · 59</p></article><article class=\"m-dish\"><h3>Tuna Tataki</h3><p>Tuna, honey, toasted sesame, ponzu, sesame oil, lobster mayonnaise</p><p class=\"price\">100 g · 69</p></article><article class=\"m-dish\"><h3>Beetroot Carpaccio</h3><p>Beetroot, walnuts, rocket, goat’s cheese, balsamic dressing</p><p class=\"price\">48</p></article><article class=\"m-dish\"><h3>Beef Carpaccio</h3><p>Beef fillet, truffle paste, Parmesan, pickled mushrooms, rocket</p><p class=\"price\">59</p></article><article class=\"m-dish\"><h3>Burrata Beef &amp; Reef</h3><p>Burrata, prawn ceviche, grilled ribeye, cherry tomatoes, chimichurri</p><p class=\"price\">48</p></article></div></section></div><div class=\"m-col\"><section class=\"m-section\"><h2 class=\"section-title\">Salads</h2><div class=\"m-dishes\"><article class=\"m-dish\"><h3>Beef &amp; Reef Salad</h3><p>Romaine lettuce, prawns, croutons, cherry tomatoes, grilled beef</p><p class=\"price\">69</p></article><article class=\"m-dish\"><h3>Chicken Caesar</h3><p>Romaine lettuce, Caesar dressing, caper crisps, croutons, Parmesan, anchovies, chicken breast</p><p class=\"price\">52</p></article><article class=\"m-dish\"><h3>Prawn Caesar</h3><p>Romaine lettuce, Caesar dressing, caper crisps, croutons, Parmesan, anchovies, prawns</p><p class=\"price\">55</p></article><article class=\"m-dish\"><h3>Goat’s Cheese Salad</h3><p>Romaine lettuce, caramelised goat’s cheese, cherry tomatoes, vinaigrette</p><p class=\"price\">49</p></article></div></section></div></div></div>\n<div class=\"m-group\" id=\"g-mains\" data-group=\"mains\"><div class=\"double-rule m-sep\" aria-hidden=\"true\"><span></span><span></span></div><div class=\"m-cols\"><div class=\"m-col\"><section class=\"m-section\"><h2 class=\"section-title\">Pasta</h2><div class=\"m-dishes\"><article class=\"m-dish\"><h3>Beef &amp; Reef Pasta</h3><p>Tagliatelle, seafood, beef, cherry tomatoes, butter emulsion</p><p class=\"price\">69</p></article><article class=\"m-dish\"><h3>Truffle Tagliatelle</h3><p>Tagliatelle, butter, Parmesan, truffle paste, fresh truffle shavings</p><p class=\"price\">75</p></article><article class=\"m-dish\"><h3>Forest Mushroom Tagliatelle</h3><p>Tagliatelle, bay bolete mushrooms, white wine, garlic, parsley, Parmesan, farmhouse cream</p><p class=\"price\">59</p></article><article class=\"m-dish\"><h3>Porcini Tortellacci</h3><p>Italian pasta parcels filled with porcini and ricotta, in a creamy bay bolete sauce with Grana Padano</p><p class=\"price\">59</p></article><article class=\"m-dish\"><h3>Green Tortellacci</h3><p>Green Italian pasta parcels filled with mozzarella and spinach, in a farmhouse cream sauce with herb oil and Parmesan</p><p class=\"price\">53</p></article></div></section></div><div class=\"m-col\"><section class=\"m-section\"><h2 class=\"section-title\">Main Courses</h2><div class=\"m-dishes\"><article class=\"m-dish\"><h3>Grilled Chicken Breast</h3><p>Grilled chicken breast with a fresh salad and sweet potato fries</p><p class=\"price\">49</p></article><article class=\"m-dish\"><h3>Beef Cheeks</h3><p>Beef cheeks with mashed potatoes and demi-glace</p><p class=\"price\">89</p></article><article class=\"m-dish\"><h3>Goose Leg Confit</h3><p>Goose leg slow-cooked in its own fat, with Silesian dumplings, cranberry sauce and sweet glazed beetroot</p><p class=\"price\">450 g · 199</p></article><article class=\"m-dish\"><h3>BBQ Pork Rib</h3><p>Sous-vide rib in BBQ sauce, roast potatoes, white cabbage slaw</p><p class=\"price\">99</p></article><article class=\"m-dish\"><h3>Duck Breast</h3><p>Sous-vide duck breast, orange sauce, celeriac purée, tenderstem broccoli</p><p class=\"price\">109</p></article></div></section></div></div></div>\n<div class=\"m-group\" id=\"g-soups\" data-group=\"soups\"><div class=\"double-rule m-sep\" aria-hidden=\"true\"><span></span><span></span></div><div class=\"m-cols\"><div class=\"m-col\"><section class=\"m-section\"><h2 class=\"section-title\">Soups</h2><div class=\"m-dishes\"><article class=\"m-dish\"><h3>Beef &amp; Reef Soup</h3><p>Mussels, prawns, beef, aromatic broth, roasted vegetables</p><p class=\"price\">52</p></article><article class=\"m-dish\"><h3>Courgette Cream Soup</h3><p>Courgette, mint, butter, croutons, herb oil</p><p class=\"price\">39</p></article></div></section><section class=\"m-section\"><h2 class=\"section-title\">Kids’ Menu</h2><div class=\"m-dishes\"><article class=\"m-dish\"><h3>Chicken Strips</h3><p>Chicken fillet, fries, creamy cucumber salad</p><p class=\"price\">33</p></article><article class=\"m-dish\"><h3>Tagliatelle with Parmesan</h3><p>Tagliatelle, butter, Parmesan</p><p class=\"price\">36</p></article></div></section></div><div class=\"m-col\"><section class=\"m-section\"><h2 class=\"section-title\">Sandwich</h2><div class=\"m-dishes\"><article class=\"m-dish\"><h3>Beef &amp; Reef</h3><p>Beef fillet, prawns, mixed leaves, pickled mushrooms, lobster mayonnaise</p><p class=\"price\">52</p></article><article class=\"m-dish\"><h3>Black Angus</h3><p>Aged Black Angus beef, BBQ sauce, cheddar, pickled gherkin, crispy onions</p><p class=\"price\">49</p></article></div></section></div></div></div>\n<div class=\"m-group\" id=\"g-desserts\" data-group=\"desserts\"><div class=\"double-rule m-sep\" aria-hidden=\"true\"><span></span><span></span></div><h2 class=\"section-title\">Desserts</h2><div class=\"m-cols\"><div class=\"m-col\"><section class=\"m-section\"><div class=\"m-dishes\"><article class=\"m-dish\"><h3>Crème brûlée</h3><p>Classic French custard with a caramelised brown sugar crust</p><p class=\"price\">37</p></article><article class=\"m-dish\"><h3>Creamy Cheesecake</h3><p>Vanilla ice cream, raspberry mousse, fruit</p><p class=\"price\">39</p></article></div></section></div><div class=\"m-col\"><section class=\"m-section\"><div class=\"m-dishes\"><article class=\"m-dish\"><h3>Polish Apple Pie</h3><p>Oven-baked, with vanilla ice cream, fruit and icing sugar</p><p class=\"price\">34</p></article></div></section></div></div></div>\n<div class=\"m-group\" id=\"g-drinks\" data-group=\"drinks\"><div class=\"double-rule m-sep\" aria-hidden=\"true\"><span></span><span></span></div><div class=\"m-cols\"><div class=\"m-col\"><section class=\"m-section\"><h2 class=\"section-title\">Tea</h2><div class=\"m-list\"><p class=\"m-row\"><span>Ceylon gold</span><span>20</span></p><p class=\"m-row\"><span>Earl Grey</span><span>20</span></p><p class=\"m-row\"><span>Black chili chocolate</span><span>20</span></p><p class=\"m-row\"><span>Gunpowder green</span><span>20</span></p><p class=\"m-row\"><span>Green jasmine</span><span>20</span></p><p class=\"m-row\"><span>Forest fruits</span><span>20</span></p><p class=\"m-row\"><span>Raspberry pear</span><span>20</span></p><p class=\"m-row\"><span>Rooibos</span><span>20</span></p></div></section><section class=\"m-section\"><h2 class=\"section-title\">Lemonades</h2><div class=\"m-list\"><p class=\"m-row\"><span>Classic (glass / carafe)</span><span>18 / 40</span></p><p class=\"m-row\"><span>Flavoured (glass / carafe)</span><span>20 / 48</span></p></div></section></div><div class=\"m-col\"><section class=\"m-section\"><h2 class=\"section-title\">Coffee</h2><div class=\"m-list\"><p class=\"m-row\"><span>Espresso (single / double)</span><span>10 / 12</span></p><p class=\"m-row\"><span>Americano</span><span>12</span></p><p class=\"m-row\"><span>Cappuccino</span><span>14</span></p><p class=\"m-row\"><span>Latte</span><span>15</span></p><p class=\"m-row\"><span>Flat white</span><span>17</span></p></div></section><section class=\"m-section\"><h2 class=\"section-title\">Soft Drinks</h2><div class=\"m-list\"><p class=\"m-row\"><span>Water</span><span>10 · 330 ml / 20 · 700 ml</span></p><p class=\"m-row\"><span>Fanta / Sprite</span><span>12 · 250 ml</span></p><p class=\"m-row\"><span>Coca-Cola (original / zero)</span><span>12 · 250 ml</span></p><p class=\"m-row\"><span>Cappy (orange / apple / multivitamin)</span><span>12 · 250 ml</span></p><p class=\"m-row\"><span>Fuze Tea (peach / lemon)</span><span>12 · 250 ml</span></p></div></section></div></div></div>\n<div class=\"m-group\" id=\"g-bar\" data-group=\"bar\"><div class=\"double-rule m-sep\" aria-hidden=\"true\"><span></span><span></span></div><div class=\"m-cols\"><div class=\"m-col\"><section class=\"m-section\"><h2 class=\"section-title\">Draught Beer</h2><div class=\"m-list\"><h3>330 / 500 ml</h3><p class=\"m-row\"><span>Grimbergen Blanche</span><span>19 / 29</span></p><p class=\"m-row\"><span>Grimbergen Blonde</span><span>19 / 29</span></p><p class=\"m-row\"><span>Grimbergen Double-Ambrée</span><span>19 / 29</span></p></div></section><section class=\"m-section\"><h2 class=\"section-title\">Bottled Beer</h2><div class=\"m-list\"><p class=\"m-row\"><span>Carlsberg Pilsner</span><span>18 · 500 ml</span></p><p class=\"m-row\"><span>Somersby</span><span>19 · 400 ml</span></p><p class=\"m-row\"><span>1664 Blanc</span><span>21 · 330 ml</span></p></div></section><section class=\"m-section\"><h2 class=\"section-title\">Alcohol-free Beer</h2><div class=\"m-list\"><p class=\"m-row\"><span>Žatecký</span><span>14 · 500 ml</span></p><p class=\"m-row\"><span>Somersby</span><span>18 · 400 ml</span></p><p class=\"m-row\"><span>Carlsberg</span><span>18 · 500 ml</span></p><p class=\"m-row\"><span>1664 Blanc</span><span>18 · 330 ml</span></p><p class=\"m-row\"><span>Paulaner Wheat Beer</span><span>20 · 500 ml</span></p></div></section><section class=\"m-section\"><h2 class=\"section-title\">Whisky</h2><div class=\"m-list\"><p class=\"m-row\"><span>Tullamore D.E.W.</span><span>22 · 50 ml</span></p><p class=\"m-row\"><span>Jack Daniel’s</span><span>26 · 50 ml</span></p><p class=\"m-row\"><span>Chivas Regal 12</span><span>29 · 50 ml</span></p><p class=\"m-row\"><span>Maker’s Mark</span><span>29 · 50 ml</span></p><p class=\"m-row\"><span>Monkey Shoulder</span><span>33 · 50 ml</span></p><p class=\"m-row\"><span>Glenfiddich 12</span><span>44 · 50 ml</span></p><p class=\"m-row\"><span>Glenfiddich 15</span><span>59 · 50 ml</span></p></div></section></div><div class=\"m-col\"><section class=\"m-section\"><h2 class=\"section-title\">Vodka</h2><div class=\"m-list\"><p class=\"m-row\"><span>Żubrówka Czarna</span><span>19 · 50 ml</span></p><p class=\"m-row\"><span>Chopin (rye)</span><span>24 · 50 ml</span></p><p class=\"m-row\"><span>Chopin (potato / wheat)</span><span>35 · 50 ml</span></p><p class=\"m-row\"><span>Belvedere</span><span>37 · 50 ml</span></p></div></section><section class=\"m-section\"><h2 class=\"section-title\">Mocktails</h2><div class=\"m-list\"><p class=\"m-row\"><span>Aperol Spritz</span><span>35</span></p><p class=\"m-row\"><span>Hugo Spritz</span><span>35</span></p><p class=\"m-row\"><span>Passion Spritz</span><span>35</span></p><p class=\"m-row\"><span>Mojito</span><span>35</span></p><p class=\"m-row\"><span>Gin Tonic</span><span>35</span></p></div></section><section class=\"m-section\"><h2 class=\"section-title\">Cocktails</h2><div class=\"m-list\"><p class=\"m-row\"><span>Aperol Spritz</span><span>39</span></p><p class=\"m-row\"><span>Cosmopolitan</span><span>39</span></p><p class=\"m-row\"><span>Espresso Martini</span><span>39</span></p><p class=\"m-row\"><span>Hugo Spritz</span><span>39</span></p><p class=\"m-row\"><span>Old Fashioned</span><span>39</span></p><p class=\"m-row\"><span>Pornstar Martini</span><span>39</span></p><p class=\"m-row\"><span>Whisky Sour</span><span>39</span></p><p class=\"m-row\"><span>Gin Tonic</span><span>39</span></p><p class=\"m-row\"><span>Mojito</span><span>39</span></p><p class=\"m-row\"><span>Negroni</span><span>45</span></p><p class=\"m-row\"><span>Signature cocktail</span><span>45</span></p></div></section></div></div></div>\n<div class=\"m-group\" id=\"g-wine\" data-group=\"wine\"><div class=\"double-rule m-sep\" aria-hidden=\"true\"><span></span><span></span></div><div class=\"m-cols\"><div class=\"m-col\"><section class=\"m-section\"><h2 class=\"section-title\">White Wine</h2><div class=\"m-list\"><p class=\"m-row\"><span>Canyon Road Chardonnay</span><span>130</span></p><p class=\"m-row\"><span>Nocturne Viorica (Purcari)</span><span>170</span></p><p class=\"m-row\"><span>Pulpo Sauvignon Blanc</span><span>190</span></p><p class=\"m-row\"><span>Ulrich Langguth Riesling</span><span>250</span></p><p class=\"m-row\"><span>Chablis “Saint Martin” (Laroche)</span><span>399</span></p></div></section><section class=\"m-section\"><h2 class=\"section-title\">Red Wine</h2><div class=\"m-list\"><p class=\"m-row\"><span>Canyon Road Cabernet Sauvignon</span><span>130</span></p><p class=\"m-row\"><span>Spier Signature Pinotage</span><span>150</span></p><p class=\"m-row\"><span>Condado de Oriza Crianza</span><span>170</span></p><p class=\"m-row\"><span>Edna Valley Pinot Noir</span><span>240</span></p><p class=\"m-row\"><span>Primitivo di Manduria</span><span>240</span></p><p class=\"m-row\"><span>Penfolds Max’s Shiraz-Cabernet</span><span>320</span></p></div></section><section class=\"m-section\"><h2 class=\"section-title\">Rosé Wine</h2><div class=\"m-list\"><p class=\"m-row\"><span>Cicada La Legende</span><span>190</span></p></div></section><section class=\"m-section\"><h2 class=\"section-title\">Sparkling Wine</h2><div class=\"m-list\"><p class=\"m-row\"><span>Lamia Prosecco (Botter)</span><span>140</span></p><p class=\"m-row\"><span>Bastets Cava Brut</span><span>200</span></p><p class=\"m-row\"><span>Palmer La Réserve (Palmer &amp; Co)</span><span>740</span></p></div></section></div><div class=\"m-col\"><section class=\"m-section\"><h2 class=\"section-title\">Wine by the Glass</h2><div class=\"m-list\"><h3>White (150 ml)</h3><p class=\"m-row\"><span>Canyon Road Chardonnay</span><span>26</span></p><p class=\"m-row\"><span>Nocturne Viorica (Purcari)</span><span>34</span></p><p class=\"m-row\"><span>Pulpo Sauvignon Blanc</span><span>37</span></p><h3>Red (150 ml)</h3><p class=\"m-row\"><span>Canyon Road Cabernet Sauvignon</span><span>26</span></p><p class=\"m-row\"><span>Condado de Oriza Crianza</span><span>34</span></p><p class=\"m-row\"><span>Primitivo di Manduria</span><span>48</span></p><h3>Rosé (150 ml)</h3><p class=\"m-row\"><span>Cicada La Legende</span><span>38</span></p><h3>Sparkling (150 ml)</h3><p class=\"m-row\"><span>Lamia Prosecco (Botter)</span><span>28</span></p></div></section></div></div></div>\n<p class=\"price-note\">PRICES IN PLN</p>\n</div>"
+ }
+}
