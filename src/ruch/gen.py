@@ -16,7 +16,8 @@ B = {  # zasoby w płótnie głównym
     'pol': '/_blob/d89ba95b176d8b55a8e1c18bfe417d1e',
     'kacz': '/_blob/8924f7504f174bf4fe303ff8ed79cd5b',
     'rog': '/_blob/0add22fb1759d259627c7231358ccea6',
-    'stekf': '/_blob/b91d76e2dbd119e6a149f75ac5a23c7a', 'sern': '/_blob/edc38a1a589a155b433557cc48e4d307', 'sernf': '/_blob/fac3d419120a5ceb1566718411036d81',
+    'stekf': '/_blob/b91d76e2dbd119e6a149f75ac5a23c7a', 'sern': '/_blob/edc38a1a589a155b433557cc48e4d307', 'kaczf': '/_blob/12886983c40a57629921236ecfeb055a', 'osmf': '/_blob/97c7b89353458ee9816e0c24b62d105d',
+    'sernf': '/_blob/fac3d419120a5ceb1566718411036d81',
     'ext': '/_blob/b17878b93c23b62318611e04dfd9a8b0', 'bar': '/_blob/d3a302a65a5e0399e24e0a8b90191e2e', 'sala': '/_blob/a26fb76d3d464d2cb8ce72e25a1375ba', 'salap': '/_blob/1925f10e8f4d5b92649197f69be95066',
 }
 TEL = 'tel:+48222538860'; PHONE = '+48 222 538 860'
@@ -182,7 +183,7 @@ def carousel(lang, label, slides_hint):
               <p class="t3 t-desc">{{{{s.desc}}}}</p>
               <p class="t4 t-price">{{{{s.price}}}}</p>
             </div>
-            <div class="s-img"><img class="{{{{s.imgCls}}}}" src="{{{{s.src}}}}" alt="{{{{s.alt}}}}" style="{{{{s.size}}}}" draggable="false"></div>
+            <div class="s-img"><img class="bgfill {{{{s.imgCls}}}}" src="{{{{s.src}}}}" alt="" aria-hidden="true" draggable="false"><img class="{{{{s.imgCls}}}}" src="{{{{s.src}}}}" alt="{{{{s.alt}}}}" style="{{{{s.size}}}}" draggable="false"></div>
           </div>
         </sc-for>
         <span class="frame" aria-hidden="true"></span>
@@ -215,18 +216,16 @@ def slides(lang):
                    desc='Królować będzie gęsina w autorskich odsłonach naszego Szefa Kuchni. 11 listopada — oryginalne rogale świętomarcińskie z certyfikowanej piekarni w Poznaniu.',
                    price='Udko z gęsi confit · 450 g · 199', cta='Zarezerwuj stolik', href=TEL, imgCls='photo', size='', until=D['EVENT']['until'])]
         di = [dict(src=B['stekf'], alt='Dwa surowe, marmurkowe antrykoty na drewnianej desce z tymiankiem i papryczkami chili', kicker='STEKI', title='Steki z najlepszych hodowli', desc='Wołowina rasy Black Angus, sezonowana na sucho min. 21 dni. Polędwica, ribeye, T-bone, porterhouse i tomahawk.', price='od 119', cta='Zobacz steki w menu', href=m + '#g-steaks', imgCls='photo', size='object-position: 60% 80%'),
-              dict(src=B['osm'], alt='Macka ośmiornicy z cukinią i czerwonym kawiorem', kicker='RYBY I OWOCE MORZA', title='Macka ośmiornicy', desc='Ośmiornica, seler naciowy, kapary, cukinia, białe wino, oliwki, opiekane ziemniaki.', price='109', cta='Zobacz ryby i owoce morza', href=m + '#g-fish', imgCls='plate', size=''),
-              dict(src=B['pol'], alt='Stek z polędwicy z kiełkami groszku i oliwą ziołową', kicker='STEKI', title='Stek z polędwicy', desc='Polędwica wołowa (filet mignon), wyjątkowo krucha i soczysta, o naturalnym, szlachetnym smaku.', price='200 g · 119 / 300 g · 179', cta='Zobacz steki w menu', href=m + '#g-steaks', imgCls='plate', size=''),
-              dict(src=B['kacz'], alt='Pierś z kaczki z sosem pomarańczowym i brokułem', kicker='DANIA GŁÓWNE', title='Pierś z kaczki', desc='Pierś z kaczki sous-vide, sos pomarańczowy, purée selerowe, brokuł łodygowy.', price='109', cta='Zobacz dania główne', href=m + '#g-mains', imgCls='plate', size=''),
+              dict(src=B['osmf'], alt='Macka ośmiornicy z cukinią, kiełkami groszku i czerwonym kawiorem w głębokim talerzu', kicker='RYBY I OWOCE MORZA', title='Macka ośmiornicy', desc='Ośmiornica, seler naciowy, kapary, cukinia, białe wino, oliwki, opiekane ziemniaki.', price='109', cta='Zobacz ryby i owoce morza', href=m + '#g-fish', imgCls='photo', size='object-position: 50% 50%'),
+              dict(src=B['kaczf'], alt='Pierś z kaczki z sosem pomarańczowym, brokułem i purée selerowym', kicker='DANIA GŁÓWNE', title='Pierś z kaczki', desc='Pierś z kaczki sous-vide, sos pomarańczowy, purée selerowe, brokuł łodygowy.', price='109', cta='Zobacz dania główne', href=m + '#g-mains', imgCls='photo', size='object-position: 50% 50%'),
               dict(src=B['sernf'], alt='Kremowy sernik z płatkami migdałów i gałką lodów waniliowych na stoliku w ogródku', kicker='DESERY', title='Kremowy sernik', desc='Lody waniliowe, mus malinowy, owoce.', price='39', cta='Zobacz desery', href=m + '#g-desserts', imgCls='photo', size='object-position: 50% 50%')]
     else:
         ev = [dict(id='Św. Marcin', src=B['rog'], alt='St. Martin’s croissants with icing and nuts', kicker='EVENT · 7–15 NOVEMBER', title='Celebrating St. Martin’s Day',
                    desc='Goose takes centre stage in our head chef’s own creations. On 11 November — original St. Martin’s croissants from a certified bakery in Poznań.',
                    price='Confit goose leg · 450 g · 199', cta='Book a table', href=TEL, imgCls='photo', size='', until=D['EVENT']['until'])]
         di = [dict(src=B['stekf'], alt='Two raw marbled ribeye steaks on a wooden board with thyme and chillies', kicker='STEAKS', title='Steaks from the finest farms', desc='Black Angus beef, dry-aged for at least 21 days. Fillet, ribeye, T-bone, porterhouse and tomahawk.', price='from 119', cta='See steaks on the menu', href=m + '#g-steaks', imgCls='photo', size='object-position: 60% 80%'),
-              dict(src=B['osm'], alt='Octopus tentacle with courgette and red caviar', kicker='FISH &amp; SEAFOOD', title='Octopus Tentacle', desc='Octopus, celery, capers, courgette, white wine, olives, roasted potatoes.', price='109', cta='See fish &amp; seafood', href=m + '#g-fish', imgCls='plate', size=''),
-              dict(src=B['pol'], alt='Fillet steak with pea shoots and herb oil', kicker='STEAKS', title='Fillet Steak', desc='Beef fillet (filet mignon), exceptionally tender and juicy, with a pure, refined flavour.', price='200 g · 119 / 300 g · 179', cta='See steaks on the menu', href=m + '#g-steaks', imgCls='plate', size=''),
-              dict(src=B['kacz'], alt='Duck breast with orange sauce and broccoli', kicker='MAINS', title='Duck Breast', desc='Sous-vide duck breast, orange sauce, celeriac purée, tenderstem broccoli.', price='109', cta='See mains', href=m + '#g-mains', imgCls='plate', size=''),
+              dict(src=B['osmf'], alt='Octopus tentacle with courgette, pea shoots and red caviar in a deep plate', kicker='FISH &amp; SEAFOOD', title='Octopus Tentacle', desc='Octopus, celery, capers, courgette, white wine, olives, roasted potatoes.', price='109', cta='See fish &amp; seafood', href=m + '#g-fish', imgCls='photo', size='object-position: 50% 50%'),
+              dict(src=B['kaczf'], alt='Duck breast with orange sauce, broccoli and celeriac purée', kicker='MAINS', title='Duck Breast', desc='Sous-vide duck breast, orange sauce, celeriac purée, tenderstem broccoli.', price='109', cta='See mains', href=m + '#g-mains', imgCls='photo', size='object-position: 50% 50%'),
               dict(src=B['sernf'], alt='Creamy cheesecake with flaked almonds and a scoop of vanilla ice cream on a terrace table', kicker='DESSERTS', title='Creamy Cheesecake', desc='Vanilla ice cream, raspberry mousse, fruit.', price='39', cta='See desserts', href=m + '#g-desserts', imgCls='photo', size='object-position: 50% 50%')]
     # JSON trafia do skryptu: encje HTML w danych zamieniamy na znaki
     for x in ev + di:
@@ -297,7 +296,7 @@ def home_body(lang):
         </p>
       </div>
       <div class="rise d4 car-wrap">
-{carousel(lang, c["car"], 6)}      </div>
+{carousel(lang, c["car"], 5)}      </div>
     </div>
   </section>
 

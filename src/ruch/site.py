@@ -27,6 +27,8 @@ IMG = {
     B['kacz']: 'assets/img/piers-z-kaczki.webp',
     B['rog']: 'assets/img/rogale-swietomarcinskie.webp',
     B['sernf']: 'assets/img/sernik.webp',
+    B['kaczf']: 'assets/img/kaczka.webp',
+    B['osmf']: 'assets/img/osmiornica.webp',
     B['ext']: 'assets/img/zewnatrz.webp',
     B['bar']: 'assets/img/bar-sala.webp',
     B['sala']: 'assets/img/sala.webp',
@@ -35,6 +37,8 @@ IMG = {
 SMALL = {  # mniejsze wersje dla telefonów
     'assets/img/rogale-swietomarcinskie.webp': ('assets/img/rogale-swietomarcinskie-800.webp', 1600),
     'assets/img/sernik.webp': ('assets/img/sernik-800.webp', 1550),
+    'assets/img/kaczka.webp': ('assets/img/kaczka-800.webp', 1600),
+    'assets/img/osmiornica.webp': ('assets/img/osmiornica-800.webp', 1600),
     'assets/img/zewnatrz.webp': ('assets/img/zewnatrz-800.webp', 1600),
     'assets/img/bar-sala.webp': ('assets/img/bar-sala-800.webp', 1600),
     'assets/img/sala.webp': ('assets/img/sala-800.webp', 1600),

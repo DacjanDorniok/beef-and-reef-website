@@ -122,7 +122,9 @@ body{margin:0}
 .rx .s-text{background:var(--paper);padding:64px 64px 168px;display:flex;flex-direction:column;justify-content:center;gap:16px;min-width:0}
 .rx .s-img{position:relative;overflow:hidden;background:var(--stage);display:flex;align-items:center;justify-content:center;min-height:0}
 .rx .s-img .plate{display:block;width:auto;height:auto;max-width:var(--mw,74%);max-height:var(--mh,82%);object-fit:contain;filter:drop-shadow(0 28px 28px var(--plate))}
-.rx .s-img .photo{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 62%}
+.rx .s-img .photo{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;object-position:50% 50% !important;z-index:1}
+.rx .s-img img.bgfill{position:absolute;top:-32px;left:-32px;width:calc(100% + 64px);height:calc(100% + 64px);max-width:none;max-height:none;object-fit:cover;object-position:50% 50% !important;filter:blur(28px) brightness(0.85) saturate(1.05);z-index:0;pointer-events:none}
+.rx .s-img img.bgfill.plate{display:none}
 .rx .t-title{margin:0;font-size:clamp(36px,3.6vw,56px);line-height:1.05;font-weight:700}
 .rx .t-desc{margin:0;max-width:440px;font-size:19px;line-height:28px}
 .rx .t-price{margin:8px 0 0;font-size:20px;line-height:24px;font-weight:700}
@@ -131,8 +133,8 @@ body{margin:0}
 .rx .slide.cur .t1{transition-delay:.15s}.rx .slide.cur .t2{transition-delay:.25s}.rx .slide.cur .t3{transition-delay:.35s}.rx .slide.cur .t4{transition-delay:.45s}
 .rx .slide .plate{opacity:0;transform:translateX(14%) rotate(-14deg)}
 .rx .slide.cur .plate,.rx .slide.out .plate{opacity:1;transform:none;transition:opacity .8s ease .1s,transform 1.5s cubic-bezier(.2,.7,.2,1) .1s}
-.rx .slide .photo{transform:scale(1.12)}
-.rx .slide.cur .photo,.rx .slide.out .photo{transform:none;transition:transform 6s cubic-bezier(.2,.6,.3,1)}
+.rx .slide .bgfill{transform:scale(1.12)}
+.rx .slide.cur .bgfill,.rx .slide.out .bgfill{transform:none;transition:transform 6s cubic-bezier(.2,.6,.3,1)}
 .rx .ctrl{position:absolute;z-index:6;left:64px;bottom:48px;width:calc(41.666% - 128px);display:flex;flex-direction:column;gap:8px}
 .rx .ctrl-row{display:flex;align-items:center;gap:12px}
 .rx .count{margin:0;font-size:18px;line-height:24px;white-space:nowrap}
