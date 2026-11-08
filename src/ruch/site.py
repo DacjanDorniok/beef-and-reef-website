@@ -27,6 +27,7 @@ IMG = {
     B['kacz']: 'assets/img/piers-z-kaczki.webp',
     B['rog']: 'assets/img/rogale-swietomarcinskie.webp',
     B['sernf']: 'assets/img/sernik.webp',
+    B['stekf']: 'assets/img/steki-foto.webp',
     B['kaczf']: 'assets/img/kaczka.webp',
     B['osmf']: 'assets/img/osmiornica.webp',
     B['ext']: 'assets/img/zewnatrz.webp',
@@ -37,6 +38,7 @@ IMG = {
 SMALL = {  # mniejsze wersje dla telefonów
     'assets/img/rogale-swietomarcinskie.webp': ('assets/img/rogale-swietomarcinskie-800.webp', 1600),
     'assets/img/sernik.webp': ('assets/img/sernik-800.webp', 1550),
+    'assets/img/steki-foto.webp': ('assets/img/steki-foto-600.webp', 756, 600),
     'assets/img/kaczka.webp': ('assets/img/kaczka-800.webp', 1600),
     'assets/img/osmiornica.webp': ('assets/img/osmiornica-800.webp', 1600),
     'assets/img/zewnatrz.webp': ('assets/img/zewnatrz-800.webp', 1600),
@@ -148,8 +150,9 @@ def fix_links(s, cur_file):
         path = IMG[blob]
         out = f'src="{rel(cur_file, path)}"'
         if path in SMALL:
-            small, w = SMALL[path]
-            out += f' srcset="{rel(cur_file, small)} 800w, {rel(cur_file, path)} {w}w" sizes="{SIZES["w"]}"'
+            small, w = SMALL[path][:2]
+            sw = SMALL[path][2] if len(SMALL[path]) > 2 else 800
+            out += f' srcset="{rel(cur_file, small)} {sw}w, {rel(cur_file, path)} {w}w" sizes="{SIZES["w"]}"'
         return out
     s = re.sub(r'src="(/_blob/[0-9a-f]+)"', img, s)
     # dane slajdów (src w JSON nie występują — slajdy są już wyrenderowane)
@@ -168,9 +171,7 @@ def ctx_for(lang, kind):
     cfg = {'words': {}, 'cats': None, 'events': [], 'dishes': []}
     if kind in ('home', 'menu'):
         ev, di = gen.slides(lang)
-        for x in di:  # zdjęcie steków z Adobe Stock (podgląd ze znakiem wodnym) nie trafia na stronę do czasu zakupu licencji
-            if x['src'] == B['stekf']:
-                x.update(src=B['steki'], imgCls='plate', size='--mw: 92%; --mh: 62%')
+        # zdjęcie steków: podgląd z Adobe Stock (nr 328832358) do akceptacji właściciela — po zakupie licencji podmienić plik assets/img/steki-foto.webp
         events = ev if (kind == 'home' and D['EVENT']['on']) else []
         L = events + di
     else:

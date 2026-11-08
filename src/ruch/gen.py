@@ -16,7 +16,7 @@ B = {  # zasoby w płótnie głównym
     'pol': '/_blob/d89ba95b176d8b55a8e1c18bfe417d1e',
     'kacz': '/_blob/8924f7504f174bf4fe303ff8ed79cd5b',
     'rog': '/_blob/0add22fb1759d259627c7231358ccea6',
-    'stekf': '/_blob/b91d76e2dbd119e6a149f75ac5a23c7a', 'sern': '/_blob/edc38a1a589a155b433557cc48e4d307', 'kaczf': '/_blob/12886983c40a57629921236ecfeb055a', 'osmf': '/_blob/de19542d18064fb333f5d47ac25ac5a4',
+    'stekf': '/_blob/131233dd41ce2602c94462e6dc1b5635', 'sern': '/_blob/edc38a1a589a155b433557cc48e4d307', 'kaczf': '/_blob/12886983c40a57629921236ecfeb055a', 'osmf': '/_blob/de19542d18064fb333f5d47ac25ac5a4',
     'sernf': '/_blob/fac3d419120a5ceb1566718411036d81',
     'ext': '/_blob/b17878b93c23b62318611e04dfd9a8b0', 'bar': '/_blob/d3a302a65a5e0399e24e0a8b90191e2e', 'sala': '/_blob/a26fb76d3d464d2cb8ce72e25a1375ba', 'salap': '/_blob/1925f10e8f4d5b92649197f69be95066',
 }

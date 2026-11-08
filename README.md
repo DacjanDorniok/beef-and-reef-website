@@ -28,7 +28,7 @@ Nowa strona restauracji Beef & Reef (Kazachska 1, Warszawa). Zbudowana na podsta
 Przebudowa po zmianach: `node src/ruch/extract.js && python3 src/ruch/site.py`
 
 ## Do uzupełnienia przed startem
-- Zdjęcie szefa kuchni. Zdjęcie steków z Adobe Stock (na płótnie) — po zakupie licencji podmienić; na stronie do tego czasu jest wycięte zdjęcie steków.
+- Zdjęcie szefa kuchni. Zdjęcie steków to podgląd z Adobe Stock (nr 328832358, ze znakiem wodnym) do akceptacji właściciela — po zakupie licencji podmienić `docs/assets/img/steki-foto.webp` (+ `-600`).
 - Opis sernika w menu a zdjęcie (migdały, lody, winogrona) — ujednolicić.
 - Linki do PDF menu (teraz `#`).
 - Polityka prywatności i cookies: dane firmy ([NAZWA FIRMY], [NIP], [KRS/CEIDG], [DOSTAWCA SYSTEMU REZERWACJI], [OKRES], [DATA]) i przegląd prawny. Mapa jest ładowana po kliknięciu — opisać to w polityce cookies.
