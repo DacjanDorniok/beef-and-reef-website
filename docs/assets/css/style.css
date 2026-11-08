@@ -258,6 +258,7 @@ html[data-theme="dark"] .rx{--paper:#0a0a0a;--ground:linear-gradient(180deg,#0a0
 .rx .seg a[aria-current]{background:var(--ink);color:var(--paper)}
 .rx .pdfs{margin:0;display:flex;flex-wrap:wrap;align-items:center;gap:0 24px;font-size:18px}
 .rx .pdfs a{display:inline-flex;align-items:center;min-height:44px}
+.rx .phead + .catbar{margin-top:0}
 .rx .catbar{margin-top:calc(var(--sec) * 0.75);position:sticky;top:var(--hh);z-index:30;background:var(--paper);border-bottom:0.5px solid var(--gold);border-top:0.5px solid var(--gold)}
 .rx .chips{display:flex;gap:32px;overflow-x:auto;scrollbar-width:none;padding-left:var(--gut);padding-right:var(--gut);max-width:calc(1312px + var(--gut) * 2);margin:0 auto}
 .rx .chips::-webkit-scrollbar{display:none}

@@ -413,14 +413,6 @@ def menu_body(lang):
     </div>
   </section>
 
-  <section data-rv="picks" class="{{{{c.picks}}}} picks" aria-labelledby="picks-title">
-    <div class="wrap">
-      <h2 id="picks-title" class="rise kicker">{c["picks"]}</h2>
-      <div class="rise d1 car-wrap" style="margin-top: 0">
-{carousel(lang, c["car"], 5)}      </div>
-    </div>
-  </section>
-
   <nav class="catbar" aria-label="{c["cats"]}">
     <div id="rx-chips" class="chips">
       <sc-for list="{{{{chips}}}}" as="ch" hint-placeholder-count="9"><a id="{{{{ch.id}}}}" class="{{{{ch.cls}}}}" href="{{{{ch.href}}}}" aria-current="{{{{ch.cur}}}}">{{{{ch.t}}}}</a></sc-for>
@@ -673,7 +665,7 @@ def page(lang, kind):
     elif kind == 'menu':
         body = menu_body(lang); ev, di = slides(lang)
         idx = 1 if lang == 'pl' else 2
-        cfg.update(rv=['picks', 'live', 'res'], words={'stmt2': S2[lang]}, dishes=di, cats=[[c[0], c[idx]] for c in D['CATS']])
+        cfg.update(rv=['live', 'res'], words={'stmt2': S2[lang]}, dishes=[], cats=[[c[0], c[idx]] for c in D['CATS']])
         bar = pbar(lang, BOOK, t['barOnline'])
     elif kind == 'party':
         body = party_body(lang)

@@ -169,7 +169,7 @@ def words(text):
 def ctx_for(lang, kind):
     t = T[lang]
     cfg = {'words': {}, 'cats': None, 'events': [], 'dishes': []}
-    if kind in ('home', 'menu'):
+    if kind == 'home':
         ev, di = gen.slides(lang)
         # zdjęcie steków: podgląd z Adobe Stock (nr 328832358) do akceptacji właściciela — po zakupie licencji podmienić plik assets/img/steki-foto.webp
         events = ev if (kind == 'home' and D['EVENT']['on']) else []
