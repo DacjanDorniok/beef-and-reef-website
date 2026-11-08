@@ -205,7 +205,7 @@ def stmt(id_, cls='stmt'):
 def split(a, b, tag='h2', id_='', extra='', b_is_tel=False):
     idattr = f' id="{id_}"' if id_ else ''
     right = (f'<a class="float d1 tel" href="{TEL}">{b}</a>' if b_is_tel else f'<span class="float d1 b">{b}</span>')
-    return f'<{tag}{idattr} class="split{extra}"><span class="float">{a}</span><span class="bar" aria-hidden="true"></span>{right}</{tag}>'
+    return f'<{tag}{idattr} class="split{extra}"><span class="float">{a}</span> <span class="bar" aria-hidden="true"></span> {right}</{tag}>'
 
 # ---------- dane karuzeli ----------
 def slides(lang):
