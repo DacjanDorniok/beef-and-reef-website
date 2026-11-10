@@ -12,7 +12,8 @@ import gen
 from gen import B, T, F, D, TEL, MAIL
 
 DOCS = os.path.normpath(os.path.join(HERE, '..', '..', 'docs'))
-SITE = 'https://dacjandorniok.github.io/beef-and-reef-website/'
+# adres strony; na produkcji: SITE=https://beefandreef.pl/ python3 src/ruch/site.py
+SITE = os.environ.get('SITE', 'https://dacjandorniok.github.io/beef-and-reef-website/')
 PAGES = D['PAGES']  # pl/en -> home, menu, party, privacy, cookies
 KINDS = ('home', 'menu', 'party', 'privacy', 'cookies')
 MAPS_EMBED = 'https://www.google.com/maps?q=Beef+%26+Reef,+Kazachska+1,+02-999+Warszawa&amp;output=embed'
@@ -397,4 +398,19 @@ if __name__ == '__main__':
     open(os.path.join(DOCS, 'assets', 'css', 'style.css'), 'w').write(site_css())
     open(os.path.join(DOCS, 'assets', 'js', 'main.js'), 'w').write(open(os.path.join(HERE, 'site.js')).read())
     done = [write_page(l, k) for l in ('pl', 'en') for k in KINDS] + [not_found()]
+    # robots.txt, sitemap.xml i CNAME (tylko dla własnej domeny)
+    pages = [f for f in done if f != '404.html']
+    pretty = lambda f: SITE + re.sub(r'(^|/)index\.html$', r'\1', f)
+    open(os.path.join(DOCS, 'robots.txt'), 'w').write(f'User-agent: *\nAllow: /\n\nSitemap: {SITE}sitemap.xml\n')
+    sm = ['<?xml version="1.0" encoding="UTF-8"?>', '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">']
+    for f in sorted(pages, key=lambda f: (f.startswith('en/'), f != 'index.html', f)):
+        sm.append(f'  <url><loc>{pretty(f)}</loc></url>')
+    sm.append('</urlset>')
+    open(os.path.join(DOCS, 'sitemap.xml'), 'w').write('\n'.join(sm) + '\n')
+    host = re.sub(r'^https?://([^/]+)/.*$', r'\1', SITE)
+    cname = os.path.join(DOCS, 'CNAME')
+    if host.endswith('github.io'):
+        if os.path.exists(cname): os.remove(cname)
+    else:
+        open(cname, 'w').write(host + '\n')
     print('\n'.join(done))

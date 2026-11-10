@@ -614,30 +614,30 @@ function privacyPage(lang) {
   const cookiesHref = link(ctx, 'cookies');
   const L = lang === 'pl' ? {
     title: 'Polityka prywatności — Beef & Reef', desc: 'Jakie dane zbiera Beef & Reef przy rezerwacji i zapytaniach o przyjęcia, w jakim celu i jakie masz prawa.',
-    eyebrow: 'INFORMACJE PRAWNE', h1: 'Polityka prywatności', since: 'Obowiązuje od [DATA]', tocTitle: 'SPIS TREŚCI',
+    eyebrow: 'INFORMACJE PRAWNE', h1: 'Polityka prywatności', since: 'Obowiązuje od 10 listopada 2026', tocTitle: 'SPIS TREŚCI',
     lead: 'Szanujemy Twoją prywatność. Poniżej wyjaśniamy, jakie dane zbieramy, gdy rezerwujesz stolik lub pytasz o przyjęcie, w jakim celu i jakie masz prawa.',
     s: [
-      ['Administrator danych', [p('Administratorem Twoich danych osobowych jest [NAZWA FIRMY], ul. Kazachska 1, 02-999 Warszawa, NIP [NIP], [KRS lub CEIDG: NUMER] — dalej „Beef &amp; Reef”.'), p(`W sprawach dotyczących danych osobowych napisz na ${mailLink} lub zadzwoń: ${telLink}.`)]],
+      ['Administrator danych', [p('Administratorem Twoich danych osobowych jest BEEF AND REEF spółka z ograniczoną odpowiedzialnością z siedzibą w Warszawie, ul. Krzysztofa Kieślowskiego 7/38, 02-961 Warszawa, wpisana do rejestru przedsiębiorców KRS pod numerem 0001222898, NIP 9512640807, REGON 543961779 — prowadząca restaurację przy ul. Kazachskiej 1, 02-999 Warszawa, dalej „Beef &amp; Reef”.'), p(`W sprawach dotyczących danych osobowych napisz na ${mailLink} lub zadzwoń: ${telLink}.`)]],
       ['Jakie dane zbieramy', [p('Zbieramy tylko dane, które sam nam przekażesz:'), ul(['przy rezerwacji stolika — imię i nazwisko, numer telefonu, ewentualnie adres e-mail, termin i liczbę gości;', 'przy zapytaniu o przyjęcie — dane kontaktowe oraz informacje o wydarzeniu, które opiszesz w rozmowie lub wiadomości;', 'przy organizacji przyjęcia na fakturę — dane potrzebne do jej wystawienia.']), p('Podanie danych jest dobrowolne, ale bez nich nie przyjmiemy rezerwacji ani nie odpowiemy na zapytanie.')]],
       ['Cele i podstawy prawne', [ul(['Obsługa rezerwacji i organizacja przyjęć — art. 6 ust. 1 lit. b RODO (działania przed zawarciem umowy i jej wykonanie).', 'Odpowiedzi na wiadomości i kontakt w sprawie wizyty — art. 6 ust. 1 lit. f RODO (nasz prawnie uzasadniony interes).', 'Wystawianie faktur i prowadzenie księgowości — art. 6 ust. 1 lit. c RODO (obowiązek prawny).', 'Ustalenie, dochodzenie lub obrona ewentualnych roszczeń — art. 6 ust. 1 lit. f RODO.'])]],
-      ['Rezerwacja online', [p(`Rezerwacja online odbywa się w zewnętrznym systemie rezerwacyjnym pod adresem ${bookLink}, prowadzonym przez [DOSTAWCA SYSTEMU REZERWACJI]. Dane z formularza trafiają do tego systemu i są przetwarzane w naszym imieniu na podstawie umowy powierzenia.`)]],
+      ['Rezerwacja online', [p(`Rezerwacja online odbywa się w zewnętrznym systemie rezerwacyjnym pod adresem ${bookLink}, prowadzonym przez Choice (choiceqr.com). Dane z formularza trafiają do tego systemu i są przetwarzane w naszym imieniu na podstawie umowy powierzenia.`)]],
       ['Komu przekazujemy dane', [p('Dane mogą otrzymać wyłącznie firmy, które pomagają nam prowadzić restaurację — w zakresie niezbędnym do wykonania ich zadań:'), ul(['dostawca systemu rezerwacji online,', 'dostawca hostingu strony i poczty e-mail,', 'biuro rachunkowe — w przypadku faktur.']), p('Nie sprzedajemy danych i nie przekazujemy ich do celów marketingowych innych firm.')]],
-      ['Jak długo przechowujemy dane', [ul(['Dane rezerwacji — do czasu realizacji wizyty, a następnie przez [OKRES], jeśli będą potrzebne do wyjaśnienia ewentualnych roszczeń.', 'Korespondencja w sprawie przyjęć — do zakończenia sprawy, a następnie przez [OKRES].', 'Dokumenty księgowe — przez okres wymagany przepisami podatkowymi.'])]],
+      ['Jak długo przechowujemy dane', [ul(['Dane rezerwacji — do czasu realizacji wizyty, a następnie do upływu terminu przedawnienia ewentualnych roszczeń.', 'Korespondencja w sprawie przyjęć — do zakończenia sprawy, a następnie do upływu terminu przedawnienia ewentualnych roszczeń.', 'Dokumenty księgowe — przez okres wymagany przepisami podatkowymi.'])]],
       ['Twoje prawa', [p('Masz prawo do dostępu do swoich danych, ich sprostowania, usunięcia, ograniczenia przetwarzania i przeniesienia, a także do sprzeciwu wobec przetwarzania opartego na naszym prawnie uzasadnionym interesie.'), p(`Aby skorzystać z tych praw, napisz na ${mailLink}. Masz też prawo złożyć skargę do Prezesa Urzędu Ochrony Danych Osobowych.`)]],
       ['Cookies i media społecznościowe', [p(`Strona nie używa plików cookies do analityki ani reklamy. Szczegóły znajdziesz w <a class="u" href="${cookiesHref}">informacji o cookies</a>.`), p('Linki do Facebooka i Instagrama prowadzą do zewnętrznych serwisów — nie osadzamy na stronie ich wtyczek. Po przejściu do nich obowiązują zasady prywatności tych serwisów.')]],
       ['Zmiany polityki', [p('Jeśli zmienimy sposób przetwarzania danych, zaktualizujemy tę stronę i datę na jej początku.')]]
     ]
   } : {
     title: 'Privacy policy — Beef & Reef', desc: 'What data Beef & Reef collects when you book a table or ask about a party, why, and what rights you have.',
-    eyebrow: 'LEGAL INFORMATION', h1: 'Privacy Policy', since: 'Effective from [DATE]', tocTitle: 'CONTENTS',
+    eyebrow: 'LEGAL INFORMATION', h1: 'Privacy Policy', since: 'Effective from 10 November 2026', tocTitle: 'CONTENTS',
     lead: 'We respect your privacy. Below we explain what data we collect when you book a table or ask about a party, why we collect it and what rights you have.',
     s: [
-      ['Data controller', [p('The controller of your personal data is [COMPANY NAME], ul. Kazachska 1, 02-999 Warszawa, NIP (tax ID) [NIP], [KRS or CEIDG: NUMBER] — hereinafter “Beef &amp; Reef”.'), p(`For any matters concerning your personal data, write to ${mailLink} or call ${telLink}.`)]],
+      ['Data controller', [p('The controller of your personal data is BEEF AND REEF spółka z ograniczoną odpowiedzialnością (a limited liability company) with its registered office at ul. Krzysztofa Kieślowskiego 7/38, 02-961 Warszawa, Poland, entered in the National Court Register (KRS) under no. 0001222898, NIP (tax ID) 9512640807, REGON 543961779, which runs the restaurant at ul. Kazachska 1, 02-999 Warszawa — hereinafter “Beef &amp; Reef”.'), p(`For any matters concerning your personal data, write to ${mailLink} or call ${telLink}.`)]],
       ['What data we collect', [p('We only collect the data you give us yourself:'), ul(['when you book a table — your name, phone number, possibly your e-mail address, the date and the number of guests;', 'when you ask about a party — your contact details and the information about the event that you describe in a conversation or message;', 'when a party is paid by invoice — the details needed to issue it.']), p('Providing your data is voluntary, but without it we cannot accept a booking or reply to an enquiry.')]],
       ['Purposes and legal bases', [ul(['Handling bookings and organising parties — Art. 6(1)(b) GDPR (steps taken before entering into a contract, and its performance).', 'Replying to messages and contacting you about your visit — Art. 6(1)(f) GDPR (our legitimate interest).', 'Issuing invoices and keeping accounts — Art. 6(1)(c) GDPR (legal obligation).', 'Establishing, pursuing or defending possible claims — Art. 6(1)(f) GDPR.'])]],
-      ['Online booking', [p(`Online booking takes place in an external booking system at ${bookLink}, operated by [BOOKING SYSTEM PROVIDER]. Data from the form goes to that system and is processed on our behalf under a data processing agreement.`)]],
+      ['Online booking', [p(`Online booking takes place in an external booking system at ${bookLink}, operated by Choice (choiceqr.com). Data from the form goes to that system and is processed on our behalf under a data processing agreement.`)]],
       ['Who we share data with', [p('Your data may only be received by companies that help us run the restaurant — to the extent necessary for their tasks:'), ul(['the online booking system provider,', 'the website and e-mail hosting provider,', 'our accounting office — in the case of invoices.']), p('We do not sell your data or share it for other companies’ marketing purposes.')]],
-      ['How long we keep data', [ul(['Booking data — until your visit, and then for [PERIOD] if it is needed to resolve possible claims.', 'Correspondence about parties — until the matter is closed, and then for [PERIOD].', 'Accounting documents — for the period required by tax law.'])]],
+      ['How long we keep data', [ul(['Booking data — until your visit, and then until any possible claims become time-barred.', 'Correspondence about parties — until the matter is closed, and then until any possible claims become time-barred.', 'Accounting documents — for the period required by tax law.'])]],
       ['Your rights', [p('You have the right to access your data, to have it rectified, erased, restricted and transferred, and to object to processing based on our legitimate interest.'), p(`To exercise these rights, write to ${mailLink}. You also have the right to lodge a complaint with the President of the Personal Data Protection Office (UODO).`)]],
       ['Cookies and social media', [p(`This website does not use cookies for analytics or advertising. You will find the details in the <a class="u" href="${cookiesHref}">cookie information</a>.`), p('The links to Facebook and Instagram lead to external services — we do not embed their plugins on the website. Once you go there, those services’ privacy policies apply.')]],
       ['Changes to this policy', [p('If we change the way we process data, we will update this page and the date at the top.')]]
@@ -660,7 +660,7 @@ function cookiesPage(lang) {
   const pl = lang === 'pl';
   const L = pl ? {
     title: 'Cookies — Beef & Reef', desc: 'Strona Beef & Reef nie używa plików cookies do analityki ani reklamy. Sprawdź, co zapisujemy w przeglądarce.',
-    eyebrow: 'INFORMACJE PRAWNE', since: 'Obowiązuje od [DATA]',
+    eyebrow: 'INFORMACJE PRAWNE', since: 'Obowiązuje od 10 listopada 2026',
     lead: 'W skrócie: ta strona nie śledzi Cię i nie używa plików cookies do analityki ani reklamy. Dlatego nie wyświetlamy banera zgody na cookies.',
     s: [
       ['ck-1', 'Co zapisujemy na Twoim urządzeniu', [p('Zapisujemy tylko dwie informacje, i to wyłącznie wtedy, gdy sam coś wybierzesz:'),
@@ -676,7 +676,7 @@ function cookiesPage(lang) {
     ]
   } : {
     title: 'Cookies — Beef & Reef', desc: 'The Beef & Reef website does not use cookies for analytics or advertising. See what we store in your browser.',
-    eyebrow: 'LEGAL INFORMATION', since: 'Effective from [DATE]',
+    eyebrow: 'LEGAL INFORMATION', since: 'Effective from 10 November 2026',
     lead: 'In short: this website does not track you and does not use cookies for analytics or advertising. That is why we do not show a cookie consent banner.',
     s: [
       ['ck-1', 'What we store on your device', [p('We store only two pieces of information, and only when you choose something yourself:'),
