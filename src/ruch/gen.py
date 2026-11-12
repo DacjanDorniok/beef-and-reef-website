@@ -18,7 +18,7 @@ B = {  # zasoby w płótnie głównym
     'rog': '/_blob/0add22fb1759d259627c7231358ccea6',
     'stekf': '/_blob/131233dd41ce2602c94462e6dc1b5635', 'sern': '/_blob/edc38a1a589a155b433557cc48e4d307', 'kaczf': '/_blob/12886983c40a57629921236ecfeb055a', 'osmf': '/_blob/de19542d18064fb333f5d47ac25ac5a4',
     'sernf': '/_blob/fac3d419120a5ceb1566718411036d81',
-    'ext': '/_blob/b17878b93c23b62318611e04dfd9a8b0', 'bar': '/_blob/d3a302a65a5e0399e24e0a8b90191e2e', 'sala': '/_blob/a26fb76d3d464d2cb8ce72e25a1375ba', 'salap': '/_blob/1925f10e8f4d5b92649197f69be95066',
+    'ext': '/_blob/b17878b93c23b62318611e04dfd9a8b0', 'bar': '/_blob/d3a302a65a5e0399e24e0a8b90191e2e', 'sala': '/_blob/a26fb76d3d464d2cb8ce72e25a1375ba', 'salap': '/_blob/1925f10e8f4d5b92649197f69be95066', 'chef': '/_blob/c2181d0888beadf9c361bef91406621a',
 }
 TEL = 'tel:+48222538860'; PHONE = '+48 222 538 860'
 BOOK = 'https://online.beefandreef.pl/booking'; DELIV = 'https://online.beefandreef.pl/delivery'
@@ -239,7 +239,7 @@ HOMEC = {
     'pl': dict(res='REZERWACJE TELEFONICZNE', cta='ZADZWOŃ I ZAREZERWUJ', order='Zamów', orr='lub', book='zarezerwuj online',
                daily='CODZIENNIE', kitchen='KUCHNIA', kt='do 22:00', addr='Kazachska 1, Warszawa', seeMenu='Zobacz menu', car='Wydarzenia i dania z karty',
                aboutL='O NAS',
-               chefA='Szef', chefB='kuchni.', chefPh='[ZDJĘCIE: KLAUDIUSZ DANOWSKI]', chefAria='Miejsce na zdjęcie szefa kuchni', chefCap='KLAUDIUSZ DANOWSKI', chefRole='SZEF KUCHNI',
+               chefA='Szef', chefB='kuchni.', chefPh='[ZDJĘCIE: KLAUDIUSZ DANOWSKI]', chefAria='Klaudiusz Danowski w kuchni Beef &amp; Reef, z dwoma talerzami polędwicy z rukolą', chefCap='KLAUDIUSZ DANOWSKI', chefRole='SZEF KUCHNI',
                chefLead='Sercem naszej kuchni jest <b>Klaudiusz Danowski</b>, który z niezwykłą dbałością o detale komponuje każde danie.',
                pr=[('Starannie wybrane produkty', 'Każde danie powstaje wyłącznie z wyselekcjonowanych składników.'), ('Precyzja', 'Steki z najlepszych hodowli — do idealnego stopnia wysmażenia i głębi smaku.'), ('Świeżość', 'Owoce morza dostarczane regularnie, dla świeżości i najwyższej jakości.')],
                partyA='Świętuj', partyB='z nami.', partyPh='[ZDJĘCIE: SALA NA PRZYJĘCIE]', partyAlt='Sala Beef & Reef: marmurowy bar, stoły nakryte do kolacji i zielone loże', extAlt='Wejście do Beef & Reef i ogródek z girlandą świateł przy Kazachskiej 1', extCap='KAZACHSKA 1 · OGRÓDEK', partyAria='Miejsce na zdjęcie sali przygotowanej na przyjęcie',
@@ -252,7 +252,7 @@ HOMEC = {
     'en': dict(res='RESERVATIONS BY PHONE', cta='CALL TO BOOK', order='Order', orr='or', book='book online',
                daily='DAILY', kitchen='KITCHEN', kt='until 22:00', addr='Kazachska 1, Warsaw', seeMenu='See the menu', car='Events and dishes from the menu',
                aboutL='ABOUT US',
-               chefA='Head', chefB='chef.', chefPh='[PHOTO: KLAUDIUSZ DANOWSKI]', chefAria='Photo placeholder: head chef', chefCap='KLAUDIUSZ DANOWSKI', chefRole='HEAD CHEF',
+               chefA='Head', chefB='chef.', chefPh='[PHOTO: KLAUDIUSZ DANOWSKI]', chefAria='Klaudiusz Danowski in the Beef &amp; Reef kitchen, holding two plates of fillet steak topped with rocket', chefCap='KLAUDIUSZ DANOWSKI', chefRole='HEAD CHEF',
                chefLead='At the heart of our kitchen is <b>Klaudiusz Danowski</b>, who composes every dish with remarkable attention to detail.',
                pr=[('Carefully selected produce', 'Every dish is made only from hand-picked ingredients.'), ('Precision', 'Steaks from the finest farms — cooked to perfect doneness and depth of flavour.'), ('Freshness', 'Seafood delivered regularly, for freshness and the highest quality.')],
                partyA='Celebrate', partyB='with us.', partyPh='[PHOTO: ROOM SET FOR A PARTY]', partyAlt='The Beef & Reef dining room: marble bar, tables set for dinner and green banquettes', extAlt='The Beef & Reef entrance and terrace with string lights at Kazachska 1', extCap='KAZACHSKA 1 · TERRACE', partyAria='Photo placeholder: room set for a party',
@@ -313,7 +313,7 @@ def home_body(lang):
       {split(c["chefA"], c["chefB"], id_="chef-title")}
       <div class="chef">
         <figure class="chef-fig plx" style="transform: translateY({{{{px.chef}}}}px)">
-          <div class="ph" role="img" aria-label="{c["chefAria"]}"><span class="t">{c["chefPh"]}</span><span class="frame" aria-hidden="true"></span></div>
+          <div class="pic"><img src="{B["chef"]}" alt="{c["chefAria"]}" loading="lazy"><span class="frame" aria-hidden="true"></span></div>
           <figcaption>{c["chefCap"]} <span class="muted">· {c["chefRole"]}</span></figcaption>
         </figure>
         <p class="rise chef-lead">{c["chefLead"]}</p>

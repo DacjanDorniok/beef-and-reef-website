@@ -35,6 +35,7 @@ IMG = {
     B['bar']: 'assets/img/bar-sala.webp',
     B['sala']: 'assets/img/sala.webp',
     B['salap']: 'assets/img/sala-pion.webp',
+    B['chef']: 'assets/img/szef-kuchni.webp',
 }
 SMALL = {  # mniejsze wersje dla telefonów
     'assets/img/rogale-swietomarcinskie.webp': ('assets/img/rogale-swietomarcinskie-800.webp', 1600),
@@ -46,6 +47,7 @@ SMALL = {  # mniejsze wersje dla telefonów
     'assets/img/bar-sala.webp': ('assets/img/bar-sala-800.webp', 1600),
     'assets/img/sala.webp': ('assets/img/sala-800.webp', 1600),
     'assets/img/sala-pion.webp': ('assets/img/sala-pion-800.webp', 1200),
+    'assets/img/szef-kuchni.webp': ('assets/img/szef-kuchni-640.webp', 1086, 640),
 }
 SIZES = {'w': '(max-width: 899px) 100vw, 60vw'}
 
