@@ -29,7 +29,7 @@ Przebudowa po zmianach: `node src/ruch/extract.js && python3 src/ruch/site.py`
 
 Adres strony: domyślnie github.io. Dla domeny produkcyjnej: `SITE=https://beefandreef.pl/ python3 src/ruch/site.py` — ustawia canonical/og/hreflang, `robots.txt`, `sitemap.xml` i tworzy `docs/CNAME`. Bez zmiennej plik CNAME jest usuwany.
 
-**Produkcja (od 13.11.2026):** beefandreef.pl stoi na hostingu seohost (FTP do `public_html`, plik `.htaccess` z przekierowaniami jest w paczce, nie w repo). Wersja na GitHub Pages to strona testowa z `noindex`. Wdrożenie: `SITE=https://beefandreef.pl/ python3 src/ruch/site.py`, skopiować `docs/` (bez CNAME) + `.htaccess` na serwer, potem przebudować bez zmiennej.
+**Produkcja (od 13.11.2026):** beefandreef.pl stoi na hostingu seohost (FTP do `public_html`, plik `.htaccess` z przekierowaniami: `deploy.htaccess` w repo, na serwer wgrywać jako `.htaccess`). Wersja na GitHub Pages to strona testowa z `noindex`. Wdrożenie: `SITE=https://beefandreef.pl/ python3 src/ruch/site.py`, skopiować `docs/` (bez CNAME) + `.htaccess` na serwer, potem przebudować bez zmiennej.
 
 ## Do uzupełnienia przed startem
 - Zdjęcie szefa kuchni (na razie placeholder). Zdjęcie steków: Adobe Stock nr 328832358, licencja wykupiona 10.11.2026.
