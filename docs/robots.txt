@@ -1,4 +1,2 @@
 User-agent: *
-Allow: /
-
-Sitemap: https://dacjandorniok.github.io/beef-and-reef-website/sitemap.xml
+Disallow:

@@ -14,6 +14,8 @@ from gen import B, T, F, D, TEL, MAIL
 DOCS = os.path.normpath(os.path.join(HERE, '..', '..', 'docs'))
 # adres strony; na produkcji: SITE=https://beefandreef.pl/ python3 src/ruch/site.py
 SITE = os.environ.get('SITE', 'https://dacjandorniok.github.io/beef-and-reef-website/')
+STAGING = 'github.io' in SITE  # wersja testowa: ukryta przed wyszukiwarkami
+NOINDEX = '\n<meta name="robots" content="noindex, nofollow">' if STAGING else ''
 PAGES = D['PAGES']  # pl/en -> home, menu, party, privacy, cookies
 KINDS = ('home', 'menu', 'party', 'privacy', 'cookies')
 MAPS_EMBED = 'https://www.google.com/maps?q=Beef+%26+Reef,+Kazachska+1,+02-999+Warszawa&amp;output=embed'
@@ -300,7 +302,7 @@ def head(lang, kind, file, title, desc, extra=''):
 <html lang="{lang}">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1">{NOINDEX}
 <title>{e(title)}</title>
 <meta name="description" content="{e(desc)}">
 <meta name="theme-color" content="#ffffff">
@@ -403,7 +405,7 @@ if __name__ == '__main__':
     # robots.txt, sitemap.xml i CNAME (tylko dla własnej domeny)
     pages = [f for f in done if f != '404.html']
     pretty = lambda f: SITE + re.sub(r'(^|/)index\.html$', r'\1', f)
-    open(os.path.join(DOCS, 'robots.txt'), 'w').write(f'User-agent: *\nAllow: /\n\nSitemap: {SITE}sitemap.xml\n')
+    open(os.path.join(DOCS, 'robots.txt'), 'w').write('User-agent: *\nDisallow:\n' if STAGING else f'User-agent: *\nAllow: /\n\nSitemap: {SITE}sitemap.xml\n')
     sm = ['<?xml version="1.0" encoding="UTF-8"?>', '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">']
     for f in sorted(pages, key=lambda f: (f.startswith('en/'), f != 'index.html', f)):
         sm.append(f'  <url><loc>{pretty(f)}</loc></url>')
