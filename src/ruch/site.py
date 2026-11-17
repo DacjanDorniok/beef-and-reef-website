@@ -191,7 +191,10 @@ def ctx_for(lang, kind):
         # (wydarzenia mają własne `until` w gen.slides — znikają same po dacie)
         # zdjęcie steków: podgląd z Adobe Stock (nr 328832358) do akceptacji właściciela — po zakupie licencji podmienić plik assets/img/steki-foto.webp
         events = ev if (kind == 'home' and D['EVENT']['on']) else []
-        L = events + di
+        # na przemian: wydarzenie, danie, wydarzenie, danie… (po dacie `until` wydarzenia znikają same)
+        L = []
+        for i in range(max(len(events), len(di))):
+            L += events[i:i+1] + di[i:i+1]
     else:
         L = []
     n = len(L)
