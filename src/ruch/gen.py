@@ -21,6 +21,7 @@ B = {  # zasoby w płótnie głównym
     'ext': '/_blob/b17878b93c23b62318611e04dfd9a8b0', 'bar': '/_blob/d3a302a65a5e0399e24e0a8b90191e2e', 'sala': '/_blob/a26fb76d3d464d2cb8ce72e25a1375ba', 'salap': '/_blob/1925f10e8f4d5b92649197f69be95066', 'chef': '/_blob/c2181d0888beadf9c361bef91406621a',
     # nowe zdjęcia sali (17.11.2026) — tylko na stronie, jeszcze nie na płótnie
     'wloze': '/_blob/b0a1e1a1000000000000000000000001', 'wstol': '/_blob/b0a1e1a1000000000000000000000002', 'wokna': '/_blob/b0a1e1a1000000000000000000000003',
+    'evfirm': '/_blob/b0a1e1a1000000000000000000000011', 'evwig': '/_blob/b0a1e1a1000000000000000000000012', 'evsyl': '/_blob/b0a1e1a1000000000000000000000013',
 }
 TEL = 'tel:+48222538860'; PHONE = '+48 222 538 860'
 # sprawy eventowe (przyjęcia, wydarzenia) — numer szefa, jak na grafikach
@@ -216,15 +217,15 @@ def split(a, b, tag='h2', id_='', extra='', b_is_tel=False):
 def slides(lang):
     m = href(lang, 'menu')
     if lang == 'pl':
-        ev = [dict(id='Wigilia firmowa', src=B['wstol'], alt='Długi stół nakryty na przyjęcie w wieczornym świetle lamp, welurowe krzesła', kicker='WYDARZENIE · GRUDZIEŃ', title='Wigilia firmowa',
+        ev = [dict(id='Wigilia firmowa', src=B['evfirm'], alt='Stoły nakryte białymi obrusami na przyjęcie w sali Beef & Reef, świece, kwiaty i balony przy przeszklonej ścianie', kicker='WYDARZENIE · GRUDZIEŃ', title='Wigilia firmowa',
                    desc='Wyśmienita kuchnia, eleganckie wnętrze i profesjonalna obsługa. Przygotujemy świąteczne spotkanie dla Twojego zespołu — menu i oprawę ustalimy indywidualnie.', descS='Wyśmienita kuchnia, eleganckie wnętrze, profesjonalna obsługa.',
-                   price='Oferta indywidualna', cta='Zapytaj o ofertę', href=EV_TEL, imgCls='photo', size='object-position: 50% 62%', until='2026-12-23'),
-              dict(id='Kolacja wigilijna', src=B['wloze'], alt='Stoły przy lożach w ciepłym świetle świec, lustra w łukowych ramach', kicker='WYDARZENIE · 24 GRUDNIA', title='Kolacja wigilijna',
+                   price='Oferta indywidualna', cta='Zapytaj o ofertę', href=EV_TEL, imgCls='photo', size='object-position: 50% 70%', until='2026-12-23'),
+              dict(id='Kolacja wigilijna', src=B['evwig'], alt='Rodzina przy świątecznym stole ze świecami, czerwonym bieżnikiem i szyszkami; ktoś nalewa czerwone wino', kicker='WYDARZENIE · 24 GRUDNIA', title='Kolacja wigilijna',
                    desc='Tradycyjna kuchnia, rodzinna atmosfera i świąteczny klimat. Zasiądź z bliskimi przy wigilijnym stole w Beef & Reef.', descS='Tradycyjna kuchnia, rodzinna atmosfera, świąteczny klimat.',
                    price='Liczba miejsc ograniczona', cta='Zarezerwuj miejsce', href=EV_TEL, imgCls='photo', size='object-position: 50% 60%', until='2026-12-24'),
-              dict(id='Sylwester', src=B['wokna'], alt='Sala Beef & Reef wieczorem: stoły ze złotymi lampkami, przeszklona ściana', kicker='WYDARZENIE · 31 GRUDNIA', title='Spędź z nami Sylwestra 2027',
+              dict(id='Sylwester', src=B['evsyl'], alt='Kieliszek szampana z płonącym zimnym ogniem na ciemnym tle ze światełkami', kicker='WYDARZENIE · 31 GRUDNIA', title='Spędź z nami Sylwestra 2027',
                    desc='Live cooking, muzyka na żywo i wyjątkowe menu — przywitaj z nami Nowy Rok.', descS='Live cooking, muzyka na żywo, wyjątkowe menu.',
-                   price='Liczba miejsc ograniczona', cta='Zarezerwuj miejsce', href=EV_TEL, imgCls='photo', size='object-position: 50% 55%', until='2026-12-31'),
+                   price='Liczba miejsc ograniczona', cta='Zarezerwuj miejsce', href=EV_TEL, imgCls='photo', size='object-position: 50% 42%', until='2026-12-31'),
               dict(id='Lunch', src=B['sala'], alt='Sala Beef & Reef w dziennym słońcu: stoły nakryte do lunchu, zielone loże, przeszklona ściana', kicker='LUNCH · PON–PT', title='Lunch na Wilanowie',
                    desc='Kuchnia polska, każdego dnia inny zestaw: zupa, danie główne i mini deser. Na miejscu lub z dostawą.', descS='Zupa, danie główne i mini deser — codziennie inny zestaw.',
                    price='12:00 – 16:00', cta='Zadzwoń i zamów', href=EV_TEL, imgCls='photo', size='object-position: 50% 40%')]
@@ -233,15 +234,15 @@ def slides(lang):
               dict(src=B['kaczf'], alt='Pierś z kaczki z sosem pomarańczowym, brokułem i purée selerowym', kicker='DANIA GŁÓWNE', title='Pierś z kaczki', desc='Pierś z kaczki sous-vide, sos pomarańczowy, purée selerowe, brokuł łodygowy.', descS='Sous-vide, sos pomarańczowy, purée selerowe.', price='109', cta='Zobacz dania główne', href=m + '#g-mains', imgCls='photo', size='object-position: 50% 50%'),
               dict(src=B['sernf'], alt='Kremowy sernik z płatkami migdałów i gałką lodów waniliowych na stoliku w ogródku', kicker='DESERY', title='Kremowy sernik', desc='Lody waniliowe, mus malinowy, owoce.', price='39', cta='Zobacz desery', href=m + '#g-desserts', imgCls='photo', size='object-position: 50% 50%')]
     else:
-        ev = [dict(id='Wigilia firmowa', src=B['wstol'], alt='A long table set for a party in warm evening light, velvet chairs', kicker='EVENT · DECEMBER', title='Company Christmas party',
+        ev = [dict(id='Wigilia firmowa', src=B['evfirm'], alt='Tables laid with white cloths for a party in the Beef & Reef dining room, candles, flowers and balloons by the glass wall', kicker='EVENT · DECEMBER', title='Company Christmas party',
                    desc='Superb food, an elegant interior and professional service. We’ll host your team’s festive gathering — menu and setting tailored to you.', descS='Superb food, an elegant interior, professional service.',
-                   price='Tailored offer', cta='Ask about the offer', href=EV_TEL, imgCls='photo', size='object-position: 50% 62%', until='2026-12-23'),
-              dict(id='Kolacja wigilijna', src=B['wloze'], alt='Tables by the banquettes in warm candlelight, arched mirrors on the wall', kicker='EVENT · 24 DECEMBER', title='Christmas Eve dinner',
+                   price='Tailored offer', cta='Ask about the offer', href=EV_TEL, imgCls='photo', size='object-position: 50% 70%', until='2026-12-23'),
+              dict(id='Kolacja wigilijna', src=B['evwig'], alt='A family at a festive table with candles, a red runner and pine cones; someone pours red wine', kicker='EVENT · 24 DECEMBER', title='Christmas Eve dinner',
                    desc='Traditional Polish Christmas Eve dishes, a family atmosphere and festive spirit. Gather your loved ones at our Wigilia table.', descS='Traditional dishes, a family atmosphere, festive spirit.',
                    price='Limited seating', cta='Book a seat', href=EV_TEL, imgCls='photo', size='object-position: 50% 60%', until='2026-12-24'),
-              dict(id='Sylwester', src=B['wokna'], alt='The Beef & Reef dining room at night: tables with gold lamps, glass wall', kicker='EVENT · 31 DECEMBER', title='New Year’s Eve 2027 with us',
+              dict(id='Sylwester', src=B['evsyl'], alt='A champagne flute with a lit sparkler against a dark background with fairy lights', kicker='EVENT · 31 DECEMBER', title='New Year’s Eve 2027 with us',
                    desc='Live cooking, live music and a special menu — welcome the New Year with us.', descS='Live cooking, live music, a special menu.',
-                   price='Limited seating', cta='Book a seat', href=EV_TEL, imgCls='photo', size='object-position: 50% 55%', until='2026-12-31'),
+                   price='Limited seating', cta='Book a seat', href=EV_TEL, imgCls='photo', size='object-position: 50% 42%', until='2026-12-31'),
               dict(id='Lunch', src=B['sala'], alt='The Beef & Reef dining room in daylight: tables set for lunch, green banquettes, glass wall', kicker='LUNCH · MON–FRI', title='Lunch in Wilanów',
                    desc='Polish cuisine with a different set every day: soup, main course and a mini dessert. Dine in or have it delivered.', descS='Soup, main course and a mini dessert — a new set every day.',
                    price='12:00 – 16:00', cta='Call to order', href=EV_TEL, imgCls='photo', size='object-position: 50% 40%')]

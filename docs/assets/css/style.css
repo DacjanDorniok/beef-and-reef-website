@@ -499,25 +499,21 @@ html[data-theme="dark"] .rx{--paper:#0a0a0a;--ground:linear-gradient(180deg,#0a0
   .rx .store-table div{grid-template-columns:1fr;gap:0}
   .rx .store-table dt{line-height:24px}
 }
-/* galeria wnętrza (przyjęcia) */
+/* galeria wnętrza (przyjęcia): równe zdjęcia, szeroki pas prawie od krawędzi do krawędzi */
 .rx .gal-k{margin-bottom:24px}
 .rx .gal-lead{margin:32px auto 0;max-width:640px;font-size:20px;line-height:32px;color:var(--muted)}
-.rx .gal{list-style:none;margin:72px 0 0;padding:0 0 64px;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:32px;align-items:start}
-.rx .gal li:nth-child(2){transform:translateY(64px)}
-.rx .in .gal li.rise:nth-child(2){transform:translateY(64px)}
+.rx .gal{list-style:none;margin:72px auto 0;padding:0 24px;max-width:1920px;width:100vw;position:relative;left:50%;transform:translateX(-50%);display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px}
 .rx .gal .pic{aspect-ratio:3 / 4}
-.rx .gal:focus-visible{outline:2px solid var(--gold);outline-offset:8px}
+.rx .gal:focus-visible{outline:2px solid var(--gold);outline-offset:-2px}
 @media (max-width: 899px){
-  .rx .gal{gap:16px;padding-bottom:40px;margin-top:56px}
-  .rx .gal li:nth-child(2),.rx .in .gal li.rise:nth-child(2){transform:translateY(40px)}
+  .rx .gal{gap:12px;padding:0 12px;margin-top:56px}
+  .rx .gal .frame{inset:8px}
 }
 @media (max-width: 599px){
   .rx .gal-lead{font-size:18px;line-height:28px;margin-top:24px}
-  .rx .gal{display:flex;gap:12px;margin:40px -16px 0;padding:0 16px 8px;overflow-x:auto;scroll-snap-type:x mandatory;scroll-padding:0 16px;scrollbar-width:none}
+  .rx .gal{display:flex;gap:12px;margin-top:40px;padding:0 16px 8px;overflow-x:auto;scroll-snap-type:x mandatory;scroll-padding:0 16px;scrollbar-width:none}
   .rx .gal::-webkit-scrollbar{display:none}
-  .rx .gal li{flex:0 0 78%;scroll-snap-align:start}
-  .rx .gal li:nth-child(2),.rx .in .gal li.rise:nth-child(2){transform:none}
-  .rx .gal .frame{inset:8px}
+  .rx .gal li{flex:0 0 84%;scroll-snap-align:start}
 }
 /* lista menu (z MenuList / src/build.js renderMenu) */
 .rx .section-title{display:inline-block;margin:0;font-size:24px;line-height:32px;font-weight:400;letter-spacing:.28em;text-transform:uppercase;padding:0 0 8px .28em;border-bottom:.5px solid var(--rule);text-align:center}

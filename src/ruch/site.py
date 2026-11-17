@@ -41,6 +41,9 @@ IMG = {
     B['wloze']: 'assets/img/sala-wieczor-loze.webp',
     B['wstol']: 'assets/img/sala-wieczor-stol.webp',
     B['wokna']: 'assets/img/sala-wieczor-okna.webp',
+    B['evfirm']: 'assets/img/wigilia-firmowa.webp',
+    B['evwig']: 'assets/img/wigilia-kolacja.webp',
+    B['evsyl']: 'assets/img/sylwester.webp',
 }
 SMALL = {  # mniejsze wersje dla telefonów
     'assets/img/rogale-swietomarcinskie.webp': ('assets/img/rogale-swietomarcinskie-800.webp', 1600),
@@ -56,6 +59,9 @@ SMALL = {  # mniejsze wersje dla telefonów
     'assets/img/sala-wieczor-loze.webp': ('assets/img/sala-wieczor-loze-800.webp', 1200),
     'assets/img/sala-wieczor-stol.webp': ('assets/img/sala-wieczor-stol-800.webp', 1200),
     'assets/img/sala-wieczor-okna.webp': ('assets/img/sala-wieczor-okna-800.webp', 1200),
+    'assets/img/wigilia-firmowa.webp': ('assets/img/wigilia-firmowa-800.webp', 1200),
+    'assets/img/wigilia-kolacja.webp': ('assets/img/wigilia-kolacja-800.webp', 1600),
+    'assets/img/sylwester.webp': ('assets/img/sylwester-800.webp', 1200),
 }
 SIZES = {'w': '(max-width: 899px) 100vw, 60vw'}
 
