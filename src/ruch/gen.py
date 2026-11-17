@@ -19,8 +19,12 @@ B = {  # zasoby w płótnie głównym
     'stekf': '/_blob/131233dd41ce2602c94462e6dc1b5635', 'sern': '/_blob/edc38a1a589a155b433557cc48e4d307', 'kaczf': '/_blob/12886983c40a57629921236ecfeb055a', 'osmf': '/_blob/de19542d18064fb333f5d47ac25ac5a4',
     'sernf': '/_blob/fac3d419120a5ceb1566718411036d81',
     'ext': '/_blob/b17878b93c23b62318611e04dfd9a8b0', 'bar': '/_blob/d3a302a65a5e0399e24e0a8b90191e2e', 'sala': '/_blob/a26fb76d3d464d2cb8ce72e25a1375ba', 'salap': '/_blob/1925f10e8f4d5b92649197f69be95066', 'chef': '/_blob/c2181d0888beadf9c361bef91406621a',
+    # nowe zdjęcia sali (17.11.2026) — tylko na stronie, jeszcze nie na płótnie
+    'wloze': '/_blob/b0a1e1a1000000000000000000000001', 'wstol': '/_blob/b0a1e1a1000000000000000000000002', 'wokna': '/_blob/b0a1e1a1000000000000000000000003',
 }
 TEL = 'tel:+48222538860'; PHONE = '+48 222 538 860'
+# sprawy eventowe (przyjęcia, wydarzenia) — numer szefa, jak na grafikach
+EV_TEL = 'tel:+48790627246'; EV_PHONE = '+48 790 627 246'
 BOOK = 'https://online.beefandreef.pl/booking'; DELIV = 'https://online.beefandreef.pl/delivery'
 MAIL = 'kontakt@beefandreef.pl'
 IG = 'https://www.instagram.com/beef.and.reef_steak_seafood'; FB = 'https://www.facebook.com/beef.and.reef.wilanow'
@@ -164,10 +168,10 @@ def footer(lang):
   </footer>
 '''
 
-def pbar(lang, second_href, second_label):
+def pbar(lang, second_href, second_label, tel=TEL):
     t = T[lang]
     return f'''  <div class="{{{{barCls}}}}">
-    <a class="btn btn-gold" href="{TEL}">{t["bar"]}</a>
+    <a class="btn btn-gold" href="{tel}">{t["bar"]}</a>
     <a class="btn btn-line" href="{second_href}">{second_label}</a>
   </div>
 '''
@@ -212,17 +216,35 @@ def split(a, b, tag='h2', id_='', extra='', b_is_tel=False):
 def slides(lang):
     m = href(lang, 'menu')
     if lang == 'pl':
-        ev = [dict(id='Św. Marcin', src=B['rog'], alt='Rogale świętomarcińskie z lukrem i orzechami', kicker='WYDARZENIE · 7–15 LISTOPADA', title='Z okazji Świętego Marcina',
-                   desc='Królować będzie gęsina w autorskich odsłonach naszego Szefa Kuchni. 11 listopada — oryginalne rogale świętomarcińskie z certyfikowanej piekarni w Poznaniu.', descS='Gęsina w autorskich odsłonach Szefa Kuchni. 11 listopada — rogale świętomarcińskie z Poznania.',
-                   price='Udko z gęsi confit · 450 g · 199', cta='Zarezerwuj stolik', href=TEL, imgCls='photo', size='', until=D['EVENT']['until'])]
+        ev = [dict(id='Wigilia firmowa', src=B['wstol'], alt='Długi stół nakryty na przyjęcie w wieczornym świetle lamp, welurowe krzesła', kicker='WYDARZENIE · GRUDZIEŃ', title='Wigilia firmowa',
+                   desc='Wyśmienita kuchnia, eleganckie wnętrze i profesjonalna obsługa. Przygotujemy świąteczne spotkanie dla Twojego zespołu — menu i oprawę ustalimy indywidualnie.', descS='Wyśmienita kuchnia, eleganckie wnętrze, profesjonalna obsługa.',
+                   price='Oferta indywidualna', cta='Zapytaj o ofertę', href=EV_TEL, imgCls='photo', size='object-position: 50% 62%', until='2026-12-23'),
+              dict(id='Kolacja wigilijna', src=B['wloze'], alt='Stoły przy lożach w ciepłym świetle świec, lustra w łukowych ramach', kicker='WYDARZENIE · 24 GRUDNIA', title='Kolacja wigilijna',
+                   desc='Tradycyjna kuchnia, rodzinna atmosfera i świąteczny klimat. Zasiądź z bliskimi przy wigilijnym stole w Beef & Reef.', descS='Tradycyjna kuchnia, rodzinna atmosfera, świąteczny klimat.',
+                   price='Liczba miejsc ograniczona', cta='Zarezerwuj miejsce', href=EV_TEL, imgCls='photo', size='object-position: 50% 60%', until='2026-12-24'),
+              dict(id='Sylwester', src=B['wokna'], alt='Sala Beef & Reef wieczorem: stoły ze złotymi lampkami, przeszklona ściana', kicker='WYDARZENIE · 31 GRUDNIA', title='Spędź z nami Sylwestra 2027',
+                   desc='Live cooking, muzyka na żywo i wyjątkowe menu — przywitaj z nami Nowy Rok.', descS='Live cooking, muzyka na żywo, wyjątkowe menu.',
+                   price='Liczba miejsc ograniczona', cta='Zarezerwuj miejsce', href=EV_TEL, imgCls='photo', size='object-position: 50% 55%', until='2026-12-31'),
+              dict(id='Lunch', src=B['sala'], alt='Sala Beef & Reef w dziennym słońcu: stoły nakryte do lunchu, zielone loże, przeszklona ściana', kicker='LUNCH · PON–PT', title='Lunch na Wilanowie',
+                   desc='Kuchnia polska, każdego dnia inny zestaw: zupa, danie główne i mini deser. Na miejscu lub z dostawą.', descS='Zupa, danie główne i mini deser — codziennie inny zestaw.',
+                   price='12:00 – 16:00', cta='Zadzwoń i zamów', href=EV_TEL, imgCls='photo', size='object-position: 50% 40%')]
         di = [dict(src=B['stekf'], alt='Dwa surowe, marmurkowe antrykoty na drewnianej desce z tymiankiem i papryczkami chili', kicker='STEKI', title='Steki z najlepszych hodowli', desc='Wołowina rasy Black Angus, sezonowana na sucho min. 21 dni. Polędwica, ribeye, T-bone, porterhouse i tomahawk.', descS='Black Angus, sezonowana na sucho min. 21 dni.', price='od 119', cta='Zobacz steki w menu', href=m + '#g-steaks', imgCls='photo', size='object-position: 60% 80%'),
               dict(src=B['osmf'], alt='Macka ośmiornicy z cukinią, kiełkami groszku i czerwonym kawiorem w głębokim talerzu', kicker='RYBY I OWOCE MORZA', title='Macka ośmiornicy', desc='Ośmiornica, seler naciowy, kapary, cukinia, białe wino, oliwki, opiekane ziemniaki.', descS='Seler naciowy, kapary, cukinia, białe wino, oliwki.', price='109', cta='Zobacz ryby i owoce morza', href=m + '#g-fish', imgCls='photo', size='object-position: 50% 50%'),
               dict(src=B['kaczf'], alt='Pierś z kaczki z sosem pomarańczowym, brokułem i purée selerowym', kicker='DANIA GŁÓWNE', title='Pierś z kaczki', desc='Pierś z kaczki sous-vide, sos pomarańczowy, purée selerowe, brokuł łodygowy.', descS='Sous-vide, sos pomarańczowy, purée selerowe.', price='109', cta='Zobacz dania główne', href=m + '#g-mains', imgCls='photo', size='object-position: 50% 50%'),
               dict(src=B['sernf'], alt='Kremowy sernik z płatkami migdałów i gałką lodów waniliowych na stoliku w ogródku', kicker='DESERY', title='Kremowy sernik', desc='Lody waniliowe, mus malinowy, owoce.', price='39', cta='Zobacz desery', href=m + '#g-desserts', imgCls='photo', size='object-position: 50% 50%')]
     else:
-        ev = [dict(id='Św. Marcin', src=B['rog'], alt='St. Martin’s croissants with icing and nuts', kicker='EVENT · 7–15 NOVEMBER', title='Celebrating St. Martin’s Day',
-                   desc='Goose takes centre stage in our head chef’s own creations. On 11 November — original St. Martin’s croissants from a certified bakery in Poznań.', descS='Goose in our head chef’s own creations. On 11 November — St. Martin’s croissants from Poznań.',
-                   price='Confit goose leg · 450 g · 199', cta='Book a table', href=TEL, imgCls='photo', size='', until=D['EVENT']['until'])]
+        ev = [dict(id='Wigilia firmowa', src=B['wstol'], alt='A long table set for a party in warm evening light, velvet chairs', kicker='EVENT · DECEMBER', title='Company Christmas party',
+                   desc='Superb food, an elegant interior and professional service. We’ll host your team’s festive gathering — menu and setting tailored to you.', descS='Superb food, an elegant interior, professional service.',
+                   price='Tailored offer', cta='Ask about the offer', href=EV_TEL, imgCls='photo', size='object-position: 50% 62%', until='2026-12-23'),
+              dict(id='Kolacja wigilijna', src=B['wloze'], alt='Tables by the banquettes in warm candlelight, arched mirrors on the wall', kicker='EVENT · 24 DECEMBER', title='Christmas Eve dinner',
+                   desc='Traditional Polish Christmas Eve dishes, a family atmosphere and festive spirit. Gather your loved ones at our Wigilia table.', descS='Traditional dishes, a family atmosphere, festive spirit.',
+                   price='Limited seating', cta='Book a seat', href=EV_TEL, imgCls='photo', size='object-position: 50% 60%', until='2026-12-24'),
+              dict(id='Sylwester', src=B['wokna'], alt='The Beef & Reef dining room at night: tables with gold lamps, glass wall', kicker='EVENT · 31 DECEMBER', title='New Year’s Eve 2027 with us',
+                   desc='Live cooking, live music and a special menu — welcome the New Year with us.', descS='Live cooking, live music, a special menu.',
+                   price='Limited seating', cta='Book a seat', href=EV_TEL, imgCls='photo', size='object-position: 50% 55%', until='2026-12-31'),
+              dict(id='Lunch', src=B['sala'], alt='The Beef & Reef dining room in daylight: tables set for lunch, green banquettes, glass wall', kicker='LUNCH · MON–FRI', title='Lunch in Wilanów',
+                   desc='Polish cuisine with a different set every day: soup, main course and a mini dessert. Dine in or have it delivered.', descS='Soup, main course and a mini dessert — a new set every day.',
+                   price='12:00 – 16:00', cta='Call to order', href=EV_TEL, imgCls='photo', size='object-position: 50% 40%')]
         di = [dict(src=B['stekf'], alt='Two raw marbled ribeye steaks on a wooden board with thyme and chillies', kicker='STEAKS', title='Steaks from the finest farms', desc='Black Angus beef, dry-aged for at least 21 days. Fillet, ribeye, T-bone, porterhouse and tomahawk.', descS='Black Angus, dry-aged for at least 21 days.', price='from 119', cta='See steaks on the menu', href=m + '#g-steaks', imgCls='photo', size='object-position: 60% 80%'),
               dict(src=B['osmf'], alt='Octopus tentacle with courgette, pea shoots and red caviar in a deep plate', kicker='FISH &amp; SEAFOOD', title='Octopus Tentacle', desc='Octopus, celery, capers, courgette, white wine, olives, roasted potatoes.', descS='Celery, capers, courgette, white wine, olives.', price='109', cta='See fish &amp; seafood', href=m + '#g-fish', imgCls='photo', size='object-position: 50% 50%'),
               dict(src=B['kaczf'], alt='Duck breast with orange sauce, broccoli and celeriac purée', kicker='MAINS', title='Duck Breast', desc='Sous-vide duck breast, orange sauce, celeriac purée, tenderstem broccoli.', descS='Sous-vide, orange sauce, celeriac purée.', price='109', cta='See mains', href=m + '#g-mains', imgCls='photo', size='object-position: 50% 50%'),
@@ -243,7 +265,7 @@ HOMEC = {
                chefLead='Sercem naszej kuchni jest <b>Klaudiusz Danowski</b>, który z niezwykłą dbałością o detale komponuje każde danie.',
                pr=[('Starannie wybrane produkty', 'Każde danie powstaje wyłącznie z wyselekcjonowanych składników.'), ('Precyzja', 'Steki z najlepszych hodowli — do idealnego stopnia wysmażenia i głębi smaku.'), ('Świeżość', 'Owoce morza dostarczane regularnie, dla świeżości i najwyższej jakości.')],
                partyA='Świętuj', partyB='z nami.', partyPh='[ZDJĘCIE: SALA NA PRZYJĘCIE]', partyAlt='Sala Beef & Reef: marmurowy bar, stoły nakryte do kolacji i zielone loże', extAlt='Wejście do Beef & Reef i ogródek z girlandą świateł przy Kazachskiej 1', extCap='KAZACHSKA 1 · OGRÓDEK', partyAria='Miejsce na zdjęcie sali przygotowanej na przyjęcie',
-               partyP='Wesela, urodziny, przyjęcia świąteczne i spotkania firmowe — wszystkie szczegóły ustalamy z Tobą indywidualnie.',
+               partyP='Chrzciny i komunie, urodziny, przyjęcia świąteczne i spotkania firmowe — wszystkie szczegóły ustalamy z Tobą indywidualnie.',
                exH='NA WYŁĄCZNOŚĆ', exV='Cała restauracja tylko dla Ciebie i Twoich gości.', offer='POZNAJ OFERTĘ', askDate='Zapytaj o termin', liveAria='Muzyka na żywo i live cooking',
                liveNote='*Siekany tatar wołowy przy stole i smażone krewetki z chorizo.', liveAsk='Zapytaj o najbliższe terminy',
                resA='Rezerwacje', lAddr='ADRES', vAddr='Kazachska 1, 02-999 Warszawa', lHours='GODZINY', vHours='Codziennie 12:00 – 23:00<br>Kuchnia do 22:00', lOnline='ONLINE', vOnline='Rezerwacja online',
@@ -256,7 +278,7 @@ HOMEC = {
                chefLead='At the heart of our kitchen is <b>Klaudiusz Danowski</b>, who composes every dish with remarkable attention to detail.',
                pr=[('Carefully selected produce', 'Every dish is made only from hand-picked ingredients.'), ('Precision', 'Steaks from the finest farms — cooked to perfect doneness and depth of flavour.'), ('Freshness', 'Seafood delivered regularly, for freshness and the highest quality.')],
                partyA='Celebrate', partyB='with us.', partyPh='[PHOTO: ROOM SET FOR A PARTY]', partyAlt='The Beef & Reef dining room: marble bar, tables set for dinner and green banquettes', extAlt='The Beef & Reef entrance and terrace with string lights at Kazachska 1', extCap='KAZACHSKA 1 · TERRACE', partyAria='Photo placeholder: room set for a party',
-               partyP='Weddings, birthdays, Christmas parties and corporate events — every detail is arranged with you individually.',
+               partyP='Christenings and First Communions, birthdays, Christmas parties and corporate events — every detail is arranged with you individually.',
                exH='EXCLUSIVE HIRE', exV='The whole restaurant just for you and your guests.', offer='VIEW THE OFFER', askDate='Ask about a date', liveAria='Live music and live cooking',
                liveNote='*Hand-chopped beef tartare at your table and pan-fried prawns with chorizo.', liveAsk='Ask about upcoming dates',
                resA='Reservations', lAddr='ADDRESS', vAddr='Kazachska 1, 02-999 Warsaw', lHours='OPENING HOURS', vHours='Daily 12:00 – 23:00<br>Kitchen until 22:00', lOnline='ONLINE', vOnline='Book online',
@@ -332,7 +354,7 @@ def home_body(lang):
           <div class="callout"><div class="callout-in"><p class="h">{c["exH"]}</p><p class="v">{c["exV"]}</p></div></div>
           <div class="btns">
             <a class="btn btn-ink" href="{href(lang,"party")}">{c["offer"]}</a>
-            <a class="u tlink" href="{TEL}">{c["askDate"]}</a>
+            <a class="u tlink" href="{EV_TEL}">{c["askDate"]}</a>
           </div>
         </div>
       </div>
@@ -444,8 +466,12 @@ def menu_body(lang):
 # ---------- przyjęcia ----------
 PC = D['PARTY']
 PARTYX = {
-    'pl': dict(a='Twoje', b='przyjęcie.', askA='Zapytaj', askB='o termin.', excl='Chcesz, aby *cała *restauracja była *tylko *dla *Was? Zarezerwujemy ją *na *wyłączność na Twoje wydarzenie.', callout='Dla Ciebie i Twoich gości: termin, liczba gości, menu i oprawa — wszystko dopasujemy indywidualnie.', salaAlt='Sala Beef & Reef w słońcu: stoły nakryte do kolacji, zielone welurowe loże, przeszklona ściana', pionAlt='Sala Beef & Reef: stoły nakryte do kolacji, ściana z zielonych roślin i pergolowe lampy'),
-    'en': dict(a='Your', b='party.', askA='Ask', askB='about a date.', excl='Want *the *entire *restaurant *just *for *your *group? We’ll reserve it *exclusively for your event.', callout='Just for you and your guests: date, number of guests, menu and setting — all tailored to you.', salaAlt='The sunlit Beef & Reef dining room: tables set for dinner, green velvet banquettes, glass wall', pionAlt='The Beef & Reef dining room: tables set for dinner, a living plant wall and pendant lights'),
+    'pl': dict(a='Twoje', b='przyjęcie.', askA='Zapytaj', askB='o termin.', excl='Chcesz, aby *cała *restauracja była *tylko *dla *Was? Zarezerwujemy ją *na *wyłączność na Twoje wydarzenie.', callout='Dla Ciebie i Twoich gości: termin, liczba gości, menu i oprawa — wszystko dopasujemy indywidualnie.', salaAlt='Sala Beef & Reef w słońcu: stoły nakryte do kolacji, zielone welurowe loże, przeszklona ściana', pionAlt='Sala Beef & Reef: stoły nakryte do kolacji, ściana z zielonych roślin i pergolowe lampy',
+               galK='WNĘTRZE', galT='Wieczorem u nas', galP='Ciepłe światło, welurowe fotele i zielone ściany — sala gotowa na kameralną kolację i na przyjęcie dla kilkudziesięciu gości.',
+               g1='Stoliki przy lożach w ciepłym świetle lampek, lustra w łukowych ramach i zielone rośliny', g2='Długi stół nakryty na przyjęcie, welurowe fotele i ściana z zielonych roślin', g3='Sala wieczorem: stoły ze złotymi lampkami, przeszklona ściana z widokiem na ulicę'),
+    'en': dict(a='Your', b='party.', askA='Ask', askB='about a date.', excl='Want *the *entire *restaurant *just *for *your *group? We’ll reserve it *exclusively for your event.', callout='Just for you and your guests: date, number of guests, menu and setting — all tailored to you.', salaAlt='The sunlit Beef & Reef dining room: tables set for dinner, green velvet banquettes, glass wall', pionAlt='The Beef & Reef dining room: tables set for dinner, a living plant wall and pendant lights',
+               galK='THE ROOM', galT='Our room by night', galP='Warm light, velvet chairs and green walls — ready for an intimate dinner or a party for dozens of guests.',
+               g1='Tables by the banquettes in warm lamplight, arched mirrors and green plants', g2='A long table set for a party, velvet chairs and a living plant wall', g3='The dining room at night: tables with gold lamps, a glass wall onto the street'),
 }
 S3 = {k: v['excl'] for k, v in PARTYX.items()}
 
@@ -463,7 +489,7 @@ def party_body(lang):
       <div class="phead-row">
         <p class="float d2 lead">{c["intro"]}</p>
         <div class="float d3 side">
-          <a class="btn btn-gold" href="{TEL}">{c["callAsk"]}</a>
+          <a class="btn btn-gold" href="{EV_TEL}">{c["callAsk"]}</a>
           <a class="u tlink" href="{mailto}">{c["write"]}</a>
         </div>
       </div>
@@ -478,6 +504,17 @@ def party_body(lang):
       <div class="center"><h2 id="{c["occId"]}" class="rise stitle">{c["occTitle"]}</h2></div>
       <ul class="occ">{occ}</ul>
       <p class="rise occ-more">{c["occMore"]}</p>
+    </div>
+  </section>
+
+  <section data-rv="gal" class="sec ruled gal-sec" aria-labelledby="gal-title">
+    <div class="wrap">
+      <div class="center"><p class="rise label gal-k">{x["galK"]}</p><h2 id="gal-title" class="rise stitle">{x["galT"]}</h2><p class="rise gal-lead">{x["galP"]}</p></div>
+      <ul class="gal" role="list" tabindex="0" aria-label="{x["galT"]}">
+        <li class="rise d1"><figure class="pic"><img src="{B["wloze"]}" alt="{x["g1"]}" loading="lazy"><span class="frame" aria-hidden="true"></span></figure></li>
+        <li class="rise d2"><figure class="pic"><img src="{B["wstol"]}" alt="{x["g2"]}" loading="lazy"><span class="frame" aria-hidden="true"></span></figure></li>
+        <li class="rise d3"><figure class="pic"><img src="{B["wokna"]}" alt="{x["g3"]}" loading="lazy"><span class="frame" aria-hidden="true"></span></figure></li>
+      </ul>
     </div>
   </section>
 
@@ -504,11 +541,11 @@ def party_body(lang):
       {split(x["askA"], x["askB"], id_="ask-title")}
       <div class="ask">
         <div class="rise l">
-          <a href="{TEL}" style="font-size: clamp(36px, 4.4vw, 64px); line-height: 1.1; font-weight: 700; white-space: nowrap">{PHONE}</a>
+          <a href="{EV_TEL}" style="font-size: clamp(36px, 4.4vw, 64px); line-height: 1.1; font-weight: 700; white-space: nowrap">{EV_PHONE}</a>
           <a class="u mail" href="{mailto}">{MAIL}</a>
           <p class="line">{c["askLine"]}</p>
         </div>
-        <div class="rise d1 r"><a class="btn btn-gold" href="{TEL}">{c["callAsk"]}</a><a class="btn btn-line" href="{mailto}">{c["mail"]}</a></div>
+        <div class="rise d1 r"><a class="btn btn-gold" href="{EV_TEL}">{c["callAsk"]}</a><a class="btn btn-line" href="{mailto}">{c["mail"]}</a></div>
       </div>
     </div>
   </section>
@@ -670,7 +707,7 @@ def page(lang, kind):
     elif kind == 'party':
         body = party_body(lang)
         cfg.update(rv=['photo', 'occ', 'excl', 'how', 'ask'], words={'stmt3': S3[lang]})
-        bar = pbar(lang, f'mailto:{MAIL}?subject={PC[lang]["subject"]}', t['email'])
+        bar = pbar(lang, f'mailto:{MAIL}?subject={PC[lang]["subject"]}', t['email'], EV_TEL)
     else:
         body = legal_body(lang, kind)
         bar = pbar(lang, BOOK, t['barOnline'])

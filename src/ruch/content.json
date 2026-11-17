@@ -142,7 +142,7 @@
    ],
    "partyEyebrow": "Przyjęcia i eventy",
    "partyTitle": "Świętuj z nami",
-   "partyText": "Organizujemy przyjęcia w naszej restauracji — wesela, urodziny, przyjęcia świąteczne i spotkania firmowe. Chcesz mieć restaurację tylko dla siebie i swoich gości? Zarezerwujemy ją na wyłączność.",
+   "partyText": "Organizujemy przyjęcia w naszej restauracji — chrzciny i komunie, urodziny, przyjęcia świąteczne i spotkania firmowe. Chcesz mieć restaurację tylko dla siebie i swoich gości? Zarezerwujemy ją na wyłączność.",
    "partyBtn": "Poznaj ofertę",
    "partyAsk": "Zapytaj",
    "partyAria": "Miejsce na zdjęcie sali przygotowanej na przyjęcie",
@@ -229,7 +229,7 @@
    ],
    "partyEyebrow": "Parties &amp; events",
    "partyTitle": "Celebrate with us",
-   "partyText": "We host parties at our restaurant — weddings, birthdays, Christmas parties and corporate events. Want the whole restaurant to yourself and your guests? We’ll reserve it exclusively for you.",
+   "partyText": "We host parties at our restaurant — christenings and First Communions, birthdays, Christmas parties and corporate events. Want the whole restaurant to yourself and your guests? We’ll reserve it exclusively for you.",
    "partyBtn": "View the offer",
    "partyAsk": "Ask",
    "partyAria": "Photo placeholder: room set for a party",
@@ -249,7 +249,7 @@
   "pl": {
    "hoursBadge": "Codziennie 12:00 – 23:00",
    "heroText": "Steki z najlepszych hodowli i regularnie dostarczane owoce morza. Kuchnia czynna do 22:00.",
-   "partyShort": "Organizujemy przyjęcia w naszej restauracji — wesela, urodziny, przyjęcia świąteczne i spotkania firmowe.",
+   "partyShort": "Organizujemy przyjęcia w naszej restauracji — chrzciny i komunie, urodziny, przyjęcia świąteczne i spotkania firmowe.",
    "exclusiveHead": "Restauracja na wyłączność",
    "exclusiveText": "Chcesz mieć restaurację tylko dla siebie i swoich gości? Zarezerwujemy ją na wyłączność.",
    "mapKicker": "Jak dojechać",
@@ -264,7 +264,7 @@
   "en": {
    "hoursBadge": "Daily 12:00 – 23:00",
    "heroText": "Steaks from the finest farms and seafood delivered regularly. Kitchen open until 22:00.",
-   "partyShort": "We host parties at our restaurant — weddings, birthdays, Christmas parties and corporate events.",
+   "partyShort": "We host parties at our restaurant — christenings and First Communions, birthdays, Christmas parties and corporate events.",
    "exclusiveHead": "Exclusive hire",
    "exclusiveText": "Want the whole restaurant to yourself and your guests? We’ll reserve it exclusively for you.",
    "mapKicker": "Getting here",
@@ -279,7 +279,7 @@
  },
  "EVENT": {
   "on": true,
-  "until": "2026-11-15",
+  "until": "2026-12-31",
   "img": "rogale-swietomarcinskie.webp",
   "img800": "rogale-swietomarcinskie-800.webp",
   "w": 1600,
@@ -308,7 +308,7 @@
  "PARTY": {
   "pl": {
    "title": "Przyjęcia i eventy — Beef & Reef",
-   "desc": "Przyjęcia w Beef & Reef w Wilanowie: wesela, urodziny, przyjęcia świąteczne, spotkania firmowe. Restauracja na wyłączność. Zadzwoń: +48 222 538 860.",
+   "desc": "Przyjęcia w Beef & Reef w Wilanowie: chrzciny i komunie, urodziny, przyjęcia świąteczne, spotkania firmowe. Restauracja na wyłączność. Zadzwoń: +48 790 627 246.",
    "subject": "Zapytanie%20o%20przyj%C4%99cie",
    "eyebrow": "Przyjęcia i eventy",
    "h1": "Twoje przyjęcie w Beef &amp; Reef",
@@ -321,8 +321,8 @@
    "occId": "okazje-title",
    "occasions": [
     [
-     "Wesela",
-     "Przyjęcie weselne w eleganckiej oprawie"
+     "Chrzciny i komunie",
+     "Rodzinne przyjęcia po uroczystości"
     ],
     [
      "Urodziny",
@@ -364,7 +364,7 @@
   },
   "en": {
    "title": "Parties & events — Beef & Reef",
-   "desc": "Parties at Beef & Reef in Wilanów: weddings, birthdays, Christmas parties and corporate events. Exclusive hire of the whole restaurant. Call +48 222 538 860.",
+   "desc": "Parties at Beef & Reef in Wilanów: christenings and First Communions, birthdays, Christmas parties and corporate events. Exclusive hire of the whole restaurant. Call +48 790 627 246.",
    "subject": "Party%20enquiry",
    "eyebrow": "Parties &amp; events",
    "h1": "Your party at Beef &amp; Reef",
@@ -377,8 +377,8 @@
    "occId": "occasions-title",
    "occasions": [
     [
-     "Weddings",
-     "A wedding reception in an elegant setting"
+     "Christenings & First Communions",
+     "Family receptions after the ceremony"
     ],
     [
      "Birthdays",

@@ -38,6 +38,9 @@ IMG = {
     B['sala']: 'assets/img/sala.webp',
     B['salap']: 'assets/img/sala-pion.webp',
     B['chef']: 'assets/img/szef-kuchni.webp',
+    B['wloze']: 'assets/img/sala-wieczor-loze.webp',
+    B['wstol']: 'assets/img/sala-wieczor-stol.webp',
+    B['wokna']: 'assets/img/sala-wieczor-okna.webp',
 }
 SMALL = {  # mniejsze wersje dla telefonów
     'assets/img/rogale-swietomarcinskie.webp': ('assets/img/rogale-swietomarcinskie-800.webp', 1600),
@@ -50,6 +53,9 @@ SMALL = {  # mniejsze wersje dla telefonów
     'assets/img/sala.webp': ('assets/img/sala-800.webp', 1600),
     'assets/img/sala-pion.webp': ('assets/img/sala-pion-800.webp', 1200),
     'assets/img/szef-kuchni.webp': ('assets/img/szef-kuchni-640.webp', 1086, 640),
+    'assets/img/sala-wieczor-loze.webp': ('assets/img/sala-wieczor-loze-800.webp', 1200),
+    'assets/img/sala-wieczor-stol.webp': ('assets/img/sala-wieczor-stol-800.webp', 1200),
+    'assets/img/sala-wieczor-okna.webp': ('assets/img/sala-wieczor-okna-800.webp', 1200),
 }
 SIZES = {'w': '(max-width: 899px) 100vw, 60vw'}
 
@@ -176,6 +182,7 @@ def ctx_for(lang, kind):
     cfg = {'words': {}, 'cats': None, 'events': [], 'dishes': []}
     if kind == 'home':
         ev, di = gen.slides(lang)
+        # (wydarzenia mają własne `until` w gen.slides — znikają same po dacie)
         # zdjęcie steków: podgląd z Adobe Stock (nr 328832358) do akceptacji właściciela — po zakupie licencji podmienić plik assets/img/steki-foto.webp
         events = ev if (kind == 'home' and D['EVENT']['on']) else []
         L = events + di

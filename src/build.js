@@ -25,7 +25,7 @@ const arrow = '<svg aria-hidden="true" width="12" height="12" viewBox="0 0 24 24
 const handset = '<svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg>';
 // Seasonal event block on the home page (PL + EN). Set on:false to hide it; it also hides itself after `until` (main.js).
 const EVENT = {
-  on: true, until: '2026-11-15',
+  on: true, until: '2026-12-31',
   img: 'rogale-swietomarcinskie.webp', img800: 'rogale-swietomarcinskie-800.webp', w: 1600, h: 1222,
   pl: { badge: 'Od 7 do 15 listopada', kicker: 'Zapraszamy na wyjątkowe menu', title: 'Z okazji Świętego Marcina',
     text: 'Królować będzie gęsina, przygotowana z dbałością o każdy detal, w autorskich odsłonach naszego Szefa Kuchni.',
@@ -253,7 +253,7 @@ const HOME = {
     chefText: ['Sercem naszej kuchni jest szef kuchni Klaudiusz Danowski, który z niezwykłą dbałością o detale komponuje każde danie, bazując wyłącznie na starannie wyselekcjonowanych produktach.',
       'Nasze steki pochodzą z najlepszych hodowli i są przygotowywane z najwyższą precyzją, aby osiągnąć idealny stopień wysmażenia i głębię smaku. Owoce morza dostarczane są regularnie, co gwarantuje ich świeżość i najwyższą jakość.'],
     partyEyebrow: 'Przyjęcia i eventy', partyTitle: 'Świętuj z nami',
-    partyText: 'Organizujemy przyjęcia w naszej restauracji — wesela, urodziny, przyjęcia świąteczne i spotkania firmowe. Chcesz mieć restaurację tylko dla siebie i swoich gości? Zarezerwujemy ją na wyłączność.',
+    partyText: 'Organizujemy przyjęcia w naszej restauracji — chrzciny i komunie, urodziny, przyjęcia świąteczne i spotkania firmowe. Chcesz mieć restaurację tylko dla siebie i swoich gości? Zarezerwujemy ją na wyłączność.',
     partyBtn: 'Poznaj ofertę', partyAsk: 'Zapytaj', partyAria: 'Miejsce na zdjęcie sali przygotowanej na przyjęcie', partyPh: '[ZDJĘCIE: SALA NA PRZYJĘCIE]',
     contactTitle: 'Rezerwacja i kontakt', address: 'Adres', directions: 'Wyznacz trasę', reservations: 'Rezerwacje', hours: 'Godziny otwarcia',
     hoursText: 'Codziennie: 12:00 – 23:00<br>Kuchnia czynna do 22:00', bookOnline: 'Rezerwacja online', mapAria: 'Miejsce na mapę dojazdu', mapPh: '[MAPA GOOGLE — KAZACHSKA 1]'
@@ -279,7 +279,7 @@ const HOME = {
     chefText: ['At the heart of our kitchen is head chef Klaudiusz Danowski, who composes every dish with remarkable attention to detail, using only carefully selected produce.',
       'Our steaks come from the finest farms and are prepared with the utmost precision for perfect doneness and depth of flavour. Our seafood is delivered regularly, guaranteeing freshness and the highest quality.'],
     partyEyebrow: 'Parties &amp; events', partyTitle: 'Celebrate with us',
-    partyText: 'We host parties at our restaurant — weddings, birthdays, Christmas parties and corporate events. Want the whole restaurant to yourself and your guests? We’ll reserve it exclusively for you.',
+    partyText: 'We host parties at our restaurant — christenings and First Communions, birthdays, Christmas parties and corporate events. Want the whole restaurant to yourself and your guests? We’ll reserve it exclusively for you.',
     partyBtn: 'View the offer', partyAsk: 'Ask', partyAria: 'Photo placeholder: room set for a party', partyPh: '[PHOTO: ROOM SET FOR A PARTY]',
     contactTitle: 'Reservations &amp; contact', address: 'Address', directions: 'Get directions', reservations: 'Reservations', hours: 'Opening hours',
     hoursText: 'Daily: 12:00 – 23:00<br>Kitchen open until 22:00', bookOnline: 'Book online', mapAria: 'Map placeholder', mapPh: '[GOOGLE MAP — KAZACHSKA 1]'
@@ -290,7 +290,7 @@ const HOME = {
 const HOME_X = {
   pl: {
     hoursBadge: 'Codziennie 12:00 – 23:00', heroText: 'Steki z najlepszych hodowli i regularnie dostarczane owoce morza. Kuchnia czynna do 22:00.',
-    partyShort: 'Organizujemy przyjęcia w naszej restauracji — wesela, urodziny, przyjęcia świąteczne i spotkania firmowe.',
+    partyShort: 'Organizujemy przyjęcia w naszej restauracji — chrzciny i komunie, urodziny, przyjęcia świąteczne i spotkania firmowe.',
     exclusiveHead: 'Restauracja na wyłączność', exclusiveText: 'Chcesz mieć restaurację tylko dla siebie i swoich gości? Zarezerwujemy ją na wyłączność.',
     mapKicker: 'Jak dojechać', mapPlace: 'Kazachska 1, Warszawa', showMap: 'Pokaż mapę', openMaps: 'Otwórz w Mapach Google',
     newTab: ' (otwiera się w nowej karcie)', mapNote: 'Mapa Google wczyta się dopiero po kliknięciu. Google może wtedy zapisać pliki cookies —', more: 'więcej',
@@ -298,7 +298,7 @@ const HOME_X = {
   },
   en: {
     hoursBadge: 'Daily 12:00 – 23:00', heroText: 'Steaks from the finest farms and seafood delivered regularly. Kitchen open until 22:00.',
-    partyShort: 'We host parties at our restaurant — weddings, birthdays, Christmas parties and corporate events.',
+    partyShort: 'We host parties at our restaurant — christenings and First Communions, birthdays, Christmas parties and corporate events.',
     exclusiveHead: 'Exclusive hire', exclusiveText: 'Want the whole restaurant to yourself and your guests? We’ll reserve it exclusively for you.',
     mapKicker: 'Getting here', mapPlace: 'Kazachska 1, Warsaw', showMap: 'Show map', openMaps: 'Open in Google Maps',
     newTab: ' (opens in a new tab)', mapNote: 'The Google map loads only after you click. Google may then set cookies —', more: 'learn more',
@@ -493,12 +493,12 @@ ${renderMenu(lang)}
 /* ---------------- Party ---------------- */
 const PARTY = {
   pl: {
-    title: 'Przyjęcia i eventy — Beef & Reef', desc: 'Przyjęcia w Beef & Reef w Wilanowie: wesela, urodziny, przyjęcia świąteczne, spotkania firmowe. Restauracja na wyłączność. Zadzwoń: +48 222 538 860.',
+    title: 'Przyjęcia i eventy — Beef & Reef', desc: 'Przyjęcia w Beef & Reef w Wilanowie: chrzciny i komunie, urodziny, przyjęcia świąteczne, spotkania firmowe. Restauracja na wyłączność. Zadzwoń: +48 790 627 246.',
     subject: 'Zapytanie%20o%20przyj%C4%99cie', eyebrow: 'Przyjęcia i eventy', h1: 'Twoje przyjęcie w Beef &amp; Reef',
     intro: 'Organizujemy przyjęcia w naszej restauracji — od kameralnych kolacji po wydarzenia na całą salę. Wszystkie szczegóły ustalamy z Tobą indywidualnie.',
     callAsk: 'Zadzwoń i zapytaj', write: 'Napisz do nas', photoAria: 'Miejsce na zdjęcie sali przygotowanej na przyjęcie', photoPh: '[ZDJĘCIE: SALA NA PRZYJĘCIE]',
     occTitle: 'Okazje', occId: 'okazje-title',
-    occasions: [['Wesela', 'Przyjęcie weselne w eleganckiej oprawie'], ['Urodziny', 'Urodziny, jubileusze i rocznice'], ['Przyjęcia świąteczne', 'Wigilie firmowe i spotkania świąteczne'], ['Spotkania firmowe', 'Kolacje biznesowe i wydarzenia dla zespołów']],
+    occasions: [['Chrzciny i komunie', 'Rodzinne przyjęcia po uroczystości'], ['Urodziny', 'Urodziny, jubileusze i rocznice'], ['Przyjęcia świąteczne', 'Wigilie firmowe i spotkania świąteczne'], ['Spotkania firmowe', 'Kolacje biznesowe i wydarzenia dla zespołów']],
     occMore: '…i każda inna okazja, którą chcesz świętować.',
     exEyebrow: 'Tylko dla Ciebie i Twoich gości', exTitle: 'Restauracja<br>na wyłączność', exId: 'wylacznosc-title',
     exText: 'Chcesz, aby cała restauracja była tylko dla Was? Nie ma problemu — zarezerwujemy ją na wyłączność na Twoje wydarzenie.',
@@ -507,12 +507,12 @@ const PARTY = {
     askTitle: 'Zapytaj o przyjęcie', askLine: 'Codziennie 12:00 – 23:00 · Kazachska 1, Warszawa', mail: 'Napisz e-mail'
   },
   en: {
-    title: 'Parties & events — Beef & Reef', desc: 'Parties at Beef & Reef in Wilanów: weddings, birthdays, Christmas parties and corporate events. Exclusive hire of the whole restaurant. Call +48 222 538 860.',
+    title: 'Parties & events — Beef & Reef', desc: 'Parties at Beef & Reef in Wilanów: christenings and First Communions, birthdays, Christmas parties and corporate events. Exclusive hire of the whole restaurant. Call +48 790 627 246.',
     subject: 'Party%20enquiry', eyebrow: 'Parties &amp; events', h1: 'Your party at Beef &amp; Reef',
     intro: 'We host parties at our restaurant — from intimate dinners to events for the whole dining room. Every detail is arranged with you individually.',
     callAsk: 'Call to ask', write: 'Write to us', photoAria: 'Photo placeholder: room set for a party', photoPh: '[PHOTO: ROOM SET FOR A PARTY]',
     occTitle: 'Occasions', occId: 'occasions-title',
-    occasions: [['Weddings', 'A wedding reception in an elegant setting'], ['Birthdays', 'Birthdays, milestones and anniversaries'], ['Christmas parties', 'Company Christmas dinners and festive gatherings'], ['Corporate events', 'Business dinners and team events']],
+    occasions: [['Christenings & First Communions', 'Family receptions after the ceremony'], ['Birthdays', 'Birthdays, milestones and anniversaries'], ['Christmas parties', 'Company Christmas dinners and festive gatherings'], ['Corporate events', 'Business dinners and team events']],
     occMore: '…and any other occasion you’d like to celebrate.',
     exEyebrow: 'Just for you and your guests', exTitle: 'The whole<br>restaurant to yourself', exId: 'exclusive-title',
     exText: 'Want the entire restaurant just for your group? No problem — we’ll reserve it exclusively for your event.',
